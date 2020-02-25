@@ -1,0 +1,22 @@
+*** SPICE deck for cell invertor_sim{lay} from library tutorial_2
+*** Created on Tue Feb 25, 2020 03:35:02
+*** Last revised on Tue Feb 25, 2020 03:41:17
+*** Written on Tue Feb 25, 2020 03:46:09 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT tutorial_2__inv_20_10 FROM CELL inv_20_10{lay}
+.SUBCKT tutorial_2__inv_20_10 gnd in out vdd
+Mnmos@0 gnd in out gnd NMOS L=0.7U W=3.5U AS=11.025P AD=19.6P PS=14.7U PD=28.7U
+Mpmos@0 vdd in out vdd PMOS L=0.7U W=7U AS=11.025P AD=26.95P PS=14.7U PD=35.7U
+.ENDS tutorial_2__inv_20_10
+
+*** TOP LEVEL CELL: invertor_sim{lay}
+Xinv_20_1@0 gnd in out vdd tutorial_2__inv_20_10
+
+* Spice Code nodes in cell cell 'invertor_sim{lay}'
+vdd vdd 0 DC 5
+vin in 0 DC 0
+.dc vin 0 5 1m
+.include C:\Electric\C5_models.txt
+.END
