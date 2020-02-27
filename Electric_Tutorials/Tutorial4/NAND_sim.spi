@@ -1,26 +1,33 @@
-*** SPICE deck for cell NAND_sim{sch} from library tutorial_3
-*** Created on Wed Feb 26, 2020 18:51:47
-*** Last revised on Wed Feb 26, 2020 19:15:38
-*** Written on Wed Feb 26, 2020 19:17:30 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell NAND_sim{lay} from library tutorial_3
+*** Created on Thu Feb 27, 2020 02:00:35
+*** Last revised on Thu Feb 27, 2020 02:14:15
+*** Written on Thu Feb 27, 2020 02:15:17 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P LIMPTS=1000
++ITL5=0 RELTOL=0.01 ABSTOL=500PA VNTOL=500UV LVLTIM=2
++LVLCOD=1
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
 
-*** SUBCIRCUIT tutorial_3__NAND_2 FROM CELL NAND_2{sch}
-.SUBCKT tutorial_3__NAND_2 A AnandB B
-** GLOBAL gnd
-** GLOBAL vdd
-Mnmos@0 AnandB A net@22 gnd NMOS L=0.35U W=1.75U
-Mnmos@1 AnandB A vdd vdd PMOS L=0.35U W=1.75U
-Mnmos@2 net@22 B gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@1 AnandB B vdd vdd PMOS L=0.35U W=1.75U
+*** SUBCIRCUIT tutorial_3__NAND_2 FROM CELL NAND_2{lay}
+.SUBCKT tutorial_3__NAND_2 A AnandB B gnd vdd
+Mnmos@0 net@9 B gnd gnd NMOS L=0.35U W=1.75U AS=6.431P AD=0.689P PS=17.85U PD=2.537U
+Mnmos@1 AnandB A net@9 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.48P PS=2.537U PD=4.025U
+Mpmos@0 vdd B AnandB vdd PMOS L=0.35U W=1.75U AS=1.48P AD=4.134P PS=4.025U PD=11.725U
+Mpmos@1 AnandB A vdd vdd PMOS L=0.35U W=1.75U AS=4.134P AD=1.48P PS=11.725U PD=4.025U
 .ENDS tutorial_3__NAND_2
 
-.global gnd vdd
+*** TOP LEVEL CELL: NAND_sim{lay}
+XNAND_2@1 in out vdd gnd vdd tutorial_3__NAND_2
 
-*** TOP LEVEL CELL: NAND_sim{sch}
-XNAND_2@0 in out vdd tutorial_3__NAND_2
-
-* Spice Code nodes in cell cell 'NAND_sim{sch}'
+* Spice Code nodes in cell cell 'NAND_sim{lay}'
 vdd vdd 0 dc 5
 vin in 0 dc 0 pulse 0 5 10n 1n
 cload out 0 250fF
