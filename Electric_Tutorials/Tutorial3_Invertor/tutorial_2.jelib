@@ -7,7 +7,7 @@ Vlayout|lay
 Vschematic|sch
 
 # Technologies:
-Tmocmos|ScaleFORmocmos()D350.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+Tmocmos|ScaleFORmocmos()D175.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
 
 # Cell NMOS_IV;1{lay}
 CNMOS_IV;1{lay}||mocmos|1262621562953|1262635167953||DRC_last_good_drc_area_date()G1262635789641|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1262635789641
