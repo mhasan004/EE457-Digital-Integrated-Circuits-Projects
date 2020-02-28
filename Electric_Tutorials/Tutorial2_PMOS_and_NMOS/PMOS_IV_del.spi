@@ -1,0 +1,30 @@
+*** SPICE deck for cell PMOS_IV{lay} from library tutorial_2
+*** Created on Sun Feb 23, 2020 07:49:37
+*** Last revised on Sun Feb 23, 2020 21:06:17
+*** Written on Thu Feb 27, 2020 12:05:42 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P LIMPTS=1000
++ITL5=0 RELTOL=0.01 ABSTOL=500PA VNTOL=500UV LVLTIM=2
++LVLCOD=1
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
+*** WARNING: no power connection for P-transistor wells in cell 'PMOS_IV{lay}'
+
+*** TOP LEVEL CELL: PMOS_IV{lay}
+Mpmos@0 d g s vdd PMOS L=0.7U W=3.5U AS=7.962P AD=7.962P PS=11.55U PD=11.55U
+
+* Spice Code nodes in cell cell 'PMOS_IV{lay}'
+vs s 0 DC 0
+vw w 0 DC 0
+vg g 0 DC 0
+vd d 0 DC 0
+.dc vd 0 -5 -1m vg 0 -5 -1
+.include C:\Electric\C5_models.txt
+.END
