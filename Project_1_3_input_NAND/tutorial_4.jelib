@@ -232,6 +232,47 @@ Iinv_20_10;1{sch}|inv_20_1@1||5.5|2.5|||D5G4;
 Awire|net@2|||1800|NAND_3@1|out|-4|8.5|inv_20_1@1|in|-1.5|8.5
 X
 
+# Cell AND_3_sim;1{lay}
+CAND_3_sim;1{lay}||mocmos|1582883788002|1582884244802||DRC_last_good_drc_area_date()G1582883956583|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582883956583
+IAND_3;1{lay}|AND_3@0||-5.5|-1|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Metal-2-Con|contact@0||-17|48||||
+NMetal-1-Pin|pin@0||-17|58.5||||
+NMetal-1-Pin|pin@1||-17|-45.5||||
+NMetal-2-Pin|pin@2||74.5|-4||||
+NMetal-2-Pin|pin@3||-0.5|48||||
+NMetal-2-Pin|pin@6||-37|48||||
+NMetal-2-Pin|pin@7||-63.5|-5.5||||
+Ngeneric:Invisible-Pin|pin@8||79.5|-32.5|||||SIM_spice_card(D5G4;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(0 3.3 0 5ns 200ns 10ns),cload out 0 250fF,.tran 0 40n,".include C:\\Electric\\C5_models.txt"]
+AMetal-2|A|D5G4;|1|S0|AND_3@0|A|-34|-5.5|pin@7||-63.5|-5.5
+AMetal-1|net@1||1|S900|AND_3@0|gnd|-17|-25.5|pin@1||-17|-45.5
+AMetal-2|net@3||1|S2700|AND_3@0|C|-0.5|-11.5|pin@3||-0.5|48
+AMetal-1|net@4||1|S2700|AND_3@0|vdd|-17|24.5|contact@0||-17|48
+AMetal-1|net@5||1|S2700|contact@0||-17|48|pin@0||-17|58.5
+AMetal-2|net@10||1|S2700|AND_3@0|B|-37|19|pin@6||-37|48
+AMetal-2|out|D5G4;|1|S1800|AND_3@0|out|26.5|-4|pin@2||74.5|-4
+AMetal-2|vdd|D5G4;|1|S0|pin@3||-0.5|48|contact@0||-17|48
+AMetal-2|vdd|D5G4;|1|S0|contact@0||-17|48|pin@6||-37|48
+Egnd||D5G4;|pin@1||U
+Evdd||D5G4;|pin@0||U
+X
+
+# Cell AND_3_sim;1{sch}
+CAND_3_sim;1{sch}||schematic|1582883976694|1582884096445|
+IAND_3;1{sch}|AND_3@0||0.5|1.5|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NWire_Pin|pin@0||-27|12.5||||
+NWire_Pin|pin@3||36.5|9.5||||
+NWire_Pin|pin@5||-28.5|-7.5||||
+NPower|pwr@0||-28.5|-1.5||||
+NPower|pwr@1||-28.5|-7.5||||
+Awire|A|D5G1;||0|AND_3@0|A|-18.5|12.5|pin@0||-27|12.5
+Awire|net@6|||0|AND_3@0|B|-18.5|-1.5|pwr@0||-28.5|-1.5
+Awire|net@7|||0|AND_3@0|C|-18.5|-7.5|pin@5||-28.5|-7.5
+Awire|net@8|||900|pwr@1||-28.5|-7.5|pin@5||-28.5|-7.5
+Awire|out|D5G1;||1800|AND_3@0|out|29|9.5|pin@3||36.5|9.5
+X
+
 # Cell NAND_2;1{ic}
 CNAND_2;1{ic}||artwork|1582778501942|1582762505113|E
 Ngeneric:Facet-Center|art@0||0|0||||AV
