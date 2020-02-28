@@ -1,7 +1,7 @@
 *** SPICE deck for cell NAND_3_sim{lay} from library tutorial_4
 *** Created on Fri Feb 28, 2020 05:16:12
-*** Last revised on Fri Feb 28, 2020 06:40:54
-*** Written on Fri Feb 28, 2020 06:41:17 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Feb 28, 2020 06:59:31
+*** Written on Fri Feb 28, 2020 06:59:33 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -84,7 +84,7 @@ C1 out 0 1.821fF
 * Spice Code nodes in cell cell 'NAND_3_sim{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-Vin A 0 PULSE(3.3 0 0 5ns 10ns 100ns 200ns)
+vin A 0 PULSE(0 3.3 0 5ns 10ns 200ns)
 cload out 0 250fF
 .tran 0 40n
 .include C:\Electric\C5_models.txt
