@@ -11,7 +11,7 @@ Tbicmos|ScaleFORbicmos()D175.0
 Tmocmos|ScaleFORmocmos()D175.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
 
 # Cell AND_3;1{lay}
-CAND_3;1{lay}||mocmos|1582880247789|1582911103684||DRC_last_good_drc_area_date()G1582911107013|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582911107013
+CAND_3;1{lay}||mocmos|1582880247789|1582920847145||DRC_last_good_drc_area_date()G1582920181942|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582920181942
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-N-Active-Con|contact@0||-21.5|-13|5||R|
 NMetal-1-P-Active-Con|contact@1||-24.5|9|5||RRR|
@@ -117,6 +117,7 @@ AMetal-1|net@232||1|S1800|pin@6||0|-3.5|pin@78||5|-3.5
 AMetal-1|net@236||1|S900|pin@78||5|-3.5|pin@80||5|-7.5
 AMetal-1|net@237||1|S900|pin@80||5|-7.5|pin@81||5|-8.5
 AMetal-1|net@238||1|S0|contact@19||20|-8.5|pin@81||5|-8.5
+AMetal-1|net@239||1|S2700|contact@18||32|-8.5|contact@16||32|9
 EA||D5G4;|contact@8||U
 EB||D5G4;|contact@11||U
 EC||D5G4;|contact@9||U
@@ -236,22 +237,22 @@ Awire|net@2|||1800|NAND_3@1|out|-4|8.5|inv_20_1@1|in|-1.5|8.5
 X
 
 # Cell AND_3_sim;1{lay}
-CAND_3_sim;1{lay}||mocmos|1582883788002|1582911205064||DRC_last_good_drc_area_date()G1582885361474|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582885361474
-IAND_3;1{lay}|AND_3@0||-4.5|-3.5|||D5G4;
+CAND_3_sim;1{lay}||mocmos|1582883788002|1582923786910||DRC_last_good_drc_area_date()G1582885361474|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582885361474
+IAND_3;1{lay}|AND_3@0||-6|-4|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NMetal-1-Pin|pin@0||-17|37.5||||
-NMetal-1-Pin|pin@1||-17.5|-46.5||||
-NMetal-2-Pin|pin@2||47|-11||||
-NMetal-2-Pin|pin@7||-48.5|-4.5||||
-Ngeneric:Invisible-Pin|pin@8||-81|39.5|||||SIM_spice_card(D5G4;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 90ns),vin2 B 0 PULSE(0 3.3 0 1ns 1ns 28ns 28ns),cload out 0 250fF,.tran 0 80n,".include C:\\Electric\\C5_models.txt"]
-NMetal-2-Pin|pin@10||-48.5|16.5||||
-NMetal-2-Pin|pin@12||-48.5|-27.5||||
-AMetal-2|A|D5G4;|1|S0|AND_3@0|A|-36|-4.5|pin@7||-48.5|-4.5
-AMetal-2|B|D5G4;|1|S0|AND_3@0|B|-36|16.5|pin@10||-48.5|16.5
-AMetal-2|C|D5G4;|1|S0|AND_3@0|C|-35.5|-27.5|pin@12||-48.5|-27.5
-AMetal-1|net@1||1|S900|AND_3@0|gnd|-17.5|-33|pin@1||-17.5|-46.5
-AMetal-1|net@9||1|S2700|AND_3@0|vdd|-17|22|pin@0||-17|37.5
-AMetal-2|out|D5G4;|1|S1800|AND_3@0|out|26.5|-11|pin@2||47|-11
+NMetal-1-Pin|pin@0||-18.5|37||||
+NMetal-1-Pin|pin@1||-19|-47||||
+NMetal-2-Pin|pin@7||-48|-4.5||||
+NMetal-2-Pin|pin@10||-48|16||||
+NMetal-2-Pin|pin@12||-49|-28||||
+Ngeneric:Invisible-Pin|pin@13||-3.5|-71.5|||||SIM_spice_card(D5G4;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns),vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns),vin3 C 0 PULSE(0 3.3 0 1ns 1ns 8ns 20ns),cload out 0 250fF,.tran 0 80n,".include C:\\Electric\\C5_models.txt"]
+NMetal-2-Pin|pin@14||44.5|-12.5||||
+AMetal-2|A|D5G4;|1|S0|AND_3@0|A|-37.5|-4.5|pin@7||-48|-4.5
+AMetal-2|B|D5G4;|1|S0|AND_3@0|B|-37.5|16|pin@10||-48|16
+AMetal-2|C|D5G4;|1|S0|AND_3@0|C|-37|-28|pin@12||-49|-28
+AMetal-1|net@1||1|S900|AND_3@0|gnd|-19|-33.5|pin@1||-19|-47
+AMetal-1|net@9||1|S2700|AND_3@0|vdd|-18.5|21.5|pin@0||-18.5|37
+AMetal-2|out|D5G4;X0.5;|1|S1800|AND_3@0|out|26|-12.5|pin@14||44.5|-12.5
 Egnd||D5G4;|pin@1||U
 Evdd||D5G4;|pin@0||U
 X
