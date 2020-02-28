@@ -1,0 +1,25 @@
+*** SPICE deck for cell NAND_sim{lay} from library tutorial_3
+*** Created on Thu Feb 27, 2020 02:00:35
+*** Last revised on Thu Feb 27, 2020 02:14:15
+*** Written on Thu Feb 27, 2020 21:04:48 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT tutorial_3__NAND_2 FROM CELL NAND_2{lay}
+.SUBCKT tutorial_3__NAND_2 A AnandB B gnd vdd
+Mnmos@0 net@9 B gnd gnd NMOS L=0.35U W=1.75U AS=6.431P AD=0.689P PS=17.85U PD=2.537U
+Mnmos@1 AnandB A net@9 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.48P PS=2.537U PD=4.025U
+Mpmos@0 vdd B AnandB vdd PMOS L=0.35U W=1.75U AS=1.48P AD=4.134P PS=4.025U PD=11.725U
+Mpmos@1 AnandB A vdd vdd PMOS L=0.35U W=1.75U AS=4.134P AD=1.48P PS=11.725U PD=4.025U
+.ENDS tutorial_3__NAND_2
+
+*** TOP LEVEL CELL: NAND_sim{lay}
+XNAND_2@1 in out vdd gnd vdd tutorial_3__NAND_2
+
+* Spice Code nodes in cell cell 'NAND_sim{lay}'
+vdd vdd 0 dc 5
+vin in 0 dc 0 pulse 0 5 10n 1n
+cload out 0 250fF
+.tran 0 40n
+.include C:\Electric\C5_models.txt
+.END
