@@ -155,7 +155,7 @@ Eout||D5G2;|pin@6||U
 X
 
 # Cell NAND_3;1{lay}
-CNAND_3;1{lay}||mocmos|1582857448601|1582888545938||DRC_last_good_drc_area_date()G1582889408048|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582889408048
+CNAND_3;1{lay}||mocmos|1582857448601|1582886221423||DRC_last_good_drc_area_date()G1582886224038|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1582886224038
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-N-Active-Con|contact@0||-7.5|-11|5||R|
 NMetal-1-P-Active-Con|contact@1||-10.5|11|5||RRR|
@@ -164,9 +164,9 @@ NMetal-1-P-Active-Con|contact@3||-2.5|11|5||RRR|
 NMetal-1-N-Active-Con|contact@4||11.5|-11|5||R|
 NMetal-1-P-Active-Con|contact@5||14|11|5||RRR|
 NMetal-1-Polysilicon-1-Con|contact@6||-14.5|-2.5||||
-NMetal-1-Polysilicon-1-Con|contact@7||19.5|-10||||
+NMetal-1-Polysilicon-1-Con|contact@7||18.5|-8.5||||
 NMetal-1-Metal-2-Con|contact@8||-14.5|-2.5||||
-NMetal-1-Metal-2-Con|contact@9||19.5|-10||||
+NMetal-1-Metal-2-Con|contact@9||18.5|-8.5||||
 NMetal-1-Polysilicon-1-Con|contact@14||-17.5|22||||
 NMetal-1-Metal-2-Con|contact@15||-17.5|22||||
 NMetal-1-Metal-2-Con|contact@16||14|2||||
@@ -183,8 +183,7 @@ NMetal-1-Pin|pin@24||-2.5|-1.5||||
 NMetal-1-Pin|pin@25||14|-1.5||||
 NMetal-1-Pin|pin@30||14|2.5||||
 NPolysilicon-1-Pin|pin@37||9.5|-4||||
-NPolysilicon-1-Pin|pin@38||19.5|-4||||
-NPolysilicon-1-Pin|pin@39||19.5|-1||||
+NPolysilicon-1-Pin|pin@39||18.5|-1||||
 NPolysilicon-1-Pin|pin@40||9.5|-1||||
 NP-Transistor|pmos@0||-6.5|11|7||RRR||SIM_spice_model(D5G1;)SPMOS
 NP-Transistor|pmos@1||1.5|11|7||RRR||SIM_spice_model(D5G1;)SPMOS
@@ -223,12 +222,11 @@ AMetal-1|net@106||1|S900|contact@5||14|11|pin@25||14|-1.5
 AMetal-1|net@113||1|S2700|pin@25||14|-1.5|pin@30||14|2.5
 AMetal-1|net@128||1|S0|contact@16||14|2.5|pin@30||14|2.5
 APolysilicon-1|net@130|||S1800|nmos@2|poly-right|7|-4|pin@37||9.5|-4
-APolysilicon-1|net@133|||S2700|contact@7||19.5|-10|pin@38||19.5|-4
-APolysilicon-1|net@135|||S2700|pin@38||19.5|-4|pin@39||19.5|-1
 APolysilicon-1|net@136|||S900|pmos@2|poly-right|9.5|4|pin@40||9.5|-1
 APolysilicon-1|net@137|||S900|pin@40||9.5|-1|pin@37||9.5|-4
-APolysilicon-1|net@138|||S0|pin@39||19.5|-1|pin@40||9.5|-1
-AMetal-1|net@139||1|S0|contact@9||19.5|-10|contact@7||19.5|-10
+APolysilicon-1|net@138|||S0|pin@39||18.5|-1|pin@40||9.5|-1
+APolysilicon-1|net@140|||S2700|contact@7||18.5|-8.5|pin@39||18.5|-1
+AMetal-1|net@141||1|S0|contact@9||18.5|-8.5|contact@7||18.5|-8.5
 EA||D5G4;|contact@8||U
 EB||D5G4;X-0.5;|contact@15||U
 EC||D5G4;|contact@9||U
@@ -296,38 +294,35 @@ Eout||D5G2;|conn@2|y|U
 X
 
 # Cell NAND_3_sim;1{lay}
-CNAND_3_sim;1{lay}||mocmos|1582884972309|1582890028862|
-INAND_3;1{lay}|NAND_3@0||-1.5|-2.5|||D5G4;
+CNAND_3_sim;1{lay}||mocmos|1582884972309|1582886848170|
+INAND_3;1{lay}|NAND_3@0||-1.5|-1.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NMetal-1-Metal-2-Con|contact@0||1|36||||
-NMetal-1-Pin|pin@5||1|-40.5||||
-NMetal-1-Pin|pin@14||1|42||||
-NMetal-2-Pin|pin@15||-27|20||||
-NMetal-2-Pin|pin@16||-27|36||||
-NMetal-2-Pin|pin@19||23|35||||
-NMetal-2-Pin|pin@20||23|36||||
-NMetal-2-Pin|pin@22||23|-12||||
-NMetal-2-Pin|pin@23||13|-41||||
-NMetal-2-Pin|pin@25||-35|-5||||
-Ngeneric:Invisible-Pin|pin@26||-59|-27.5|||||SIM_spice_card(D5G4;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,Vin A 0 PULSE(3.3 0 0 5ns 10ns 100ns 200ns),".include C:\\Electric\\C5_models.txt"]
-AMetal-2|A|D5G5;|1|S0|NAND_3@0|A|-16|-5|pin@25||-35|-5
-AMetal-1|net@5||1|S900|NAND_3@0|gnd|1|-25|pin@5||1|-40.5
-AMetal-2|net@20||1|S0|NAND_3@0|B|-19|20|pin@15||-27|20
-AMetal-2|net@21||1|S2700|pin@15||-27|20|pin@16||-27|36
-AMetal-1|net@22||1|S2700|NAND_3@0|vdd|1|25|contact@0||1|36
-AMetal-1|net@23||1|S2700|contact@0||1|36|pin@14||1|42
-AMetal-2|net@28||1|S2700|pin@19||23|35|pin@20||23|36
-AMetal-2|net@31||1|S1800|NAND_3@0|C|18|-12|pin@22||23|-12
-AMetal-2|net@32||1|S2700|pin@22||23|-12|pin@20||23|36
-AMetal-2|out|D5G5;Y-16;|1|S900|NAND_3@0|out|13|0|pin@23||13|-41
-AMetal-2|vdd|D5G5;|1|S1800|pin@16||-27|36|contact@0||1|36
-AMetal-2|vdd|D5G5;|1|S1800|contact@0||1|36|pin@20||23|36
-Egnd||D5G2;|pin@5||U
-Evdd||D5G2;|pin@14||U
+NMetal-1-Metal-2-Con|contact@2||1|39.5||||
+NMetal-1-Pin|pin@17||1|-37||||
+NMetal-2-Pin|pin@19||-30.5|20.5||||
+NMetal-2-Pin|pin@21||-30.5|39.5||||
+NMetal-1-Pin|pin@22||1|45.5||||
+NMetal-2-Pin|pin@23||-31.5|-4||||
+NMetal-2-Pin|pin@24||12.5|-35||||
+NMetal-2-Pin|pin@28||23.5|-10||||
+NMetal-2-Pin|pin@30||23.5|39.5||||
+AMetal-2|in|D5G5;|1|S0|NAND_3@0|A|-16|-4|pin@23||-31.5|-4
+AMetal-1|net@25||1|S900|NAND_3@0|gnd|1|-24|pin@17||1|-37
+AMetal-2|net@27||1|S0|NAND_3@0|B|-19|20.5|pin@19||-30.5|20.5
+AMetal-2|net@32||1|S2700|pin@19||-30.5|20.5|pin@21||-30.5|39.5
+AMetal-1|net@38||1|S2700|NAND_3@0|vdd|1|26|contact@2||1|39.5
+AMetal-1|net@39||1|S2700|contact@2||1|39.5|pin@22||1|45.5
+AMetal-2|net@46||1|S1800|NAND_3@0|C|17|-10|pin@28||23.5|-10
+AMetal-2|net@50||1|S900|pin@30||23.5|39.5|pin@28||23.5|-10
+AMetal-2|out|D5G5;X0.5;Y-15;|1|S900|NAND_3@0|out|12.5|0.5|pin@24||12.5|-35
+AMetal-2|vdd|D5G5;|1|S1800|pin@21||-30.5|39.5|contact@2||1|39.5
+AMetal-2|vdd|D5G5;|1|S1800|contact@2||1|39.5|pin@30||23.5|39.5
+Egnd||D5G2;|pin@17||U
+Evdd||D5G2;|pin@22||U
 X
 
 # Cell NAND_3_sim;1{sch}
-CNAND_3_sim;1{sch}||schematic|1582884835951|1582889972015|
+CNAND_3_sim;1{sch}||schematic|1582884835951|1582884943733|
 INAND_3;1{ic}|NAND_3@0||-1.5|-1.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NWire_Pin|pin@0||7.5|-0.5||||
@@ -335,7 +330,7 @@ NWire_Pin|pin@1||-9.5|1.5||||
 NWire_Pin|pin@4||-6.5|-4.5||||
 NPower|pwr@0||-11|-4.5||||
 NPower|pwr@1||-11|-0.5||||
-Awire|A|D5G1;||0|NAND_3@0|A|-6.5|1.5|pin@1||-9.5|1.5
+Awire|in|D5G1;||0|NAND_3@0|A|-6.5|1.5|pin@1||-9.5|1.5
 Awire|net@6|||0|NAND_3@0|B|-6.5|-0.5|pwr@1||-11|-0.5
 Awire|net@7|||900|NAND_3@0|C|-6.5|-2.5|pin@4||-6.5|-4.5
 Awire|net@8|||1800|pwr@0||-11|-4.5|pin@4||-6.5|-4.5
@@ -551,14 +546,14 @@ Evdd||D5G5;|well@0||U
 X
 
 # Cell inv_20_10;1{sch}
-Cinv_20_10;1{sch}||schematic|1262901450917|1582889311584|
+Cinv_20_10;1{sch}||schematic|1262901450917|1262903740399|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-5|6||||
 NOff-Page|conn@1||10|6||||
 NGround|gnd@0||3|-1.5|-1|-1||
 Iinv_20_10;1{ic}|inv_20_1@0||16|19|||D5G4;
-NTransistor|nmos@0||1|3|||R||ATTR_length(D5G0.5;X0.25;Y-3;)D2.0|ATTR_width(D5G1;X1;Y-3;)D10.0|SIM_spice_model(D5G1;X-0.5;Y-3.5;)SNMOS
-NTransistor|nmos@1||1|9|||YR|2|ATTR_length(D5G0.5;X-0.25;Y-3;)D2.0|ATTR_width(D5G1;X-1;Y-3;)D20.0|SIM_spice_model(D5G1;X0.5;Y-3.5;)SPMOS
+NTransistor|nmos@0||1|3|||R||ATTR_length(D5G0.5;RRRX0.25;Y-2;)D2.0|ATTR_width(D5G1;RRRX1;Y-2;)D10.0|SIM_spice_model(D5G1;RRRX-0.5;Y-3.5;)SNMOS
+NTransistor|nmos@1||1|9|||YR|2|ATTR_length(D5G0.5;RRRX0.25;Y-2;)D2.0|ATTR_width(D5G1;RRRX1;Y-2;)D20.0|SIM_spice_model(D5G1;RRRX-0.5;Y-3.5;)SPMOS
 NWire_Pin|pin@0||0|6||||
 NWire_Pin|pin@1||3|6||||
 NPower|pwr@0||3|13|-1|-1||
