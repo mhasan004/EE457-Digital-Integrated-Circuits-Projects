@@ -1,7 +1,7 @@
 *** SPICE deck for cell AND_3_sim{lay} from library tutorial_4
 *** Created on Fri Feb 28, 2020 04:56:28
 *** Last revised on Fri Feb 28, 2020 16:03:06
-*** Written on Fri Feb 28, 2020 16:16:12 by Electric VLSI Design System, version 9.07
+*** Written on Fri Feb 28, 2020 23:58:33 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
