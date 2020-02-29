@@ -1,8 +1,0 @@
-VDD VDD 0 DC 3.3
-VGND GND 0 DC 0
-vin A 0 PULSE(0 3.3 0 5ns 10ns 185ns 0ns)
-vin2 B vdd
-vin3 C vdd
-cload out 0 250fF
-.tran 0 200n
-.include C:\Electric\C5_models.txt
