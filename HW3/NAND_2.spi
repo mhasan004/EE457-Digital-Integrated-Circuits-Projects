@@ -1,0 +1,58 @@
+*** SPICE deck for cell NAND_2{lay} from library project_1
+*** Created on Thu Jan 07, 2010 18:59:18
+*** Last revised on Tue Mar 03, 2020 19:15:17
+*** Written on Tue Mar 03, 2020 19:15:18 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+*** WARNING: no power connection for P-transistor wells in cell 'NAND_2{lay}'
+*** WARNING: no ground connection for N-transistor wells in cell 'NAND_2{lay}'
+
+*** TOP LEVEL CELL: NAND_2{lay}
+Mnmos@2 net@91 net@80 net@72 gnd NMOS L=0.35U W=1.75U AS=6.431P AD=0.689P PS=17.85U PD=2.537U
+Mnmos@3 net@71 net@77 net@91 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.48P PS=2.537U PD=4.025U
+Mpmos@2 net@70 net@80#2pmos@2_poly-right net@71 vdd PMOS L=0.35U W=1.75U AS=1.48P AD=4.134P PS=4.025U PD=11.725U
+Mpmos@3 net@71 net@77#2pmos@3_poly-right net@70 vdd PMOS L=0.35U W=1.75U AS=4.134P AD=1.48P PS=11.725U PD=4.025U
+** Extracted Parasitic Capacitors ***
+C0 net@72 0 0.855fF
+C1 net@70 0 1.657fF
+C2 net@71 0 1.791fF
+C3 net@80#3pin@36_polysilicon-1 0 0.13fF
+C4 net@77#3pin@37_polysilicon-1 0 0.141fF
+** Extracted Parasitic Resistors ***
+R0 net@77 net@77#1pin@34_polysilicon-1 6.2
+R1 net@80 net@80#1pin@35_polysilicon-1 4.65
+R2 net@80#2pmos@2_poly-right net@80#2pmos@2_poly-right##0 6.2
+R3 net@80#2pmos@2_poly-right##0 net@80#3pin@36_polysilicon-1 6.2
+R4 net@80#3pin@36_polysilicon-1 net@80#3pin@36_polysilicon-1##0 6.2
+R5 net@80#3pin@36_polysilicon-1##0 net@80#1pin@35_polysilicon-1 6.2
+R6 net@80#4contact@19_metal-1-polysilicon-1 net@80#4contact@19_metal-1-polysilicon-1##0 6.717
+R7 net@80#4contact@19_metal-1-polysilicon-1##0 net@80#4contact@19_metal-1-polysilicon-1##1 6.717
+R8 net@80#4contact@19_metal-1-polysilicon-1##1 net@80#3pin@36_polysilicon-1 6.717
+R9 net@77#2pmos@3_poly-right net@77#2pmos@3_poly-right##0 6.2
+R10 net@77#2pmos@3_poly-right##0 net@77#3pin@37_polysilicon-1 6.2
+R11 net@77#3pin@37_polysilicon-1 net@77#3pin@37_polysilicon-1##0 6.2
+R12 net@77#3pin@37_polysilicon-1##0 net@77#1pin@34_polysilicon-1 6.2
+R13 net@77#4contact@20_metal-1-polysilicon-1 net@77#4contact@20_metal-1-polysilicon-1##0 7.75
+R14 net@77#4contact@20_metal-1-polysilicon-1##0 net@77#4contact@20_metal-1-polysilicon-1##1 7.75
+R15 net@77#4contact@20_metal-1-polysilicon-1##1 net@77#4contact@20_metal-1-polysilicon-1##2 7.75
+R16 net@77#4contact@20_metal-1-polysilicon-1##2 net@77#3pin@37_polysilicon-1 7.75
+.END
