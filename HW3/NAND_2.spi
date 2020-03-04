@@ -1,7 +1,7 @@
 *** SPICE deck for cell NAND_2{lay} from library project_1
 *** Created on Thu Jan 07, 2010 18:59:18
-*** Last revised on Tue Mar 03, 2020 19:15:17
-*** Written on Tue Mar 03, 2020 19:15:18 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed Mar 04, 2020 03:28:51
+*** Written on Wed Mar 04, 2020 03:30:20 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -23,36 +23,41 @@
 ***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
 ***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
 ***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
-*** WARNING: no power connection for P-transistor wells in cell 'NAND_2{lay}'
-*** WARNING: no ground connection for N-transistor wells in cell 'NAND_2{lay}'
 
 *** TOP LEVEL CELL: NAND_2{lay}
-Mnmos@2 net@91 net@80 net@72 gnd NMOS L=0.35U W=1.75U AS=6.431P AD=0.689P PS=17.85U PD=2.537U
-Mnmos@3 net@71 net@77 net@91 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.48P PS=2.537U PD=4.025U
-Mpmos@2 net@70 net@80#2pmos@2_poly-right net@71 vdd PMOS L=0.35U W=1.75U AS=1.48P AD=4.134P PS=4.025U PD=11.725U
-Mpmos@3 net@71 net@77#2pmos@3_poly-right net@70 vdd PMOS L=0.35U W=1.75U AS=4.134P AD=1.48P PS=11.725U PD=4.025U
+Mnmos@0 net@66 B#0nmos@0_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.431P AD=0.689P PS=17.85U PD=2.537U
+Mnmos@1 out A#0nmos@1_poly-right net@66 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.48P PS=2.537U PD=4.025U
+Mpmos@0 vdd B#2pmos@0_poly-right out vdd PMOS L=0.35U W=1.75U AS=1.48P AD=4.134P PS=4.025U PD=11.725U
+Mpmos@1 out A#2pmos@1_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=4.134P AD=1.48P PS=11.725U PD=4.025U
 ** Extracted Parasitic Capacitors ***
-C0 net@72 0 0.855fF
-C1 net@70 0 1.657fF
-C2 net@71 0 1.791fF
-C3 net@80#3pin@36_polysilicon-1 0 0.13fF
-C4 net@77#3pin@37_polysilicon-1 0 0.141fF
+C0 out 0 1.737fF
+C1 B#3pin@23_polysilicon-1 0 0.13fF
+C2 A#3pin@24_polysilicon-1 0 0.141fF
 ** Extracted Parasitic Resistors ***
-R0 net@77 net@77#1pin@34_polysilicon-1 6.2
-R1 net@80 net@80#1pin@35_polysilicon-1 4.65
-R2 net@80#2pmos@2_poly-right net@80#2pmos@2_poly-right##0 6.2
-R3 net@80#2pmos@2_poly-right##0 net@80#3pin@36_polysilicon-1 6.2
-R4 net@80#3pin@36_polysilicon-1 net@80#3pin@36_polysilicon-1##0 6.2
-R5 net@80#3pin@36_polysilicon-1##0 net@80#1pin@35_polysilicon-1 6.2
-R6 net@80#4contact@19_metal-1-polysilicon-1 net@80#4contact@19_metal-1-polysilicon-1##0 6.717
-R7 net@80#4contact@19_metal-1-polysilicon-1##0 net@80#4contact@19_metal-1-polysilicon-1##1 6.717
-R8 net@80#4contact@19_metal-1-polysilicon-1##1 net@80#3pin@36_polysilicon-1 6.717
-R9 net@77#2pmos@3_poly-right net@77#2pmos@3_poly-right##0 6.2
-R10 net@77#2pmos@3_poly-right##0 net@77#3pin@37_polysilicon-1 6.2
-R11 net@77#3pin@37_polysilicon-1 net@77#3pin@37_polysilicon-1##0 6.2
-R12 net@77#3pin@37_polysilicon-1##0 net@77#1pin@34_polysilicon-1 6.2
-R13 net@77#4contact@20_metal-1-polysilicon-1 net@77#4contact@20_metal-1-polysilicon-1##0 7.75
-R14 net@77#4contact@20_metal-1-polysilicon-1##0 net@77#4contact@20_metal-1-polysilicon-1##1 7.75
-R15 net@77#4contact@20_metal-1-polysilicon-1##1 net@77#4contact@20_metal-1-polysilicon-1##2 7.75
-R16 net@77#4contact@20_metal-1-polysilicon-1##2 net@77#3pin@37_polysilicon-1 7.75
+R0 A#0nmos@1_poly-right A#1pin@21_polysilicon-1 6.2
+R1 B#0nmos@0_poly-right B#1pin@22_polysilicon-1 4.65
+R2 B#2pmos@0_poly-right B#2pmos@0_poly-right##0 6.2
+R3 B#2pmos@0_poly-right##0 B#3pin@23_polysilicon-1 6.2
+R4 B#3pin@23_polysilicon-1 B#3pin@23_polysilicon-1##0 6.2
+R5 B#3pin@23_polysilicon-1##0 B#1pin@22_polysilicon-1 6.2
+R6 B B##0 6.717
+R7 B##0 B##1 6.717
+R8 B##1 B#3pin@23_polysilicon-1 6.717
+R9 A#2pmos@1_poly-right A#2pmos@1_poly-right##0 6.2
+R10 A#2pmos@1_poly-right##0 A#3pin@24_polysilicon-1 6.2
+R11 A#3pin@24_polysilicon-1 A#3pin@24_polysilicon-1##0 6.2
+R12 A#3pin@24_polysilicon-1##0 A#1pin@21_polysilicon-1 6.2
+R13 A A##0 7.75
+R14 A##0 A##1 7.75
+R15 A##1 A##2 7.75
+R16 A##2 A#3pin@24_polysilicon-1 7.75
+
+* Spice Code nodes in cell cell 'NAND_2{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
+vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
+cload out 0 250fF
+.tran 0 80n
+.include C:\Electric\C5_models.txt
 .END
