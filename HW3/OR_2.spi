@@ -1,7 +1,7 @@
 *** SPICE deck for cell OR_2{lay} from library project_1
 *** Created on Tue Mar 03, 2020 20:00:00
-*** Last revised on Tue Mar 03, 2020 20:14:56
-*** Written on Tue Mar 03, 2020 20:15:00 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed Mar 04, 2020 01:22:39
+*** Written on Wed Mar 04, 2020 01:22:44 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
