@@ -1,0 +1,63 @@
+*** SPICE deck for cell HW3{lay} from library project_1_delmaybe
+*** Created on Wed Mar 04, 2020 00:07:52
+*** Last revised on Wed Mar 04, 2020 00:23:50
+*** Written on Wed Mar 04, 2020 00:23:52 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: HW3{lay}
+Mnmos@0 a2 A#2nmos@0_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=4.9P AD=2.756P PS=14.35U PD=7.35U
+Mnmos@2 d2 D#3nmos@2_poly-right net@54 gnd NMOS L=0.35U W=1.75U AS=4.9P AD=2.756P PS=14.35U PD=7.35U
+Mpmos@0 vdd A#0pmos@0_poly-right a2 vdd PMOS L=0.35U W=3.5U AS=2.756P AD=6.738P PS=7.35U PD=17.85U
+Mpmos@2 net@49 D#0pmos@2_poly-right d2 vdd PMOS L=0.35U W=3.5U AS=2.756P AD=6.738P PS=7.35U PD=17.85U
+** Extracted Parasitic Capacitors ***
+C0 a2 0 1.443fF
+C1 net@54 0 0.615fF
+C2 d2 0 1.443fF
+C3 net@49 0 0.882fF
+C4 A#1pin@2_polysilicon-1 0 0.154fF
+C5 D#1pin@12_polysilicon-1 0 0.154fF
+** Extracted Parasitic Resistors ***
+R0 A#0pmos@0_poly-right A#0pmos@0_poly-right##0 8.525
+R1 A#0pmos@0_poly-right##0 A#1pin@2_polysilicon-1 8.525
+R2 A#1pin@2_polysilicon-1 A#2nmos@0_poly-right 7.75
+R3 A A##0 7.75
+R4 A##0 A##1 7.75
+R5 A##1 A##2 7.75
+R6 A##2 A#1pin@2_polysilicon-1 7.75
+R7 D#0pmos@2_poly-right D#0pmos@2_poly-right##0 8.525
+R8 D#0pmos@2_poly-right##0 D#1pin@12_polysilicon-1 8.525
+R9 D#1pin@12_polysilicon-1 D#3nmos@2_poly-right 7.75
+R10 D D##0 7.75
+R11 D##0 D##1 7.75
+R12 D##1 D##2 7.75
+R13 D##2 D#1pin@12_polysilicon-1 7.75
+
+* Spice Code nodes in cell cell 'HW3{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
+vin2 D 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
+cload out 0 250fF
+.tran 0 80n
+.include C:\Electric\C5_models.txt
+.END

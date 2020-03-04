@@ -1,10 +1,10 @@
 l A
 l B
-s 2
+s 1
 h A
-s 2
+s 1
 h B
 s 0
 l A
-s 2
+s 1
 h A

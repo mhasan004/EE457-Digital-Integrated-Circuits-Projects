@@ -1,7 +1,7 @@
 *** SPICE deck for cell AND_2{lay} from library project_1
 *** Created on Wed Mar 04, 2020 02:08:28
-*** Last revised on Wed Mar 04, 2020 03:27:38
-*** Written on Wed Mar 04, 2020 03:30:10 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed Mar 04, 2020 03:35:47
+*** Written on Wed Mar 04, 2020 03:36:11 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -25,37 +25,47 @@
 ***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
 
 *** TOP LEVEL CELL: AND_2{lay}
-Mnmos@6 net@131 A#0nmos@6_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=4.9P AD=0.689P PS=14.35U PD=2.537U
-Mnmos@7 out B#0nmos@7_poly-right net@131 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.276P PS=2.537U PD=3.792U
-Mpmos@6 vdd A#2pmos@6_poly-right out vdd PMOS L=0.35U W=1.75U AS=1.276P AD=3.216P PS=3.792U PD=9.8U
-Mpmos@7 out B#2pmos@7_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=3.216P AD=1.276P PS=9.8U PD=3.792U
+Mnmos@6 net@131 B#0nmos@6_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=4.9P AD=0.689P PS=14.35U PD=2.537U
+Mnmos@7 net@111 A#0nmos@7_poly-right net@131 gnd NMOS L=0.35U W=1.75U AS=0.689P AD=1.276P PS=2.537U PD=3.792U
+Mnmos@9 out net@111#11nmos@9_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=4.9P AD=2.756P PS=14.35U PD=7.35U
+Mpmos@6 vdd B#2pmos@6_poly-right net@111 vdd PMOS L=0.35U W=1.75U AS=1.276P AD=4.39P PS=3.792U PD=12.483U
+Mpmos@7 net@111 A#2pmos@7_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=4.39P AD=1.276P PS=12.483U PD=3.792U
+Mpmos@9 vdd net@111#9pmos@9_poly-right out vdd PMOS L=0.35U W=3.5U AS=2.756P AD=4.39P PS=7.35U PD=12.483U
 ** Extracted Parasitic Capacitors ***
-C0 out 0 2.179fF
-C1 B#0nmos@7_poly-right 0 0.101fF
-C2 A#3pin@34_polysilicon-1 0 0.13fF
-C3 B#4pin@39_polysilicon-1 0 0.106fF
-C4 B#5pin@40_polysilicon-1 0 0.116fF
+C0 net@111 0 3.264fF
+C1 out 0 1.39fF
+C2 A#0nmos@7_poly-right 0 0.101fF
+C3 B#3pin@34_polysilicon-1 0 0.13fF
+C4 A#4pin@39_polysilicon-1 0 0.106fF
+C5 A#5pin@40_polysilicon-1 0 0.116fF
+C6 net@111#10pin@57_polysilicon-1 0 0.15fF
 ** Extracted Parasitic Resistors ***
-R0 A#0nmos@6_poly-right A#1pin@33_polysilicon-1 4.65
-R1 A#2pmos@6_poly-right A#2pmos@6_poly-right##0 6.2
-R2 A#2pmos@6_poly-right##0 A#3pin@34_polysilicon-1 6.2
-R3 A#3pin@34_polysilicon-1 A#3pin@34_polysilicon-1##0 6.2
-R4 A#3pin@34_polysilicon-1##0 A#1pin@33_polysilicon-1 6.2
-R5 A A##0 6.717
-R6 A##0 A##1 6.717
-R7 A##1 A#3pin@34_polysilicon-1 6.717
-R8 B#2pmos@7_poly-right B#2pmos@7_poly-right##0 8.267
-R9 B#2pmos@7_poly-right##0 B#2pmos@7_poly-right##1 8.267
-R10 B#2pmos@7_poly-right##1 B#0nmos@7_poly-right 8.267
-R11 B#0nmos@7_poly-right B#0nmos@7_poly-right##0 6.2
-R12 B#0nmos@7_poly-right##0 B#4pin@39_polysilicon-1 6.2
-R13 B#4pin@39_polysilicon-1 B#4pin@39_polysilicon-1##0 8.06
-R14 B#4pin@39_polysilicon-1##0 B#4pin@39_polysilicon-1##1 8.06
-R15 B#4pin@39_polysilicon-1##1 B#4pin@39_polysilicon-1##2 8.06
-R16 B#4pin@39_polysilicon-1##2 B#4pin@39_polysilicon-1##3 8.06
-R17 B#4pin@39_polysilicon-1##3 B#5pin@40_polysilicon-1 8.06
-R18 B#5pin@40_polysilicon-1 B#5pin@40_polysilicon-1##0 7.75
-R19 B#5pin@40_polysilicon-1##0 B 7.75
+R0 B#0nmos@6_poly-right B#1pin@33_polysilicon-1 4.65
+R1 B#2pmos@6_poly-right B#2pmos@6_poly-right##0 6.2
+R2 B#2pmos@6_poly-right##0 B#3pin@34_polysilicon-1 6.2
+R3 B#3pin@34_polysilicon-1 B#3pin@34_polysilicon-1##0 6.2
+R4 B#3pin@34_polysilicon-1##0 B#1pin@33_polysilicon-1 6.2
+R5 B B##0 6.717
+R6 B##0 B##1 6.717
+R7 B##1 B#3pin@34_polysilicon-1 6.717
+R8 A#2pmos@7_poly-right A#2pmos@7_poly-right##0 8.267
+R9 A#2pmos@7_poly-right##0 A#2pmos@7_poly-right##1 8.267
+R10 A#2pmos@7_poly-right##1 A#0nmos@7_poly-right 8.267
+R11 A#0nmos@7_poly-right A#0nmos@7_poly-right##0 6.2
+R12 A#0nmos@7_poly-right##0 A#4pin@39_polysilicon-1 6.2
+R13 A#4pin@39_polysilicon-1 A#4pin@39_polysilicon-1##0 8.06
+R14 A#4pin@39_polysilicon-1##0 A#4pin@39_polysilicon-1##1 8.06
+R15 A#4pin@39_polysilicon-1##1 A#4pin@39_polysilicon-1##2 8.06
+R16 A#4pin@39_polysilicon-1##2 A#4pin@39_polysilicon-1##3 8.06
+R17 A#4pin@39_polysilicon-1##3 A#5pin@40_polysilicon-1 8.06
+R18 A#5pin@40_polysilicon-1 A#5pin@40_polysilicon-1##0 7.75
+R19 A#5pin@40_polysilicon-1##0 A 7.75
+R20 net@111#9pmos@9_poly-right net@111#9pmos@9_poly-right##0 8.525
+R21 net@111#9pmos@9_poly-right##0 net@111#10pin@57_polysilicon-1 8.525
+R22 net@111#10pin@57_polysilicon-1 net@111#11nmos@9_poly-right 7.75
+R23 net@111 net@111##0 7.75
+R24 net@111##0 net@111##1 7.75
+R25 net@111##1 net@111#10pin@57_polysilicon-1 7.75
 
 * Spice Code nodes in cell cell 'AND_2{lay}'
 VDD VDD 0 DC 3.3
