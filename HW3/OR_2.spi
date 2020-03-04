@@ -1,0 +1,80 @@
+*** SPICE deck for cell OR_2{lay} from library project_1
+*** Created on Tue Mar 03, 2020 20:00:00
+*** Last revised on Tue Mar 03, 2020 20:14:56
+*** Written on Tue Mar 03, 2020 20:15:00 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: OR_2{lay}
+Mnmos@0 gnd A#2nmos@0_poly-left net@3 gnd NMOS L=0.35U W=1.75U AS=1.174P AD=3.726P PS=3.675U PD=10.675U
+Mnmos@1 net@3 B#0nmos@1_poly-left gnd gnd NMOS L=0.35U W=1.75U AS=3.726P AD=1.174P PS=10.675U PD=3.675U
+Mnmos@2 out net@3#9nmos@2_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=3.726P AD=2.527P PS=10.675U PD=7.175U
+Mpmos@0 net@3 B#5pmos@0_poly-left net@18 vdd PMOS L=0.35U W=1.75U AS=0.574P AD=1.174P PS=2.713U PD=3.675U
+Mpmos@1 net@18 A#4pmos@1_poly-left vdd vdd PMOS L=0.35U W=1.75U AS=5.589P AD=0.574P PS=15.05U PD=2.713U
+Mpmos@2 vdd net@3#7pmos@2_poly-right out vdd PMOS L=0.35U W=3.5U AS=2.527P AD=5.589P PS=7.175U PD=15.05U
+** Extracted Parasitic Capacitors ***
+C0 net@3 0 2.531fF
+C1 B 0 0.107fF
+C2 out 0 1.443fF
+C3 B#0nmos@1_poly-left 0 0.108fF
+C4 B#1pin@4_polysilicon-1 0 0.113fF
+C5 B#3pin@5_polysilicon-1 0 0.123fF
+C6 net@3#8pin@19_polysilicon-1 0 0.168fF
+C7 A#4pmos@1_poly-left 0 0.128fF
+** Extracted Parasitic Resistors ***
+R0 A#2nmos@0_poly-left A#2nmos@0_poly-left##0 5.425
+R1 A#2nmos@0_poly-left##0 A#0pin@2_polysilicon-1 5.425
+R2 B#0nmos@1_poly-left B#0nmos@1_poly-left##0 9.3
+R3 B#0nmos@1_poly-left##0 B#0nmos@1_poly-left##1 9.3
+R4 B#0nmos@1_poly-left##1 B#1pin@4_polysilicon-1 9.3
+R5 B#0nmos@1_poly-left B#0nmos@1_poly-left##0 6.2
+R6 B#0nmos@1_poly-left##0 B#3pin@5_polysilicon-1 6.2
+R7 B#3pin@5_polysilicon-1 B#3pin@5_polysilicon-1##0 9.817
+R8 B#3pin@5_polysilicon-1##0 B#3pin@5_polysilicon-1##1 9.817
+R9 B#3pin@5_polysilicon-1##1 B#3pin@5_polysilicon-1##2 9.817
+R10 B#3pin@5_polysilicon-1##2 B#3pin@5_polysilicon-1##3 9.817
+R11 B#3pin@5_polysilicon-1##3 B#3pin@5_polysilicon-1##4 9.817
+R12 B#3pin@5_polysilicon-1##4 B 9.817
+R13 B#5pmos@0_poly-left B#1pin@4_polysilicon-1 9.3
+R14 A#0pin@2_polysilicon-1 A#0pin@2_polysilicon-1##0 8.525
+R15 A#0pin@2_polysilicon-1##0 A#4pmos@1_poly-left 8.525
+R16 A#4pmos@1_poly-left A#4pmos@1_poly-left##0 9.3
+R17 A#4pmos@1_poly-left##0 A#4pmos@1_poly-left##1 9.3
+R18 A#4pmos@1_poly-left##1 A#4pmos@1_poly-left##2 9.3
+R19 A#4pmos@1_poly-left##2 A 9.3
+R20 net@3#7pmos@2_poly-right net@3#8pin@19_polysilicon-1 9.3
+R21 net@3#8pin@19_polysilicon-1 net@3#8pin@19_polysilicon-1##0 7.75
+R22 net@3#8pin@19_polysilicon-1##0 net@3#9nmos@2_poly-right 7.75
+R23 net@3 net@3##0 9.3
+R24 net@3##0 net@3##1 9.3
+R25 net@3##1 net@3##2 9.3
+R26 net@3##2 net@3#8pin@19_polysilicon-1 9.3
+
+* Spice Code nodes in cell cell 'OR_2{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
+vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
+cload out 0 250fF
+.tran 0 80n
+.include C:\Electric\HW3\C5_models.txt
+.END
