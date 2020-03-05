@@ -1,31 +1,28 @@
-Circuit: *** SPICE deck for cell HW3_2{sch} from library project_1_delmaybe
+Circuit: *** SPICE deck for cell HW3_2{lay} from library project_1_delmaybe
 
 Vgnd: both pins shorted together -- ignoring.
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
+Vin4: Missing value, assumed 0V @ DC
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Mar 04 20:04:25 2020
-Total elapsed time: 0.170 seconds.
+Date: Wed Mar 04 22:59:31 2020
+Total elapsed time: 0.248 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 4129
-traniter = 4112
-tranpoints = 1514
-accept = 1379
-rejected = 135
-matrix size = 16
-fillins = 2
+totiter = 4207
+traniter = 4185
+tranpoints = 1611
+accept = 1433
+rejected = 178
+matrix size = 105
+fillins = 86
 solver = Normal
-Matrix Compiler1: 1.03 KB object code size  0.5/0.3/[0.2]
-Matrix Compiler2: 1.53 KB object code size  0.4/0.5/[0.2]
+Matrix Compiler1: 9.26 KB object code size  1.9/1.2/[0.9]
+Matrix Compiler2: 9.48 KB object code size  0.9/1.2/[0.7]
 
 

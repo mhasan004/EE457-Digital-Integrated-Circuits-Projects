@@ -7,8 +7,8 @@ Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Mar 04 20:05:51 2020
-Total elapsed time: 0.303 seconds.
+Date: Wed Mar 04 23:04:08 2020
+Total elapsed time: 0.338 seconds.
 
 tnom = 27
 temp = 27
@@ -21,8 +21,8 @@ rejected = 251
 matrix size = 139
 fillins = 110
 solver = Normal
-Thread vector: 49.9/40.2[2] 13.7/9.1[2] 3.1/3.7[1] 1.0/3.6[1]  2592/500
-Matrix Compiler1: 12.24 KB object code size  5.2/3.1/[2.2]
-Matrix Compiler2: 12.76 KB object code size  2.5/3.3/[1.4]
+Thread vector: 49.5/39.4[2] 28.8/11.3[2] 3.2/3.7[1] 0.9/3.6[1]  2592/500
+Matrix Compiler1: 12.24 KB object code size  5.2/3.2/[2.3]
+Matrix Compiler2: 12.76 KB object code size  2.6/3.5/[1.5]
 
 
