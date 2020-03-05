@@ -1,0 +1,34 @@
+*** SPICE deck for cell HW3_2{sch} from library project_1_delmaybe
+*** Created on Wed Mar 04, 2020 19:41:53
+*** Last revised on Wed Mar 04, 2020 20:04:23
+*** Written on Wed Mar 04, 2020 20:04:24 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW3_2{sch}
+Mnmos@0 out A net@43 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@43 net@71 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 out net@80 net@50 gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@50 D gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@71 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@80 C gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@4 net@26 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@26 net@71 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@6 out net@80 net@26 vdd PMOS L=0.35U W=1.75U
+Mpmos@7 out D net@26 vdd PMOS L=0.35U W=1.75U
+Mpmos@8 net@71 B vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@9 net@80 C vdd vdd PMOS L=0.35U W=1.75U
+
+* Spice Code nodes in cell cell 'HW3_2{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A 0 PULSE(3.3 0 0 5ns 10ns 100ns 200ns)
+vin2 B 0 PULSE(3.3 0 0 5ns 10ns 200ns 400ns)
+vin3 C 0 PULSE(3.3 0 0 5ns 10ns 400ns 800ns)
+vin4 D 0 PULSE(3.3 0 0 5ns 10ns 800ns 1600ns)
+cload out 0 250fF
+.tran 0 1600ns
+.include C:\Electric\C5_models.txt
+.END
