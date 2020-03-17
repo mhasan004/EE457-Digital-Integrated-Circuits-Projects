@@ -1,7 +1,7 @@
 *** SPICE deck for cell Two_bit_adder{sch} from library Proj2
 *** Created on Tue Mar 17, 2020 04:25:11
-*** Last revised on Tue Mar 17, 2020 05:00:26
-*** Written on Tue Mar 17, 2020 05:00:28 by Electric VLSI Design System, version 9.07
+*** Last revised on Tue Mar 17, 2020 05:30:42
+*** Written on Tue Mar 17, 2020 05:30:45 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -52,18 +52,18 @@ Mpmos@6 out net@38 vdd vdd PMOS L=0.35U W=3.5U
 .global gnd vdd
 
 *** TOP LEVEL CELL: Two_bit_adder{sch}
-XAND_2@2 A B net@88 Proj2__AND_2
-XAND_2@3 Cin net@87 net@109 Proj2__AND_2
-XOR_2@1 net@109 net@88 Cout Proj2__OR_2
-XXOR_2@2 A B net@87 Proj2__XOR_2
-XXOR_2@3 Cin net@87 Sum Proj2__XOR_2
+XAND_2@2 A B net@122 Proj2__AND_2
+XAND_2@3 Cin net@104 net@138 Proj2__AND_2
+XOR_2@1 net@138 net@122 Cout Proj2__OR_2
+XXOR_2@2 A B net@104 Proj2__XOR_2
+XXOR_2@3 Cin net@104 Sum Proj2__XOR_2
 
 * Spice Code nodes in cell cell 'Two_bit_adder{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
 vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
-vin3 Cin vdd
+vin3 Cin 0
 cload out 0 250fF
 .tran 0 80n
 .include C:\Electric\C5_models.txt

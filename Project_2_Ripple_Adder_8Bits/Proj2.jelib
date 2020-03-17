@@ -2369,18 +2369,18 @@ Ngeneric:Facet-Center|art@0||0|0||||AV
 X
 
 # Cell Two_bit_adder;1{sch}
-CTwo_bit_adder;1{sch}||schematic|1584433511546|1584437081497|
+CTwo_bit_adder;1{sch}||schematic|1584433511546|1584437442871|
 IAND_2;1{sch}|AND_2@2||47.5|-38|||D5G4;
 IAND_2;1{sch}|AND_2@3||103|-31|||D5G4;
-IOR_2;1{sch}|OR_2@1||156|-37|||D5G4;
+IOR_2;1{sch}|OR_2@1||153|-37|||D5G4;
 IXOR_2;1{sch}|XOR_2@2||17.5|16|||D5G4;
-IXOR_2;1{sch}|XOR_2@3||75|23|||D5G4;
+IXOR_2;1{sch}|XOR_2@3||74|23|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@1||2|20||||
 NOff-Page|conn@2||2|-1.5||||
 NOff-Page|conn@3||2|38||||
 NOff-Page|conn@4||120|21||||
-NOff-Page|conn@5||145|-29||||
+NOff-Page|conn@5||141|-29||||
 NWire_Pin|pin@37||10.5|20||||
 NWire_Pin|pin@39||10.5|-22||||
 NWire_Pin|pin@40||5|-36||||
@@ -2393,10 +2393,9 @@ NWire_Pin|pin@65||66|38||||
 NWire_Pin|pin@66||54.5|-25||||
 NWire_Pin|pin@67||54.5|-41||||
 NWire_Pin|pin@70||62|5.5||||
-NWire_Pin|pin@71||108|-18||||
-NWire_Pin|pin@72||105.5|-41||||
-NWire_Pin|pin@73||108|-41||||
-Ngeneric:Invisible-Pin|pin@74||188.5|2.5|||||SIM_spice_card(D5G3;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns),vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns),vin2 Cin vdd,cload out 0 250fF,.tran 0 80n,".include C:\\Electric\\C5_models.txt"]
+NWire_Pin|pin@73||105|-41||||
+NWire_Pin|pin@75||105|-41||||
+Ngeneric:Invisible-Pin|pin@76||185.5|7.5|||||SIM_spice_card(D5G3;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns),vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns),vin3 Cin 0,cload out 0 250fF,.tran 0 80n,".include C:\\Electric\\C5_models.txt"]
 Awire|net@70|||1800|conn@1|y|4|20|pin@37||10.5|20
 Awire|net@71|||1800|pin@37||10.5|20|XOR_2@2|A|13.5|20
 Awire|net@74|||0|AND_2@2|A|13.5|-22|pin@39||10.5|-22
@@ -2406,11 +2405,11 @@ Awire|net@78|||2700|pin@40||5|-36|pin@41||5|-1.5
 Awire|net@83|||0|XOR_2@2|B|12.5|-1.5|pin@41||5|-1.5
 Awire|net@84|||900|pin@37||10.5|20|pin@39||10.5|-22
 Awire|net@92|||0|AND_2@3|A|69|-15|pin@50||66|-15
-Awire|net@94|||1800|pin@51||66|27|XOR_2@3|A|71|27
+Awire|net@94|||1800|pin@51||66|27|XOR_2@3|A|70|27
 Awire|net@95|||2700|pin@50||66|-15|pin@51||66|27
 Awire|net@104|||0|AND_2@3|B|69|-29|pin@56||62|-29
-Awire|net@114|||0|conn@4|a|118|21|XOR_2@3|out|117.5|21
-Awire|net@115|||0|conn@5|a|143|-29|OR_2@1|out|142|-29
+Awire|net@114|||0|conn@4|a|118|21|XOR_2@3|out|116.5|21
+Awire|net@115|||0|conn@5|a|139|-29|OR_2@1|out|139|-29
 Awire|net@116|||1800|XOR_2@2|out|60|14|pin@63||62|14
 Awire|net@120|||2700|pin@51||66|27|pin@65||66|38
 Awire|net@121|||0|pin@65||66|38|conn@3|y|4|38
@@ -2418,12 +2417,11 @@ Awire|net@122|||1800|AND_2@2|out|49.5|-25|pin@66||54.5|-25
 Awire|net@123|||900|pin@66||54.5|-25|pin@67||54.5|-41
 Awire|net@130|||2700|pin@56||62|-29|pin@70||62|5.5
 Awire|net@131|||2700|pin@70||62|5.5|pin@63||62|14
-Awire|net@132|||0|XOR_2@3|B|70|5.5|pin@70||62|5.5
-Awire|net@133|||1800|AND_2@3|out|105|-18|pin@71||108|-18
-Awire|net@134|||900|OR_2@1|A|108|-18|pin@71||108|-18
-Awire|net@135|||1800|pin@67||54.5|-41|pin@72||105.5|-41
-Awire|net@136|||1800|pin@72||105.5|-41|pin@73||108|-41
-Awire|net@137|||900|OR_2@1|B|108|-25|pin@73||108|-41
+Awire|net@132|||0|XOR_2@3|B|69|5.5|pin@70||62|5.5
+Awire|net@137|||900|OR_2@1|B|105|-25|pin@73||105|-41
+Awire|net@138|||1800|AND_2@3|out|105|-18|OR_2@1|A|105|-18
+Awire|net@140|||900|OR_2@1|B|105|-25|pin@75||105|-41
+Awire|net@141|||1800|pin@67||54.5|-41|pin@75||105|-41
 EA||D5G2;X1;|conn@1|a|U
 EB||D5G2;X1;|conn@2|a|U
 ECin||D5G2;X1.5;|conn@3|a|U
