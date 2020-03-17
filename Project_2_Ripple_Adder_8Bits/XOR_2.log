@@ -1,0 +1,33 @@
+Circuit: *** SPICE deck for cell XOR_2{sch} from library Proj2
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Mar 17 01:01:53 2020
+Total elapsed time: 0.151 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2581
+traniter = 2561
+tranpoints = 1143
+accept = 1107
+rejected = 36
+matrix size = 13
+fillins = 2
+solver = Normal
+Matrix Compiler1: 960 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.40 KB object code size  0.2/0.2/[0.1]
+
+

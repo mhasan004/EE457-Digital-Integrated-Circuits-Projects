@@ -1,0 +1,12 @@
+l A
+l B
+s 2
+h B
+s 2
+l B
+s 0
+h A
+s 2
+h B
+s 2
+l B
