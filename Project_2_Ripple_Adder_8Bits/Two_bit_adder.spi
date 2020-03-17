@@ -1,0 +1,70 @@
+*** SPICE deck for cell Two_bit_adder{sch} from library Proj2
+*** Created on Tue Mar 17, 2020 04:25:11
+*** Last revised on Tue Mar 17, 2020 05:00:26
+*** Written on Tue Mar 17, 2020 05:00:28 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT Proj2__AND_2 FROM CELL AND_2{sch}
+.SUBCKT Proj2__AND_2 A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out net@5 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@5 A net@6 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@6 B gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 out net@5 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@1 net@5 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@5 B vdd vdd PMOS L=0.35U W=1.75U
+.ENDS Proj2__AND_2
+
+*** SUBCIRCUIT Proj2__OR_2 FROM CELL OR_2{sch}
+.SUBCKT Proj2__OR_2 A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@1 A gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@1 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@2 out net@1 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@8 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@1 B net@8 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 out net@1 vdd vdd PMOS L=0.35U W=3.5U
+.ENDS Proj2__OR_2
+
+*** SUBCIRCUIT Proj2__XOR_2 FROM CELL XOR_2{sch}
+.SUBCKT Proj2__XOR_2 A B out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@38 A net@41 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@38 net@128 net@47 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@128 A gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 net@41 net@113 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@47 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@113 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@6 out net@38 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@27 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@38 net@128 net@27 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@128 A vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@3 net@27 net@113 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@38 B net@27 vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@113 B vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@6 out net@38 vdd vdd PMOS L=0.35U W=3.5U
+.ENDS Proj2__XOR_2
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Two_bit_adder{sch}
+XAND_2@2 A B net@88 Proj2__AND_2
+XAND_2@3 Cin net@87 net@109 Proj2__AND_2
+XOR_2@1 net@109 net@88 Cout Proj2__OR_2
+XXOR_2@2 A B net@87 Proj2__XOR_2
+XXOR_2@3 Cin net@87 Sum Proj2__XOR_2
+
+* Spice Code nodes in cell cell 'Two_bit_adder{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
+vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
+vin3 Cin vdd
+cload out 0 250fF
+.tran 0 80n
+.include C:\Electric\C5_models.txt
+.END
