@@ -1,0 +1,187 @@
+*** SPICE deck for cell Four_bit_adder{sch} from library Proj2
+*** Created on Wed Mar 18, 2020 00:57:51
+*** Last revised on Wed Mar 18, 2020 04:58:29
+*** Written on Wed Mar 18, 2020 04:58:33 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Four_bit_adder{sch}
+Mnmos@0 net@25 A0 net@54 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@25 net@21 net@55 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@21 A0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 net@54 net@11 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@55 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@11 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@6 net@0 net@25 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@94 CIn net@123 gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@94 net@90 net@124 gnd NMOS L=0.35U W=1.75U
+Mnmos@9 net@90 CIn gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@10 net@123 net@80 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@124 net@0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 net@80 net@0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@13 Sum0 net@94 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@14 net@145 CIn net@151 gnd NMOS L=0.35U W=1.75U
+Mnmos@15 net@151 net@0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@16 net@163 net@145 net@168 gnd NMOS L=0.35U W=1.75U
+Mnmos@17 net@168 net@171 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@18 net@171 A0 net@186 gnd NMOS L=0.35U W=1.75U
+Mnmos@19 net@186 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@40 net@557 A1 net@592 gnd NMOS L=0.35U W=1.75U
+Mnmos@41 net@557 net@543 net@593 gnd NMOS L=0.35U W=1.75U
+Mnmos@42 net@543 A1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@43 net@592 net@449 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@44 net@593 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@45 net@449 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@46 net@437 net@557 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@47 net@462 net@163 net@464 gnd NMOS L=0.35U W=1.75U
+Mnmos@48 net@462 net@439 net@465 gnd NMOS L=0.35U W=1.75U
+Mnmos@49 net@439 net@163 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@50 net@464 net@443 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@51 net@465 net@437 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@52 net@443 net@437 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@53 Sum1 net@462 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@54 net@488 net@163 net@495 gnd NMOS L=0.35U W=1.75U
+Mnmos@55 net@495 net@437 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@56 net@507 net@488 net@512 gnd NMOS L=0.35U W=1.75U
+Mnmos@57 net@512 net@514 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@58 net@514 A1 net@527 gnd NMOS L=0.35U W=1.75U
+Mnmos@59 net@527 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@80 net@986 A2 net@1123 gnd NMOS L=0.35U W=1.75U
+Mnmos@81 net@986 net@972 net@1132 gnd NMOS L=0.35U W=1.75U
+Mnmos@82 net@972 A2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@83 net@1123 net@878 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@84 net@1132 B2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@85 net@878 B2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@86 net@866 net@986 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@87 net@891 net@507 net@893 gnd NMOS L=0.35U W=1.75U
+Mnmos@88 net@891 net@868 net@894 gnd NMOS L=0.35U W=1.75U
+Mnmos@89 net@868 net@507 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@90 net@893 net@872 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@91 net@894 net@866 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@92 net@872 net@866 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@93 Sum2 net@891 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@94 net@917 net@507 net@924 gnd NMOS L=0.35U W=1.75U
+Mnmos@95 net@924 net@866 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@96 net@936 net@917 net@941 gnd NMOS L=0.35U W=1.75U
+Mnmos@97 net@941 net@943 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@98 net@943 A2 net@956 gnd NMOS L=0.35U W=1.75U
+Mnmos@99 net@956 B2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@100 net@1140 A3 net@1179 gnd NMOS L=0.35U W=1.75U
+Mnmos@101 net@1140 net@1126 net@1180 gnd NMOS L=0.35U W=1.75U
+Mnmos@102 net@1126 A3 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@103 net@1179 net@1023 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@104 net@1180 B3 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@105 net@1023 B3 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@106 net@1010 net@1140 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@107 net@1038 net@936 net@1040 gnd NMOS L=0.35U W=1.75U
+Mnmos@108 net@1038 net@1012 net@1041 gnd NMOS L=0.35U W=1.75U
+Mnmos@109 net@1012 net@936 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@110 net@1040 net@1017 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@111 net@1041 net@1010 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@112 net@1017 net@1010 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@113 Sum3 net@1038 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@114 net@1065 net@936 net@1073 gnd NMOS L=0.35U W=1.75U
+Mnmos@115 net@1073 net@1010 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@116 Cout net@1065 net@1093 gnd NMOS L=0.35U W=1.75U
+Mnmos@117 net@1093 net@1095 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@118 net@1095 A3 net@1109 gnd NMOS L=0.35U W=1.75U
+Mnmos@119 net@1109 B3 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@43 A0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@25 net@21 net@43 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@21 A0 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@3 net@43 net@11 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@25 B0 net@43 vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@11 B0 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@6 net@0 net@25 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@7 net@112 CIn vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@8 net@94 net@90 net@112 vdd PMOS L=0.35U W=1.75U
+Mpmos@9 net@90 CIn vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@10 net@112 net@80 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@11 net@94 net@0 net@112 vdd PMOS L=0.35U W=1.75U
+Mpmos@12 net@80 net@0 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@13 Sum0 net@94 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@14 net@145 CIn vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@15 net@145 net@0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@16 net@163 net@145 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@17 net@163 net@171 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@18 net@171 A0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@19 net@171 B0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@40 net@577 A1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@41 net@557 net@543 net@577 vdd PMOS L=0.35U W=1.75U
+Mpmos@42 net@543 A1 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@43 net@577 net@449 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@44 net@557 B1 net@577 vdd PMOS L=0.35U W=1.75U
+Mpmos@45 net@449 B1 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@46 net@437 net@557 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@47 net@452 net@163 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@48 net@462 net@439 net@452 vdd PMOS L=0.35U W=1.75U
+Mpmos@49 net@439 net@163 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@50 net@452 net@443 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@51 net@462 net@437 net@452 vdd PMOS L=0.35U W=1.75U
+Mpmos@52 net@443 net@437 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@53 Sum1 net@462 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@54 net@488 net@163 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@55 net@488 net@437 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@56 net@507 net@488 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@57 net@507 net@514 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@58 net@514 A1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@59 net@514 B1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@81 net@1006 A2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@82 net@986 net@972 net@1006 vdd PMOS L=0.35U W=1.75U
+Mpmos@83 net@972 A2 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@84 net@1006 net@878 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@85 net@986 B2 net@1006 vdd PMOS L=0.35U W=1.75U
+Mpmos@86 net@878 B2 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@87 net@866 net@986 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@88 net@881 net@507 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@89 net@891 net@868 net@881 vdd PMOS L=0.35U W=1.75U
+Mpmos@90 net@868 net@507 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@91 net@881 net@872 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@92 net@891 net@866 net@881 vdd PMOS L=0.35U W=1.75U
+Mpmos@93 net@872 net@866 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@94 Sum2 net@891 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@95 net@917 net@507 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@96 net@917 net@866 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@97 net@936 net@917 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@98 net@936 net@943 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@99 net@943 A2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@100 net@943 B2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@101 net@1162 A3 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@102 net@1140 net@1126 net@1162 vdd PMOS L=0.35U W=1.75U
+Mpmos@103 net@1126 A3 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@104 net@1162 net@1023 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@105 net@1140 B3 net@1162 vdd PMOS L=0.35U W=1.75U
+Mpmos@106 net@1023 B3 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@107 net@1010 net@1140 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@108 net@1027 net@936 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@109 net@1038 net@1012 net@1027 vdd PMOS L=0.35U W=1.75U
+Mpmos@110 net@1012 net@936 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@111 net@1027 net@1017 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@112 net@1038 net@1010 net@1027 vdd PMOS L=0.35U W=1.75U
+Mpmos@113 net@1017 net@1010 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@114 Sum3 net@1038 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@115 net@1065 net@936 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@116 net@1065 net@1010 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@117 Cout net@1065 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@118 Cout net@1095 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@119 net@1095 A3 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@120 net@1095 B3 vdd vdd PMOS L=0.35U W=1.75U
+
+* Spice Code nodes in cell cell 'Four_bit_adder{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1 A0 vdd
+vin2 A1 vdd
+vin3 A2 0
+vin4 A3 vdd
+vin5 B0 0
+vin6 B1 vdd
+vin7 B2 vdd
+vin8 B3 0
+vin9 Cin 0
+cload out 0 250fF
+.tran 0 10u
+.include C:\Electric\C5_models.txt
+.END

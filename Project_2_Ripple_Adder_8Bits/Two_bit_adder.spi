@@ -1,70 +1,103 @@
 *** SPICE deck for cell Two_bit_adder{sch} from library Proj2
-*** Created on Tue Mar 17, 2020 04:25:11
-*** Last revised on Tue Mar 17, 2020 21:57:32
-*** Written on Wed Mar 18, 2020 02:16:02 by Electric VLSI Design System, version 9.07
+*** Created on Wed Mar 18, 2020 04:25:44
+*** Last revised on Wed Mar 18, 2020 04:46:12
+*** Written on Wed Mar 18, 2020 04:50:49 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
-
-*** SUBCIRCUIT Proj2__AND_2 FROM CELL AND_2{sch}
-.SUBCKT Proj2__AND_2 A B out
-** GLOBAL gnd
-** GLOBAL vdd
-Mnmos@0 out net@5 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@1 net@5 A net@6 gnd NMOS L=0.35U W=1.75U
-Mnmos@2 net@6 B gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 out net@5 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@1 net@5 A vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@2 net@5 B vdd vdd PMOS L=0.35U W=1.75U
-.ENDS Proj2__AND_2
-
-*** SUBCIRCUIT Proj2__OR_2 FROM CELL OR_2{sch}
-.SUBCKT Proj2__OR_2 A B out
-** GLOBAL gnd
-** GLOBAL vdd
-Mnmos@0 net@1 A gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@1 net@1 B gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@2 out net@1 gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 net@8 A vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@1 net@1 B net@8 vdd PMOS L=0.35U W=1.75U
-Mpmos@2 out net@1 vdd vdd PMOS L=0.35U W=3.5U
-.ENDS Proj2__OR_2
-
-*** SUBCIRCUIT Proj2__XOR_2 FROM CELL XOR_2{sch}
-.SUBCKT Proj2__XOR_2 A B out
-** GLOBAL gnd
-** GLOBAL vdd
-Mnmos@0 net@38 A net@41 gnd NMOS L=0.35U W=1.75U
-Mnmos@1 net@38 net@128 net@47 gnd NMOS L=0.35U W=1.75U
-Mnmos@2 net@128 A gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@3 net@41 net@113 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@4 net@47 B gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@5 net@113 B gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@6 out net@38 gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 net@27 A vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@1 net@38 net@128 net@27 vdd PMOS L=0.35U W=1.75U
-Mpmos@2 net@128 A vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@3 net@27 net@113 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@4 net@38 B net@27 vdd PMOS L=0.35U W=1.75U
-Mpmos@5 net@113 B vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@6 out net@38 vdd vdd PMOS L=0.35U W=3.5U
-.ENDS Proj2__XOR_2
 
 .global gnd vdd
 
 *** TOP LEVEL CELL: Two_bit_adder{sch}
-XAND_2@2 A B net@122 Proj2__AND_2
-XAND_2@3 Cin net@104 net@138 Proj2__AND_2
-XOR_2@1 net@138 net@122 Cout Proj2__OR_2
-XXOR_2@2 A B net@104 Proj2__XOR_2
-XXOR_2@3 Cin net@104 Sum Proj2__XOR_2
+Mnmos@140 net@1482 A0 net@1511 gnd NMOS L=0.35U W=1.75U
+Mnmos@141 net@1482 net@1478 net@1512 gnd NMOS L=0.35U W=1.75U
+Mnmos@142 net@1478 A0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@143 net@1511 net@1468 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@144 net@1512 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@145 net@1468 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@146 net@1457 net@1482 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@147 net@1551 Cin net@1580 gnd NMOS L=0.35U W=1.75U
+Mnmos@148 net@1551 net@1547 net@1581 gnd NMOS L=0.35U W=1.75U
+Mnmos@149 net@1547 Cin gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@150 net@1580 net@1537 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@151 net@1581 net@1457 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@152 net@1537 net@1457 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@153 Sum0 net@1551 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@154 net@1602 Cin net@1608 gnd NMOS L=0.35U W=1.75U
+Mnmos@155 net@1608 net@1457 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@156 net@1619 net@1602 net@1625 gnd NMOS L=0.35U W=1.75U
+Mnmos@157 net@1625 net@1628 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@158 net@1628 A0 net@1643 gnd NMOS L=0.35U W=1.75U
+Mnmos@159 net@1643 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@160 net@1687 A1 net@1716 gnd NMOS L=0.35U W=1.75U
+Mnmos@161 net@1687 net@1683 net@1717 gnd NMOS L=0.35U W=1.75U
+Mnmos@162 net@1683 A1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@163 net@1716 net@1673 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@164 net@1717 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@165 net@1673 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@166 net@1662 net@1687 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@167 net@1756 net@1619 net@1785 gnd NMOS L=0.35U W=1.75U
+Mnmos@168 net@1756 net@1752 net@1786 gnd NMOS L=0.35U W=1.75U
+Mnmos@169 net@1752 net@1619 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@170 net@1785 net@1742 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@171 net@1786 net@1662 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@172 net@1742 net@1662 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@173 Sum1 net@1756 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@174 net@1807 net@1619 net@1813 gnd NMOS L=0.35U W=1.75U
+Mnmos@175 net@1813 net@1662 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@176 Cout net@1807 net@1830 gnd NMOS L=0.35U W=1.75U
+Mnmos@177 net@1830 net@1833 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@178 net@1833 A1 net@1848 gnd NMOS L=0.35U W=1.75U
+Mnmos@179 net@1848 B1 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@140 net@1500 A0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@141 net@1482 net@1478 net@1500 vdd PMOS L=0.35U W=1.75U
+Mpmos@142 net@1478 A0 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@143 net@1500 net@1468 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@144 net@1482 B0 net@1500 vdd PMOS L=0.35U W=1.75U
+Mpmos@145 net@1468 B0 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@146 net@1457 net@1482 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@147 net@1569 Cin vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@148 net@1551 net@1547 net@1569 vdd PMOS L=0.35U W=1.75U
+Mpmos@149 net@1547 Cin vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@150 net@1569 net@1537 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@151 net@1551 net@1457 net@1569 vdd PMOS L=0.35U W=1.75U
+Mpmos@152 net@1537 net@1457 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@153 Sum0 net@1551 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@154 net@1602 Cin vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@155 net@1602 net@1457 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@156 net@1619 net@1602 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@157 net@1619 net@1628 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@158 net@1628 A0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@159 net@1628 B0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@160 net@1705 A1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@161 net@1687 net@1683 net@1705 vdd PMOS L=0.35U W=1.75U
+Mpmos@162 net@1683 A1 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@163 net@1705 net@1673 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@164 net@1687 B1 net@1705 vdd PMOS L=0.35U W=1.75U
+Mpmos@165 net@1673 B1 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@166 net@1662 net@1687 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@167 net@1774 net@1619 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@168 net@1756 net@1752 net@1774 vdd PMOS L=0.35U W=1.75U
+Mpmos@169 net@1752 net@1619 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@170 net@1774 net@1742 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@171 net@1756 net@1662 net@1774 vdd PMOS L=0.35U W=1.75U
+Mpmos@172 net@1742 net@1662 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@173 Sum1 net@1756 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@174 net@1807 net@1619 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@175 net@1807 net@1662 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@176 Cout net@1807 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@177 Cout net@1833 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@178 net@1833 A1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@179 net@1833 B1 vdd vdd PMOS L=0.35U W=1.75U
 
 * Spice Code nodes in cell cell 'Two_bit_adder{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-vin A 0 PULSE(0 3.3 0 1ns 1ns 38ns 80ns)
-vin2 B 0 PULSE(0 3.3 0 1ns 1ns 18ns 40ns)
-vin3 Cin 0
+vin1 A0 vdd
+vin2 B0 0
+vin3 A1 vdd
+vin4 B1 vdd
+vin5 Cin 0
 cload out 0 250fF
-.tran 0 80n
+.tran 0 10u
 .include C:\Electric\C5_models.txt
 .END

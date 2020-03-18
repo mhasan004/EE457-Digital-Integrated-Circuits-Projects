@@ -1,19 +1,19 @@
-*** SPICE deck for cell Two_bit_adder2{sch} from library Proj2
+*** SPICE deck for cell One_bit_adder2{sch} from library Proj2
 *** Created on Tue Mar 17, 2020 22:05:22
-*** Last revised on Wed Mar 18, 2020 02:26:09
-*** Written on Wed Mar 18, 2020 04:22:14 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed Mar 18, 2020 04:39:50
+*** Written on Wed Mar 18, 2020 04:47:26 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 .global gnd vdd
 
-*** TOP LEVEL CELL: Two_bit_adder2{sch}
-Mnmos@0 net@135 A net@169 gnd NMOS L=0.35U W=1.75U
+*** TOP LEVEL CELL: One_bit_adder2{sch}
+Mnmos@0 net@135 A0 net@169 gnd NMOS L=0.35U W=1.75U
 Mnmos@1 net@135 net@131 net@170 gnd NMOS L=0.35U W=1.75U
-Mnmos@2 net@131 A gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@131 A0 gnd gnd NMOS L=0.35U W=1.75U
 Mnmos@3 net@169 net@121 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@4 net@170 B gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@5 net@121 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@170 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@121 B0 gnd gnd NMOS L=0.35U W=1.75U
 Mnmos@6 net@110 net@135 gnd gnd NMOS L=0.35U W=1.75U
 Mnmos@7 net@217 Cin net@251 gnd NMOS L=0.35U W=1.75U
 Mnmos@8 net@217 net@213 net@252 gnd NMOS L=0.35U W=1.75U
@@ -26,14 +26,14 @@ Mnmos@14 net@283 Cin net@292 gnd NMOS L=0.35U W=1.75U
 Mnmos@15 net@292 net@110 gnd gnd NMOS L=0.35U W=1.75U
 Mnmos@16 Cout net@283 net@324 gnd NMOS L=0.35U W=1.75U
 Mnmos@17 net@324 net@327 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@18 net@327 A net@357 gnd NMOS L=0.35U W=1.75U
-Mnmos@19 net@357 B gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 net@158 A vdd vdd PMOS L=0.35U W=1.75U
+Mnmos@18 net@327 A0 net@357 gnd NMOS L=0.35U W=1.75U
+Mnmos@19 net@357 B0 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@158 A0 vdd vdd PMOS L=0.35U W=1.75U
 Mpmos@1 net@135 net@131 net@158 vdd PMOS L=0.35U W=1.75U
-Mpmos@2 net@131 A vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@2 net@131 A0 vdd vdd PMOS L=0.35U W=3.5U
 Mpmos@3 net@158 net@121 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@4 net@135 B net@158 vdd PMOS L=0.35U W=1.75U
-Mpmos@5 net@121 B vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@4 net@135 B0 net@158 vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@121 B0 vdd vdd PMOS L=0.35U W=3.5U
 Mpmos@6 net@110 net@135 vdd vdd PMOS L=0.35U W=3.5U
 Mpmos@7 net@240 Cin vdd vdd PMOS L=0.35U W=1.75U
 Mpmos@8 net@217 net@213 net@240 vdd PMOS L=0.35U W=1.75U
@@ -46,14 +46,14 @@ Mpmos@14 net@283 Cin vdd vdd PMOS L=0.35U W=1.75U
 Mpmos@15 net@283 net@110 vdd vdd PMOS L=0.35U W=1.75U
 Mpmos@16 Cout net@283 vdd vdd PMOS L=0.35U W=1.75U
 Mpmos@17 Cout net@327 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@18 net@327 A vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@19 net@327 B vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@18 net@327 A0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@19 net@327 B0 vdd vdd PMOS L=0.35U W=1.75U
 
-* Spice Code nodes in cell cell 'Two_bit_adder2{sch}'
+* Spice Code nodes in cell cell 'One_bit_adder2{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-vin A 0 PULSE(5 0 0 1n 1n 2u 4u)
-vin2 B 0 PULSE(5 0 0 1n 1n 1u 2u )
+vin  A0 0 PULSE(5 0 0 1n 1n 2u 4u)
+vin2 B0 0 PULSE(5 0 0 1n 1n 1u 2u )
 vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u)
 cload out 0 250fF
 .tran 0 10u
