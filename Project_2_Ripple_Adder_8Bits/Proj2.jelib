@@ -349,7 +349,7 @@ Awire|out|D5G1;||1800|AND_3@0|out|29|9.5|pin@3||36.5|9.5
 X
 
 # Cell Eight_bit_adder;1{lay}
-CEight_bit_adder;1{lay}||mocmos|1584577133820|1584585416866||DRC_last_good_drc_area_date()G1584585497697|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1584585497697
+CEight_bit_adder;1{lay}||mocmos|1584577133820|1584586129756||DRC_last_good_drc_area_date()G1584586089706|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1584586089706
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-N-Active-Con|contact@221||-121.5|-120|5||R|
 NMetal-1-P-Active-Con|contact@222||-121.5|75.5|5||RRR|
@@ -583,7 +583,6 @@ NMetal-1-Metal-2-Con|contact@562||647|50||||
 NMetal-1-Metal-2-Con|contact@563||670.5|66||||
 NMetal-1-Metal-2-Con|contact@564||672.5|50||||
 NMetal-1-Metal-2-Con|contact@565||672|-109.5||||
-NMetal-1-Metal-2-Con|contact@566||244|-80.5||||
 NMetal-1-Metal-2-Con|contact@567||-208|1||||
 NN-Transistor|nmos@40||-117.5|-120|7||R||SIM_spice_model(D5G1;)SNMOS
 NN-Transistor|nmos@41||-109.5|-120|7||R||SIM_spice_model(D5G1;)SNMOS
@@ -797,9 +796,11 @@ NMetal-2-Pin|pin@509||236|-129.5||||
 NMetal-2-Pin|pin@510||235|-80||||
 NMetal-2-Pin|pin@511||236|-80||||
 NMetal-1-Pin|pin@512||236.5|65.5||||
-NMetal-1-Pin|pin@514||236.5|41||||
-NMetal-1-Pin|pin@515||236.5|-25.5||||
-NMetal-1-Pin|pin@516||244|-25.5||||
+NMetal-2-Pin|pin@517||242|43||||
+NMetal-2-Pin|pin@518||243|43||||
+NMetal-2-Pin|pin@521||229.5|-159||||
+NMetal-1-Pin|pin@522||244|38.5||||
+NMetal-1-Pin|pin@523||236.5|38.5||||
 NP-Transistor|pmos@40||-117.5|75.5|7||RRR||SIM_spice_model(D5G1;)SPMOS
 NP-Transistor|pmos@41||-109.5|75.5|7||RRR||SIM_spice_model(D5G1;)SPMOS
 NP-Transistor|pmos@42||-101.5|75.5|7||RRR||SIM_spice_model(D5G1;)SPMOS
@@ -844,12 +845,15 @@ NMetal-1-P-Well-Con|substr@2||14.5|-136.5|425|||
 NMetal-1-P-Well-Con|substr@3||457|-136.5|425|||
 NMetal-1-N-Well-Con|well@2||15.5|94.5|425|5||
 NMetal-1-N-Well-Con|well@3||458|94.5|425|5||
+AMetal-2|A1|D5G4;X121.5;||S1800|pin@330||-75.5|43|pin@517||242|43
 AMetal-2|A_to_NAND2|D5G4;X-115;Y0.5;||S0|contact@317||165.5|50.5|pin@219||-199.5|50.5
 AMetal-2|A_to_NAND3|D5G4;X-115;Y0.5;||S0|contact@552||608|50.5|pin@392||243|50.5
+AMetal-2|B1|D5G4;X-2;||S1800|pin@508||178|-80|pin@510||235|-80
 AMetal-2|B_to_NAND2|D5G4;X-119.5;Y0.5;||S0|contact@318||190.5|-87|pin@223||-206.5|-87
 AMetal-2|B_to_NAND3|D5G4;X-119.5;Y0.5;||S0|contact@553||633|-87|pin@394||236|-87
 AMetal-2|Cin_to_XOR2_&_NAND1|D5G4;X-11;||S0|pin@206||-36.5|-99.5|contact@299||-198.5|-99.5
 AMetal-2|Cin_to_XOR2_&_NAND2|D5G4;X-11;||S0|pin@381||406|-99.5|contact@534||244|-99.5
+AMetal-1|FA1(Cout)_to_FA2(Cin)|D5G4;RY10.5;||S2700|contact@534||244|-99.5|pin@522||244|38.5
 AMetal-2|NAND1_to_NAND3|D5G4;X2;Y0.5;||S0|contact@328||228|65.5|pin@228||154|65.5
 AMetal-2|NAND1_to_NAND4|D5G4;X2;Y0.5;||S0|contact@563||670.5|65.5|pin@398||596.5|65.5
 AMetal-1|NAND2_to_Nand3|D5G3;X-6;Y0.5;||S0|contact@327||204.5|50|pin@236||184|50
@@ -1425,15 +1429,16 @@ AMetal-2|net@1776|||S1800|contact@441||-208|-80|pin@508||178|-80
 AMetal-2|net@1777|||S900|pin@394||236|-87|pin@509||236|-129.5
 AMetal-2|net@1778|||S1800|pin@509||236|-129.5|pin@355||277.5|-129.5
 AMetal-1|net@1779||1|S900|contact@273||9|-120|substr@2||9|-136.5
-AMetal-2|net@1780|||S1800|pin@508||178|-80|pin@510||235|-80
 AMetal-2|net@1781|||S1800|pin@510||235|-80|pin@511||236|-80
 AMetal-2|net@1782|||S2700|pin@394||236|-87|pin@511||236|-80
-AMetal-1|net@1784||1|S2700|contact@534||244|-99.5|contact@566||244|-80.5
 AMetal-1|net@1785|||S1800|contact@328||228|65.5|pin@512||236.5|65.5
-AMetal-1|net@1787|||S900|pin@512||236.5|65.5|pin@514||236.5|41
-AMetal-1|net@1788|||S900|pin@514||236.5|41|pin@515||236.5|-25.5
-AMetal-1|net@1789|||S1800|pin@515||236.5|-25.5|pin@516||244|-25.5
-AMetal-1|net@1790|||S900|pin@516||244|-25.5|contact@566||244|-80.5
+AMetal-2|net@1793|||S1800|pin@517||242|43|pin@518||243|43
+AMetal-2|net@1794|||S900|pin@392||243|50.5|pin@518||243|43
+AMetal-1|net@1795||6|S1800|well@2||15.5|94|well@3||458|94
+AMetal-1|net@1796||1|S1800|substr@2||14.5|-136.5|substr@3||457|-136.5
+AMetal-2|net@1799|||S900|contact@330||229.5|-109.5|pin@521||229.5|-159
+AMetal-1|net@1803|||S900|pin@512||236.5|65.5|pin@523||236.5|38.5
+AMetal-1|net@1805|||S0|pin@522||244|38.5|pin@523||236.5|38.5
 EA0||D5G8;X-7.5;|contact@249||U
 EA1||D5G8;X-7;|contact@455||U
 EA2||D5G8;X-7;|contact@454||U
@@ -1451,7 +1456,7 @@ EB5||D5G8;X-7;|contact@445||U
 EB6||D5G8;X-7;|contact@446||U
 EB7||D5G8;X-7;|contact@447||U
 ECin||D5G8;X2;Y0.5;|contact@299||U
-ESum0||D5G10;X-64;Y60.5;|contact@330||U
+ESum0||D5G9;|pin@521||U
 Egnd||D5G10;X-4.5;Y-1;|substr@2||U
 Evdd||D5G10;|well@2||U
 X
