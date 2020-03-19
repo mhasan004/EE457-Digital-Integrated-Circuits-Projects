@@ -1,7 +1,7 @@
 *** SPICE deck for cell One_bit_adder2{lay} from library Proj2
 *** Created on Tue Mar 17, 2020 22:42:41
-*** Last revised on Wed Mar 18, 2020 02:18:23
-*** Written on Wed Mar 18, 2020 21:27:34 by Electric VLSI Design System, version 9.07
+*** Last revised on Thu Mar 19, 2020 00:50:48
+*** Written on Thu Mar 19, 2020 00:50:53 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -80,7 +80,7 @@ C10 net@163 0 1.741fF
 C11 net@117 0 8.395fF
 C12 Cin#0pin@55_metal-2 0 11.38fF
 C13 net@101#2contact@66_metal-1-polysilicon-1 0 5.341fF
-C14 Sum 0 9.888fF
+C14 Sum 0 10.118fF
 C15 Cin 0 3.389fF
 C16 NAND1_to_NAND3 0 8.661fF
 C17 XOR1_to_NAND1 0 3.919fF
@@ -88,7 +88,7 @@ C18 Cin#14contact@87_metal-1-metal-2 0 4.06fF
 C19 NAND2_to_Nand3 0 6.118fF
 C20 A#0contact@98_metal-1-metal-2 0 7.684fF
 C21 B#0contact@99_metal-1-metal-2 0 5.739fF
-C22 Cout 0 5.348fF
+C22 Cout 0 5.799fF
 C23 B#11nmos@2_poly-right 0 0.132fF
 C24 net@3#8nmos@3_poly-right 0 0.175fF
 C25 Cin#10nmos@9_poly-right 0 0.132fF
@@ -882,9 +882,9 @@ R754 NAND1_to_NAND3#14nmos@19_poly-right##22 NAND1_to_NAND3#13pin@106_polysilico
 * Spice Code nodes in cell cell 'One_bit_adder2{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-vin A 0 PULSE(5 0 0 1n 1n 2u 4u)
-vin2 B 0 PULSE(5 0 0 1n 1n 1u 2u )
-vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u)
+vin1 A 0
+vin2 B vdd
+vin3 Cin 0 
 cload out 0 250fF
 .tran 0 10u
 .include C:\Electric\C5_models.txt
