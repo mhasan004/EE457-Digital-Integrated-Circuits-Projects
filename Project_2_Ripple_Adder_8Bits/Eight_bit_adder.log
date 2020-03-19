@@ -1,2 +1,31 @@
-Circuit: *** SPICE deck for cell Eight_bit_adder{sch} from library Proj2
+Circuit: *** SPICE deck for cell Eight_bit_adder{lay} from library Proj2
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node OUT is floating.
+
+WARNING: Less than two connections to node OUT.  This node is used by CLOAD.
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Mar 18 21:30:26 2020
+Total elapsed time: 1.901 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4309
+traniter = 4271
+tranpoints = 1789
+accept = 1582
+rejected = 207
+matrix size = 1487
+fillins = 2816
+solver = Normal
+Thread vector: 38.8/18.3[6] 12.0/5.7[6] 2.8/4.7[1] 6.6/9.1[1]  2592/500
+Matrix Compiler1: 186.88 KB object code size  37.6/25.2/[23.4]
+Matrix Compiler2: off  [12.7]/21.3/15.5
+
 

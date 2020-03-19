@@ -1,4 +1,4 @@
-Circuit: *** SPICE deck for cell One_bit_adder2{sch} from library Proj2
+Circuit: *** SPICE deck for cell One_bit_adder2{lay} from library Proj2
 
 Vgnd: both pins shorted together -- ignoring.
 Ignoring BSIM parameter XL
@@ -8,30 +8,24 @@ Ignoring BSIM parameter XW
 WARNING: Node OUT is floating.
 
 WARNING: Less than two connections to node OUT.  This node is used by CLOAD.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Mar 18 04:47:26 2020
-Total elapsed time: 0.282 seconds.
+Date: Wed Mar 18 21:27:36 2020
+Total elapsed time: 1.493 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 4946
-traniter = 4902
-tranpoints = 1772
-accept = 1562
-rejected = 210
-matrix size = 29
-fillins = 6
+totiter = 4495
+traniter = 4457
+tranpoints = 1846
+accept = 1617
+rejected = 229
+matrix size = 772
+fillins = 1272
 solver = Normal
-Thread vector: 40.2/15.1[4] 10.1/4.4[4] 3.7/2.2[4] 0.2/1.8[1]  2592/500
-Matrix Compiler1: 2.97 KB object code size  0.8/0.5/[0.3]
-Matrix Compiler2: 3.45 KB object code size  0.5/0.6/[0.4]
+Thread vector: 62.5/19.9[5] 11.3/4.9[5] 2.9/3.9[1] 4.8/3.6[5]  2592/500
+Matrix Compiler1: 91.24 KB object code size  19.5/12.1/[10.4]
+Matrix Compiler2: off  [7.5]/8.8/11.7
 
 

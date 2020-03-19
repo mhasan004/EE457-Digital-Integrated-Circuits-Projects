@@ -1,331 +1,1619 @@
-*** SPICE deck for cell Eight_bit_adder{sch} from library Proj2
-*** Created on Wed Mar 18, 2020 15:44:55
-*** Last revised on Wed Mar 18, 2020 17:26:36
-*** Written on Wed Mar 18, 2020 17:26:39 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell Eight_bit_adder{lay} from library Proj2
+*** Created on Wed Mar 18, 2020 20:18:53
+*** Last revised on Wed Mar 18, 2020 21:30:23
+*** Written on Wed Mar 18, 2020 21:30:24 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
 
-.global gnd vdd
+*** TOP LEVEL CELL: Eight_bit_adder{lay}
+Mnmos@40 net@676#2contact@256_metal-1-polysilicon-1 A0#15nmos@40_poly-right net@560 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=0.919P PS=5.425U PD=2.8U
+Mnmos@41 net@817 net@562#11nmos@41_poly-right net@676#2contact@256_metal-1-polysilicon-1 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mnmos@42 gnd B0#16nmos@42_poly-left net@817 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=6.514P PS=2.8U PD=16.329U
+Mnmos@43 net@560 net@684#9nmos@43_poly-left gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@44 net@684#2contact@231_metal-1-metal-2 B0#9nmos@44_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@45 net@562#2pin@166_metal-1 A0#14nmos@45_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@46 XOR1_to_NAND1#1contact@309_metal-1-metal-2 net@676#4nmos@46_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@47 net@576#2contact@295_metal-1-polysilicon-1 XOR1_to_NAND1#26nmos@47_poly-right net@566 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=0.919P PS=5.425U PD=2.8U
+Mnmos@48 net@638 net@564#11nmos@48_poly-right net@576#2contact@295_metal-1-polysilicon-1 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mnmos@49 gnd Cin#9nmos@49_poly-left net@638 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=6.514P PS=2.8U PD=16.329U
+Mnmos@50 net@566 net@577#9nmos@50_poly-left gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@51 net@577#2contact@270_metal-1-metal-2 Cin#5nmos@51_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@52 net@564#2pin@192_metal-1 XOR1_to_NAND1#24nmos@52_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@53 Sum0 net@576#4nmos@53_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=1.684P PS=16.329U PD=5.425U
+Mnmos@54 net@674 XOR1_to_NAND1#27nmos@54_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=0.919P PS=16.329U PD=2.8U
+Mnmos@55 NAND1_to_NAND3#4nmos@55_diff-bottom Cin#16nmos@55_poly-right net@674 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=1.174P PS=2.8U PD=3.675U
+Mnmos@56 net@706 A0#17nmos@56_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=0.919P PS=16.329U PD=2.8U
+Mnmos@57 NAND2_to_Nand3#4nmos@57_diff-bottom B0#13nmos@57_poly-right net@706 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=1.174P PS=2.8U PD=3.675U
+Mnmos@58 net@737 NAND2_to_Nand3#11nmos@58_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=6.514P AD=0.919P PS=16.329U PD=2.8U
+Mnmos@59 Cout#2nmos@59_diff-bottom NAND1_to_NAND3#14nmos@59_poly-right net@737 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=1.174P PS=2.8U PD=3.675U
+Mpmos@40 vdd A0#10pmos@40_poly-left net@800 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=9.934P PS=2.8U PD=15.072U
+Mpmos@41 net@800 net@562#7pmos@41_poly-left net@676 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mpmos@42 net@676 B0#18pmos@42_poly-right net@800 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mpmos@43 net@800 net@684#14pmos@43_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=9.934P AD=0.919P PS=15.072U PD=2.8U
+Mpmos@44 vdd B0#17pmos@44_poly-right net@684 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@45 vdd A0#3pmos@45_poly-right net@562#5pmos@45_diff-top vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@46 vdd net@676#12pmos@46_poly-right XOR1_to_NAND1#22pmos@46_diff-top vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@47 vdd XOR1_to_NAND1#9pmos@47_poly-left net@621 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=9.934P PS=2.8U PD=15.072U
+Mpmos@48 net@621 net@564#7pmos@48_poly-left net@576 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mpmos@49 net@576 Cin#18pmos@49_poly-right net@621 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mpmos@50 net@621 net@577#14pmos@50_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=9.934P AD=0.919P PS=15.072U PD=2.8U
+Mpmos@51 vdd Cin#17pmos@51_poly-right net@577 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@52 vdd XOR1_to_NAND1#4pmos@52_poly-right net@564#5pmos@52_diff-top vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@53 vdd net@576#12pmos@53_poly-right Sum0#4pmos@53_diff-top vdd PMOS L=0.35U W=1.75U AS=1.684P AD=9.934P PS=5.425U PD=15.072U
+Mpmos@54 vdd XOR1_to_NAND1#16pmos@54_poly-right NAND1_to_NAND3 vdd PMOS L=0.35U W=1.75U AS=1.174P AD=9.934P PS=3.675U PD=15.072U
+Mpmos@55 NAND1_to_NAND3 Cin#20pmos@55_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=9.934P AD=1.174P PS=15.072U PD=3.675U
+Mpmos@56 vdd A0#9pmos@56_poly-right NAND2_to_Nand3 vdd PMOS L=0.35U W=1.75U AS=1.174P AD=9.934P PS=3.675U PD=15.072U
+Mpmos@57 NAND2_to_Nand3 B0#20pmos@57_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=9.934P AD=1.174P PS=15.072U PD=3.675U
+Mpmos@58 vdd NAND2_to_Nand3#10pmos@58_poly-right Cout vdd PMOS L=0.35U W=1.75U AS=1.174P AD=9.934P PS=3.675U PD=15.072U
+Mpmos@59 Cout NAND1_to_NAND3#11pmos@59_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=9.934P AD=1.174P PS=15.072U PD=3.675U
+** Extracted Parasitic Capacitors ***
+C0 net@560 0 3.833fF
+C1 net@676 0 4.502fF
+C2 net@800 0 1.741fF
+C3 net@676#2contact@256_metal-1-polysilicon-1 0 7.287fF
+C4 net@684#2contact@231_metal-1-metal-2 0 8.905fF
+C5 net@684 0 4.589fF
+C6 B0 0 10.665fF
+C7 A0 0 11.542fF
+C8 net@562#2pin@166_metal-1 0 5.84fF
+C9 net@562#5pmos@45_diff-top 0 4.602fF
+C10 XOR1_to_NAND1#1contact@309_metal-1-metal-2 0 22.356fF
+C11 XOR1_to_NAND1#22pmos@46_diff-top 0 4.651fF
+C12 net@566 0 3.833fF
+C13 net@576 0 4.452fF
+C14 net@621 0 1.741fF
+C15 net@576#2contact@295_metal-1-polysilicon-1 0 7.187fF
+C16 net@577#2contact@270_metal-1-metal-2 0 8.905fF
+C17 net@577 0 4.589fF
+C18 Cin#0pin@206_metal-2 0 11.38fF
+C19 net@564#2pin@192_metal-1 0 5.84fF
+C20 net@564#5pmos@52_diff-top 0 4.602fF
+C21 Sum0 0 10.373fF
+C22 Sum0#4pmos@53_diff-top 0 4.614fF
+C23 Cin 0 3.389fF
+C24 NAND1_to_NAND3 0 9.146fF
+C25 NAND1_to_NAND3#4nmos@55_diff-bottom 0 4.614fF
+C26 XOR1_to_NAND1 0 3.919fF
+C27 Cin#11contact@308_metal-1-metal-2 0 4.06fF
+C28 NAND2_to_Nand3 0 6.989fF
+C29 NAND2_to_Nand3#4nmos@57_diff-bottom 0 4.229fF
+C30 A0#0contact@317_metal-1-metal-2 0 7.684fF
+C31 B0#0contact@318_metal-1-metal-2 0 5.739fF
+C32 Cout 0 6.218fF
+C33 Cout#2nmos@59_diff-bottom 0 4.229fF
+C34 B0#16nmos@42_poly-left 0 0.135fF
+C35 net@684#9nmos@43_poly-left 0 0.178fF
+C36 Cin#9nmos@49_poly-left 0 0.135fF
+C37 net@577#9nmos@50_poly-left 0 0.178fF
+C38 net@562 0 0.143fF
+C39 B0#14pin@157_polysilicon-1 0 0.132fF
+C40 A0#11pin@164_polysilicon-1 0 0.12fF
+C41 A0#13pin@165_polysilicon-1 0 0.106fF
+C42 B0#10pin@167_polysilicon-1 0 0.203fF
+C43 net@676#5pin@169_polysilicon-1 0 0.221fF
+C44 B0#15pin@174_polysilicon-1 0 0.175fF
+C45 net@562#1pin@176_polysilicon-1 0 0.187fF
+C46 A0#2pin@177_polysilicon-1 0 0.199fF
+C47 net@564 0 0.143fF
+C48 Cin#7pin@183_polysilicon-1 0 0.132fF
+C49 XOR1_to_NAND1#10pin@190_polysilicon-1 0 0.12fF
+C50 XOR1_to_NAND1#12pin@191_polysilicon-1 0 0.106fF
+C51 Cin#6pin@193_polysilicon-1 0 0.203fF
+C52 net@576#5pin@195_polysilicon-1 0 0.236fF
+C53 Cin#8pin@200_polysilicon-1 0 0.175fF
+C54 net@564#1pin@202_polysilicon-1 0 0.187fF
+C55 XOR1_to_NAND1#3pin@203_polysilicon-1 0 0.199fF
+C56 XOR1_to_NAND1#14pin@207_polysilicon-1 0 0.184fF
+C57 Cin#14pin@212_polysilicon-1 0 0.244fF
+C58 A0#8pin@215_polysilicon-1 0 0.224fF
+C59 B0#8pin@220_polysilicon-1 0 0.237fF
+C60 NAND2_to_Nand3#9pin@224_polysilicon-1 0 0.224fF
+C61 NAND1_to_NAND3#12pin@229_polysilicon-1 0 0.103fF
+C62 A0#10pmos@40_poly-left 0 0.158fF
+C63 net@562#7pmos@41_poly-left 0 0.145fF
+C64 XOR1_to_NAND1#9pmos@47_poly-left 0 0.158fF
+C65 net@564#7pmos@48_poly-left 0 0.145fF
+C66 NAND1_to_NAND3#11pmos@59_poly-right 0 0.13fF
+** Extracted Parasitic Resistors ***
+R0 A0#0contact@317_metal-1-metal-2 A0 9.49
+R1 B0#0contact@318_metal-1-metal-2 B0#0contact@318_metal-1-metal-2##0 5.291
+C67 B0#0contact@318_metal-1-metal-2##0 0 5.676fF
+R2 B0#0contact@318_metal-1-metal-2##0 B0 5.291
+R3 Cin#0pin@206_metal-2 Cin 4.212
+R4 XOR1_to_NAND1 XOR1_to_NAND1#1contact@309_metal-1-metal-2 4.42
+R5 net@562 net@562##0 9.92
+R6 net@562##0 net@562##1 9.92
+R7 net@562##1 net@562##2 9.92
+R8 net@562##2 net@562##3 9.92
+R9 net@562##3 net@562##4 9.92
+R10 net@562##4 net@562##5 9.92
+R11 net@562##5 net@562##6 9.92
+R12 net@562##6 net@562##7 9.92
+R13 net@562##7 net@562##8 9.92
+R14 net@562##8 net@562##9 9.92
+R15 net@562##9 net@562##10 9.92
+R16 net@562##10 net@562##11 9.92
+R17 net@562##11 net@562##12 9.92
+R18 net@562##12 net@562##13 9.92
+R19 net@562##13 net@562##14 9.92
+R20 net@562##14 net@562##15 9.92
+R21 net@562##15 net@562##16 9.92
+R22 net@562##16 net@562##17 9.92
+R23 net@562##17 net@562##18 9.92
+R24 net@562##18 net@562#1pin@176_polysilicon-1 9.92
+R25 net@564 net@564##0 9.92
+R26 net@564##0 net@564##1 9.92
+R27 net@564##1 net@564##2 9.92
+R28 net@564##2 net@564##3 9.92
+R29 net@564##3 net@564##4 9.92
+R30 net@564##4 net@564##5 9.92
+R31 net@564##5 net@564##6 9.92
+R32 net@564##6 net@564##7 9.92
+R33 net@564##7 net@564##8 9.92
+R34 net@564##8 net@564##9 9.92
+R35 net@564##9 net@564##10 9.92
+R36 net@564##10 net@564##11 9.92
+R37 net@564##11 net@564##12 9.92
+R38 net@564##12 net@564##13 9.92
+R39 net@564##13 net@564##14 9.92
+R40 net@564##14 net@564##15 9.92
+R41 net@564##15 net@564##16 9.92
+R42 net@564##16 net@564##17 9.92
+R43 net@564##17 net@564##18 9.92
+R44 net@564##18 net@564#1pin@202_polysilicon-1 9.92
+R45 XOR1_to_NAND1#3pin@203_polysilicon-1 XOR1_to_NAND1#3pin@203_polysilicon-1##0 6.2
+R46 XOR1_to_NAND1#3pin@203_polysilicon-1##0 XOR1_to_NAND1#4pmos@52_poly-right 6.2
+R47 XOR1_to_NAND1#3pin@203_polysilicon-1 XOR1_to_NAND1#3pin@203_polysilicon-1##0 8.138
+R48 XOR1_to_NAND1#3pin@203_polysilicon-1##0 XOR1_to_NAND1#3pin@203_polysilicon-1##1 8.138
+R49 XOR1_to_NAND1#3pin@203_polysilicon-1##1 XOR1_to_NAND1#3pin@203_polysilicon-1##2 8.138
+R50 XOR1_to_NAND1#3pin@203_polysilicon-1##2 XOR1_to_NAND1#1contact@309_metal-1-metal-2 8.138
+R51 Cin#5nmos@51_poly-right Cin#5nmos@51_poly-right##0 5.425
+R52 Cin#5nmos@51_poly-right##0 Cin#6pin@193_polysilicon-1 5.425
+R53 Cin#0pin@206_metal-2 Cin#0pin@206_metal-2##0 8.99
+R54 Cin#0pin@206_metal-2##0 Cin#0pin@206_metal-2##1 8.99
+R55 Cin#0pin@206_metal-2##1 Cin#0pin@206_metal-2##2 8.99
+R56 Cin#0pin@206_metal-2##2 Cin#0pin@206_metal-2##3 8.99
+R57 Cin#0pin@206_metal-2##3 Cin#6pin@193_polysilicon-1 8.99
+R58 A0#2pin@177_polysilicon-1 A0#2pin@177_polysilicon-1##0 6.2
+R59 A0#2pin@177_polysilicon-1##0 A0#3pmos@45_poly-right 6.2
+R60 XOR1_to_NAND1#9pmos@47_poly-left XOR1_to_NAND1#9pmos@47_poly-left##0 8.138
+R61 XOR1_to_NAND1#9pmos@47_poly-left##0 XOR1_to_NAND1#9pmos@47_poly-left##1 8.138
+R62 XOR1_to_NAND1#9pmos@47_poly-left##1 XOR1_to_NAND1#9pmos@47_poly-left##2 8.138
+R63 XOR1_to_NAND1#9pmos@47_poly-left##2 XOR1_to_NAND1#10pin@190_polysilicon-1 8.138
+R64 Cin#7pin@183_polysilicon-1 Cin#7pin@183_polysilicon-1##0 9.843
+R65 Cin#7pin@183_polysilicon-1##0 Cin#7pin@183_polysilicon-1##1 9.843
+R66 Cin#7pin@183_polysilicon-1##1 Cin#7pin@183_polysilicon-1##2 9.843
+R67 Cin#7pin@183_polysilicon-1##2 Cin#7pin@183_polysilicon-1##3 9.843
+R68 Cin#7pin@183_polysilicon-1##3 Cin#7pin@183_polysilicon-1##4 9.843
+R69 Cin#7pin@183_polysilicon-1##4 Cin#7pin@183_polysilicon-1##5 9.843
+R70 Cin#7pin@183_polysilicon-1##5 Cin#7pin@183_polysilicon-1##6 9.843
+R71 Cin#7pin@183_polysilicon-1##6 Cin#7pin@183_polysilicon-1##7 9.843
+R72 Cin#7pin@183_polysilicon-1##7 Cin#7pin@183_polysilicon-1##8 9.843
+R73 Cin#7pin@183_polysilicon-1##8 Cin#7pin@183_polysilicon-1##9 9.843
+R74 Cin#7pin@183_polysilicon-1##9 Cin#7pin@183_polysilicon-1##10 9.843
+R75 Cin#7pin@183_polysilicon-1##10 Cin#7pin@183_polysilicon-1##11 9.843
+R76 Cin#7pin@183_polysilicon-1##11 Cin#7pin@183_polysilicon-1##12 9.843
+R77 Cin#7pin@183_polysilicon-1##12 Cin#7pin@183_polysilicon-1##13 9.843
+R78 Cin#7pin@183_polysilicon-1##13 Cin#7pin@183_polysilicon-1##14 9.843
+R79 Cin#7pin@183_polysilicon-1##14 Cin#7pin@183_polysilicon-1##15 9.843
+R80 Cin#7pin@183_polysilicon-1##15 Cin#7pin@183_polysilicon-1##16 9.843
+R81 Cin#7pin@183_polysilicon-1##16 Cin#7pin@183_polysilicon-1##17 9.843
+R82 Cin#7pin@183_polysilicon-1##17 Cin#7pin@183_polysilicon-1##18 9.843
+R83 Cin#7pin@183_polysilicon-1##18 Cin#8pin@200_polysilicon-1 9.843
+R84 net@576#4nmos@53_poly-right net@576#4nmos@53_poly-right##0 9.3
+R85 net@576#4nmos@53_poly-right##0 net@576#4nmos@53_poly-right##1 9.3
+R86 net@576#4nmos@53_poly-right##1 net@576#5pin@195_polysilicon-1 9.3
+R87 net@576#2contact@295_metal-1-polysilicon-1 net@576#2contact@295_metal-1-polysilicon-1##0 8.99
+R88 net@576#2contact@295_metal-1-polysilicon-1##0 net@576#2contact@295_metal-1-polysilicon-1##1 8.99
+R89 net@576#2contact@295_metal-1-polysilicon-1##1 net@576#2contact@295_metal-1-polysilicon-1##2 8.99
+R90 net@576#2contact@295_metal-1-polysilicon-1##2 net@576#2contact@295_metal-1-polysilicon-1##3 8.99
+R91 net@576#2contact@295_metal-1-polysilicon-1##3 net@576#5pin@195_polysilicon-1 8.99
+R92 A0#2pin@177_polysilicon-1 A0#2pin@177_polysilicon-1##0 8.138
+R93 A0#2pin@177_polysilicon-1##0 A0#2pin@177_polysilicon-1##1 8.138
+R94 A0#2pin@177_polysilicon-1##1 A0#2pin@177_polysilicon-1##2 8.138
+R95 A0#2pin@177_polysilicon-1##2 A0 8.138
+R96 XOR1_to_NAND1#1contact@309_metal-1-metal-2 XOR1_to_NAND1#1contact@309_metal-1-metal-2##0 6.717
+R97 XOR1_to_NAND1#1contact@309_metal-1-metal-2##0 XOR1_to_NAND1#1contact@309_metal-1-metal-2##1 6.717
+R98 XOR1_to_NAND1#1contact@309_metal-1-metal-2##1 XOR1_to_NAND1#12pin@191_polysilicon-1 6.717
+R99 XOR1_to_NAND1#10pin@190_polysilicon-1 XOR1_to_NAND1#10pin@190_polysilicon-1##0 7.75
+R100 XOR1_to_NAND1#10pin@190_polysilicon-1##0 XOR1_to_NAND1#10pin@190_polysilicon-1##1 7.75
+R101 XOR1_to_NAND1#10pin@190_polysilicon-1##1 XOR1_to_NAND1#12pin@191_polysilicon-1 7.75
+R102 Cin#8pin@200_polysilicon-1 Cin#8pin@200_polysilicon-1##0 9.743
+R103 Cin#8pin@200_polysilicon-1##0 Cin#8pin@200_polysilicon-1##1 9.743
+R104 Cin#8pin@200_polysilicon-1##1 Cin#8pin@200_polysilicon-1##2 9.743
+R105 Cin#8pin@200_polysilicon-1##2 Cin#8pin@200_polysilicon-1##3 9.743
+R106 Cin#8pin@200_polysilicon-1##3 Cin#8pin@200_polysilicon-1##4 9.743
+R107 Cin#8pin@200_polysilicon-1##4 Cin#8pin@200_polysilicon-1##5 9.743
+R108 Cin#8pin@200_polysilicon-1##5 Cin#0pin@206_metal-2 9.743
+R109 net@564#7pmos@48_poly-left net@564#7pmos@48_poly-left##0 7.75
+R110 net@564#7pmos@48_poly-left##0 net@564 7.75
+R111 Cin#9nmos@49_poly-left Cin#9nmos@49_poly-left##0 6.2
+R112 Cin#9nmos@49_poly-left##0 Cin#7pin@183_polysilicon-1 6.2
+R113 net@577#9nmos@50_poly-left net@577#9nmos@50_poly-left##0 8.37
+R114 net@577#9nmos@50_poly-left##0 net@577#9nmos@50_poly-left##1 8.37
+R115 net@577#9nmos@50_poly-left##1 net@577#9nmos@50_poly-left##2 8.37
+R116 net@577#9nmos@50_poly-left##2 net@577#9nmos@50_poly-left##3 8.37
+R117 net@577#9nmos@50_poly-left##3 net@577#2contact@270_metal-1-metal-2 8.37
+R118 XOR1_to_NAND1 XOR1_to_NAND1##0 6.717
+R119 XOR1_to_NAND1##0 XOR1_to_NAND1##1 6.717
+R120 XOR1_to_NAND1##1 XOR1_to_NAND1#14pin@207_polysilicon-1 6.717
+R121 XOR1_to_NAND1#16pmos@54_poly-right XOR1_to_NAND1#16pmos@54_poly-right##0 6.2
+R122 XOR1_to_NAND1#16pmos@54_poly-right##0 XOR1_to_NAND1#14pin@207_polysilicon-1 6.2
+R123 Cin#14pin@212_polysilicon-1 Cin#14pin@212_polysilicon-1##0 9.688
+R124 Cin#14pin@212_polysilicon-1##0 Cin#14pin@212_polysilicon-1##1 9.688
+R125 Cin#14pin@212_polysilicon-1##1 Cin#14pin@212_polysilicon-1##2 9.688
+R126 Cin#14pin@212_polysilicon-1##2 Cin#11contact@308_metal-1-metal-2 9.688
+R127 Cin#11contact@308_metal-1-metal-2 Cin#0pin@206_metal-2 4.953
+R128 A0#0contact@317_metal-1-metal-2 A0#0contact@317_metal-1-metal-2##0 6.717
+R129 A0#0contact@317_metal-1-metal-2##0 A0#0contact@317_metal-1-metal-2##1 6.717
+R130 A0#0contact@317_metal-1-metal-2##1 A0#8pin@215_polysilicon-1 6.717
+R131 A0#9pmos@56_poly-right A0#9pmos@56_poly-right##0 9.558
+R132 A0#9pmos@56_poly-right##0 A0#9pmos@56_poly-right##1 9.558
+R133 A0#9pmos@56_poly-right##1 A0#9pmos@56_poly-right##2 9.558
+R134 A0#9pmos@56_poly-right##2 A0#9pmos@56_poly-right##3 9.558
+R135 A0#9pmos@56_poly-right##3 A0#9pmos@56_poly-right##4 9.558
+R136 A0#9pmos@56_poly-right##4 A0#8pin@215_polysilicon-1 9.558
+R137 B0#8pin@220_polysilicon-1 B0#8pin@220_polysilicon-1##0 8.138
+R138 B0#8pin@220_polysilicon-1##0 B0#8pin@220_polysilicon-1##1 8.138
+R139 B0#8pin@220_polysilicon-1##1 B0#8pin@220_polysilicon-1##2 8.138
+R140 B0#8pin@220_polysilicon-1##2 B0#0contact@318_metal-1-metal-2 8.138
+R141 B0#9nmos@44_poly-right B0#9nmos@44_poly-right##0 5.425
+R142 B0#9nmos@44_poly-right##0 B0#10pin@167_polysilicon-1 5.425
+R143 NAND2_to_Nand3 NAND2_to_Nand3##0 6.717
+R144 NAND2_to_Nand3##0 NAND2_to_Nand3##1 6.717
+R145 NAND2_to_Nand3##1 NAND2_to_Nand3#9pin@224_polysilicon-1 6.717
+R146 NAND2_to_Nand3#10pmos@58_poly-right NAND2_to_Nand3#10pmos@58_poly-right##0 9.558
+R147 NAND2_to_Nand3#10pmos@58_poly-right##0 NAND2_to_Nand3#10pmos@58_poly-right##1 9.558
+R148 NAND2_to_Nand3#10pmos@58_poly-right##1 NAND2_to_Nand3#10pmos@58_poly-right##2 9.558
+R149 NAND2_to_Nand3#10pmos@58_poly-right##2 NAND2_to_Nand3#10pmos@58_poly-right##3 9.558
+R150 NAND2_to_Nand3#10pmos@58_poly-right##3 NAND2_to_Nand3#10pmos@58_poly-right##4 9.558
+R151 NAND2_to_Nand3#10pmos@58_poly-right##4 NAND2_to_Nand3#9pin@224_polysilicon-1 9.558
+R152 B0 B0##0 8.99
+R153 B0##0 B0##1 8.99
+R154 B0##1 B0##2 8.99
+R155 B0##2 B0##3 8.99
+R156 B0##3 B0#10pin@167_polysilicon-1 8.99
+R157 NAND1_to_NAND3#11pmos@59_poly-right NAND1_to_NAND3#11pmos@59_poly-right##0 5.425
+R158 NAND1_to_NAND3#11pmos@59_poly-right##0 NAND1_to_NAND3#12pin@229_polysilicon-1 5.425
+R159 NAND1_to_NAND3#12pin@229_polysilicon-1 NAND1_to_NAND3#12pin@229_polysilicon-1##0 9.3
+R160 NAND1_to_NAND3#12pin@229_polysilicon-1##0 NAND1_to_NAND3#12pin@229_polysilicon-1##1 9.3
+R161 NAND1_to_NAND3#12pin@229_polysilicon-1##1 NAND1_to_NAND3 9.3
+R162 Cin#16nmos@55_poly-right Cin#16nmos@55_poly-right##0 8.636
+R163 Cin#16nmos@55_poly-right##0 Cin#16nmos@55_poly-right##1 8.636
+R164 Cin#16nmos@55_poly-right##1 Cin#16nmos@55_poly-right##2 8.636
+R165 Cin#16nmos@55_poly-right##2 Cin#16nmos@55_poly-right##3 8.636
+R166 Cin#16nmos@55_poly-right##3 Cin#16nmos@55_poly-right##4 8.636
+R167 Cin#16nmos@55_poly-right##4 Cin#16nmos@55_poly-right##5 8.636
+R168 Cin#16nmos@55_poly-right##5 Cin#14pin@212_polysilicon-1 8.636
+R169 B0#13nmos@57_poly-right B0#13nmos@57_poly-right##0 8.956
+R170 B0#13nmos@57_poly-right##0 B0#13nmos@57_poly-right##1 8.956
+R171 B0#13nmos@57_poly-right##1 B0#13nmos@57_poly-right##2 8.956
+R172 B0#13nmos@57_poly-right##2 B0#13nmos@57_poly-right##3 8.956
+R173 B0#13nmos@57_poly-right##3 B0#13nmos@57_poly-right##4 8.956
+R174 B0#13nmos@57_poly-right##4 B0#13nmos@57_poly-right##5 8.956
+R175 B0#13nmos@57_poly-right##5 B0#13nmos@57_poly-right##6 8.956
+R176 B0#13nmos@57_poly-right##6 B0#13nmos@57_poly-right##7 8.956
+R177 B0#13nmos@57_poly-right##7 B0#8pin@220_polysilicon-1 8.956
+R178 A0#10pmos@40_poly-left A0#10pmos@40_poly-left##0 8.138
+R179 A0#10pmos@40_poly-left##0 A0#10pmos@40_poly-left##1 8.138
+R180 A0#10pmos@40_poly-left##1 A0#10pmos@40_poly-left##2 8.138
+R181 A0#10pmos@40_poly-left##2 A0#11pin@164_polysilicon-1 8.138
+R182 B0#14pin@157_polysilicon-1 B0#14pin@157_polysilicon-1##0 9.843
+R183 B0#14pin@157_polysilicon-1##0 B0#14pin@157_polysilicon-1##1 9.843
+R184 B0#14pin@157_polysilicon-1##1 B0#14pin@157_polysilicon-1##2 9.843
+R185 B0#14pin@157_polysilicon-1##2 B0#14pin@157_polysilicon-1##3 9.843
+R186 B0#14pin@157_polysilicon-1##3 B0#14pin@157_polysilicon-1##4 9.843
+R187 B0#14pin@157_polysilicon-1##4 B0#14pin@157_polysilicon-1##5 9.843
+R188 B0#14pin@157_polysilicon-1##5 B0#14pin@157_polysilicon-1##6 9.843
+R189 B0#14pin@157_polysilicon-1##6 B0#14pin@157_polysilicon-1##7 9.843
+R190 B0#14pin@157_polysilicon-1##7 B0#14pin@157_polysilicon-1##8 9.843
+R191 B0#14pin@157_polysilicon-1##8 B0#14pin@157_polysilicon-1##9 9.843
+R192 B0#14pin@157_polysilicon-1##9 B0#14pin@157_polysilicon-1##10 9.843
+R193 B0#14pin@157_polysilicon-1##10 B0#14pin@157_polysilicon-1##11 9.843
+R194 B0#14pin@157_polysilicon-1##11 B0#14pin@157_polysilicon-1##12 9.843
+R195 B0#14pin@157_polysilicon-1##12 B0#14pin@157_polysilicon-1##13 9.843
+R196 B0#14pin@157_polysilicon-1##13 B0#14pin@157_polysilicon-1##14 9.843
+R197 B0#14pin@157_polysilicon-1##14 B0#14pin@157_polysilicon-1##15 9.843
+R198 B0#14pin@157_polysilicon-1##15 B0#14pin@157_polysilicon-1##16 9.843
+R199 B0#14pin@157_polysilicon-1##16 B0#14pin@157_polysilicon-1##17 9.843
+R200 B0#14pin@157_polysilicon-1##17 B0#14pin@157_polysilicon-1##18 9.843
+R201 B0#14pin@157_polysilicon-1##18 B0#15pin@174_polysilicon-1 9.843
+R202 net@676#4nmos@46_poly-right net@676#4nmos@46_poly-right##0 7.233
+R203 net@676#4nmos@46_poly-right##0 net@676#4nmos@46_poly-right##1 7.233
+R204 net@676#4nmos@46_poly-right##1 net@676#5pin@169_polysilicon-1 7.233
+R205 net@676#2contact@256_metal-1-polysilicon-1 net@676#2contact@256_metal-1-polysilicon-1##0 8.99
+R206 net@676#2contact@256_metal-1-polysilicon-1##0 net@676#2contact@256_metal-1-polysilicon-1##1 8.99
+R207 net@676#2contact@256_metal-1-polysilicon-1##1 net@676#2contact@256_metal-1-polysilicon-1##2 8.99
+R208 net@676#2contact@256_metal-1-polysilicon-1##2 net@676#2contact@256_metal-1-polysilicon-1##3 8.99
+R209 net@676#2contact@256_metal-1-polysilicon-1##3 net@676#5pin@169_polysilicon-1 8.99
+R210 A0 A0##0 6.717
+R211 A0##0 A0##1 6.717
+R212 A0##1 A0#13pin@165_polysilicon-1 6.717
+R213 A0#11pin@164_polysilicon-1 A0#11pin@164_polysilicon-1##0 7.75
+R214 A0#11pin@164_polysilicon-1##0 A0#11pin@164_polysilicon-1##1 7.75
+R215 A0#11pin@164_polysilicon-1##1 A0#13pin@165_polysilicon-1 7.75
+R216 B0#15pin@174_polysilicon-1 B0#15pin@174_polysilicon-1##0 9.743
+R217 B0#15pin@174_polysilicon-1##0 B0#15pin@174_polysilicon-1##1 9.743
+R218 B0#15pin@174_polysilicon-1##1 B0#15pin@174_polysilicon-1##2 9.743
+R219 B0#15pin@174_polysilicon-1##2 B0#15pin@174_polysilicon-1##3 9.743
+R220 B0#15pin@174_polysilicon-1##3 B0#15pin@174_polysilicon-1##4 9.743
+R221 B0#15pin@174_polysilicon-1##4 B0#15pin@174_polysilicon-1##5 9.743
+R222 B0#15pin@174_polysilicon-1##5 B0 9.743
+R223 net@562#7pmos@41_poly-left net@562#7pmos@41_poly-left##0 7.75
+R224 net@562#7pmos@41_poly-left##0 net@562 7.75
+R225 B0#16nmos@42_poly-left B0#16nmos@42_poly-left##0 6.2
+R226 B0#16nmos@42_poly-left##0 B0#14pin@157_polysilicon-1 6.2
+R227 net@684#9nmos@43_poly-left net@684#9nmos@43_poly-left##0 8.37
+R228 net@684#9nmos@43_poly-left##0 net@684#9nmos@43_poly-left##1 8.37
+R229 net@684#9nmos@43_poly-left##1 net@684#9nmos@43_poly-left##2 8.37
+R230 net@684#9nmos@43_poly-left##2 net@684#9nmos@43_poly-left##3 8.37
+R231 net@684#9nmos@43_poly-left##3 net@684#2contact@231_metal-1-metal-2 8.37
+R232 A0#2pin@177_polysilicon-1 A0#2pin@177_polysilicon-1##0 9.881
+R233 A0#2pin@177_polysilicon-1##0 A0#2pin@177_polysilicon-1##1 9.881
+R234 A0#2pin@177_polysilicon-1##1 A0#2pin@177_polysilicon-1##2 9.881
+R235 A0#2pin@177_polysilicon-1##2 A0#2pin@177_polysilicon-1##3 9.881
+R236 A0#2pin@177_polysilicon-1##3 A0#2pin@177_polysilicon-1##4 9.881
+R237 A0#2pin@177_polysilicon-1##4 A0#2pin@177_polysilicon-1##5 9.881
+R238 A0#2pin@177_polysilicon-1##5 A0#2pin@177_polysilicon-1##6 9.881
+R239 A0#2pin@177_polysilicon-1##6 A0#2pin@177_polysilicon-1##7 9.881
+R240 A0#2pin@177_polysilicon-1##7 A0#2pin@177_polysilicon-1##8 9.881
+R241 A0#2pin@177_polysilicon-1##8 A0#2pin@177_polysilicon-1##9 9.881
+R242 A0#2pin@177_polysilicon-1##9 A0#2pin@177_polysilicon-1##10 9.881
+R243 A0#2pin@177_polysilicon-1##10 A0#2pin@177_polysilicon-1##11 9.881
+R244 A0#2pin@177_polysilicon-1##11 A0#2pin@177_polysilicon-1##12 9.881
+R245 A0#2pin@177_polysilicon-1##12 A0#2pin@177_polysilicon-1##13 9.881
+R246 A0#2pin@177_polysilicon-1##13 A0#2pin@177_polysilicon-1##14 9.881
+R247 A0#2pin@177_polysilicon-1##14 A0#2pin@177_polysilicon-1##15 9.881
+R248 A0#2pin@177_polysilicon-1##15 A0#2pin@177_polysilicon-1##16 9.881
+R249 A0#2pin@177_polysilicon-1##16 A0#2pin@177_polysilicon-1##17 9.881
+R250 A0#2pin@177_polysilicon-1##17 A0#2pin@177_polysilicon-1##18 9.881
+R251 A0#2pin@177_polysilicon-1##18 A0#2pin@177_polysilicon-1##19 9.881
+R252 A0#2pin@177_polysilicon-1##19 A0#2pin@177_polysilicon-1##20 9.881
+R253 A0#2pin@177_polysilicon-1##20 A0#2pin@177_polysilicon-1##21 9.881
+R254 A0#2pin@177_polysilicon-1##21 A0#2pin@177_polysilicon-1##22 9.881
+R255 A0#2pin@177_polysilicon-1##22 A0#2pin@177_polysilicon-1##23 9.881
+R256 A0#2pin@177_polysilicon-1##23 A0#2pin@177_polysilicon-1##24 9.881
+R257 A0#2pin@177_polysilicon-1##24 A0#2pin@177_polysilicon-1##25 9.881
+R258 A0#2pin@177_polysilicon-1##25 A0#2pin@177_polysilicon-1##26 9.881
+R259 A0#2pin@177_polysilicon-1##26 A0#2pin@177_polysilicon-1##27 9.881
+R260 A0#2pin@177_polysilicon-1##27 A0#2pin@177_polysilicon-1##28 9.881
+R261 A0#2pin@177_polysilicon-1##28 A0#2pin@177_polysilicon-1##29 9.881
+R262 A0#2pin@177_polysilicon-1##29 A0#2pin@177_polysilicon-1##30 9.881
+R263 A0#2pin@177_polysilicon-1##30 A0#2pin@177_polysilicon-1##31 9.881
+R264 A0#2pin@177_polysilicon-1##31 A0#2pin@177_polysilicon-1##32 9.881
+R265 A0#2pin@177_polysilicon-1##32 A0#2pin@177_polysilicon-1##33 9.881
+R266 A0#2pin@177_polysilicon-1##33 A0#2pin@177_polysilicon-1##34 9.881
+R267 A0#2pin@177_polysilicon-1##34 A0#2pin@177_polysilicon-1##35 9.881
+R268 A0#2pin@177_polysilicon-1##35 A0#2pin@177_polysilicon-1##36 9.881
+R269 A0#2pin@177_polysilicon-1##36 A0#2pin@177_polysilicon-1##37 9.881
+R270 A0#2pin@177_polysilicon-1##37 A0#2pin@177_polysilicon-1##38 9.881
+R271 A0#2pin@177_polysilicon-1##38 A0#2pin@177_polysilicon-1##39 9.881
+R272 A0#2pin@177_polysilicon-1##39 A0#2pin@177_polysilicon-1##40 9.881
+R273 A0#2pin@177_polysilicon-1##40 A0#2pin@177_polysilicon-1##41 9.881
+R274 A0#2pin@177_polysilicon-1##41 A0#2pin@177_polysilicon-1##42 9.881
+R275 A0#2pin@177_polysilicon-1##42 A0#2pin@177_polysilicon-1##43 9.881
+R276 A0#2pin@177_polysilicon-1##43 A0#2pin@177_polysilicon-1##44 9.881
+R277 A0#2pin@177_polysilicon-1##44 A0#2pin@177_polysilicon-1##45 9.881
+R278 A0#2pin@177_polysilicon-1##45 A0#2pin@177_polysilicon-1##46 9.881
+R279 A0#2pin@177_polysilicon-1##46 A0#2pin@177_polysilicon-1##47 9.881
+R280 A0#2pin@177_polysilicon-1##47 A0#2pin@177_polysilicon-1##48 9.881
+R281 A0#2pin@177_polysilicon-1##48 A0#2pin@177_polysilicon-1##49 9.881
+R282 A0#2pin@177_polysilicon-1##49 A0#2pin@177_polysilicon-1##50 9.881
+R283 A0#2pin@177_polysilicon-1##50 A0#2pin@177_polysilicon-1##51 9.881
+R284 A0#2pin@177_polysilicon-1##51 A0#2pin@177_polysilicon-1##52 9.881
+R285 A0#2pin@177_polysilicon-1##52 A0#2pin@177_polysilicon-1##53 9.881
+R286 A0#2pin@177_polysilicon-1##53 A0#2pin@177_polysilicon-1##54 9.881
+R287 A0#2pin@177_polysilicon-1##54 A0#14nmos@45_poly-right 9.881
+R288 net@562#5pmos@45_diff-top net@562#2pin@166_metal-1 4.81
+R289 net@562#1pin@176_polysilicon-1 net@562#1pin@176_polysilicon-1##0 9.85
+R290 net@562#1pin@176_polysilicon-1##0 net@562#1pin@176_polysilicon-1##1 9.85
+R291 net@562#1pin@176_polysilicon-1##1 net@562#1pin@176_polysilicon-1##2 9.85
+R292 net@562#1pin@176_polysilicon-1##2 net@562#1pin@176_polysilicon-1##3 9.85
+R293 net@562#1pin@176_polysilicon-1##3 net@562#1pin@176_polysilicon-1##4 9.85
+R294 net@562#1pin@176_polysilicon-1##4 net@562#1pin@176_polysilicon-1##5 9.85
+R295 net@562#1pin@176_polysilicon-1##5 net@562#1pin@176_polysilicon-1##6 9.85
+R296 net@562#1pin@176_polysilicon-1##6 net@562#1pin@176_polysilicon-1##7 9.85
+R297 net@562#1pin@176_polysilicon-1##7 net@562#1pin@176_polysilicon-1##8 9.85
+R298 net@562#1pin@176_polysilicon-1##8 net@562#1pin@176_polysilicon-1##9 9.85
+R299 net@562#1pin@176_polysilicon-1##9 net@562#1pin@176_polysilicon-1##10 9.85
+R300 net@562#1pin@176_polysilicon-1##10 net@562#1pin@176_polysilicon-1##11 9.85
+R301 net@562#1pin@176_polysilicon-1##11 net@562#1pin@176_polysilicon-1##12 9.85
+R302 net@562#1pin@176_polysilicon-1##12 net@562#1pin@176_polysilicon-1##13 9.85
+R303 net@562#1pin@176_polysilicon-1##13 net@562#1pin@176_polysilicon-1##14 9.85
+R304 net@562#1pin@176_polysilicon-1##14 net@562#1pin@176_polysilicon-1##15 9.85
+R305 net@562#1pin@176_polysilicon-1##15 net@562#1pin@176_polysilicon-1##16 9.85
+R306 net@562#1pin@176_polysilicon-1##16 net@562#1pin@176_polysilicon-1##17 9.85
+R307 net@562#1pin@176_polysilicon-1##17 net@562#1pin@176_polysilicon-1##18 9.85
+R308 net@562#1pin@176_polysilicon-1##18 net@562#1pin@176_polysilicon-1##19 9.85
+R309 net@562#1pin@176_polysilicon-1##19 net@562#1pin@176_polysilicon-1##20 9.85
+R310 net@562#1pin@176_polysilicon-1##20 net@562#1pin@176_polysilicon-1##21 9.85
+R311 net@562#1pin@176_polysilicon-1##21 net@562#1pin@176_polysilicon-1##22 9.85
+R312 net@562#1pin@176_polysilicon-1##22 net@562#1pin@176_polysilicon-1##23 9.85
+R313 net@562#1pin@176_polysilicon-1##23 net@562#1pin@176_polysilicon-1##24 9.85
+R314 net@562#1pin@176_polysilicon-1##24 net@562#1pin@176_polysilicon-1##25 9.85
+R315 net@562#1pin@176_polysilicon-1##25 net@562#1pin@176_polysilicon-1##26 9.85
+R316 net@562#1pin@176_polysilicon-1##26 net@562#1pin@176_polysilicon-1##27 9.85
+R317 net@562#1pin@176_polysilicon-1##27 net@562#1pin@176_polysilicon-1##28 9.85
+R318 net@562#1pin@176_polysilicon-1##28 net@562#1pin@176_polysilicon-1##29 9.85
+R319 net@562#1pin@176_polysilicon-1##29 net@562#1pin@176_polysilicon-1##30 9.85
+R320 net@562#1pin@176_polysilicon-1##30 net@562#1pin@176_polysilicon-1##31 9.85
+R321 net@562#1pin@176_polysilicon-1##31 net@562#1pin@176_polysilicon-1##32 9.85
+R322 net@562#1pin@176_polysilicon-1##32 net@562#1pin@176_polysilicon-1##33 9.85
+R323 net@562#1pin@176_polysilicon-1##33 net@562#1pin@176_polysilicon-1##34 9.85
+R324 net@562#1pin@176_polysilicon-1##34 net@562#1pin@176_polysilicon-1##35 9.85
+R325 net@562#1pin@176_polysilicon-1##35 net@562#1pin@176_polysilicon-1##36 9.85
+R326 net@562#1pin@176_polysilicon-1##36 net@562#1pin@176_polysilicon-1##37 9.85
+R327 net@562#1pin@176_polysilicon-1##37 net@562#1pin@176_polysilicon-1##38 9.85
+R328 net@562#1pin@176_polysilicon-1##38 net@562#1pin@176_polysilicon-1##39 9.85
+R329 net@562#1pin@176_polysilicon-1##39 net@562#1pin@176_polysilicon-1##40 9.85
+R330 net@562#1pin@176_polysilicon-1##40 net@562#1pin@176_polysilicon-1##41 9.85
+R331 net@562#1pin@176_polysilicon-1##41 net@562#1pin@176_polysilicon-1##42 9.85
+R332 net@562#1pin@176_polysilicon-1##42 net@562#1pin@176_polysilicon-1##43 9.85
+R333 net@562#1pin@176_polysilicon-1##43 net@562#1pin@176_polysilicon-1##44 9.85
+R334 net@562#1pin@176_polysilicon-1##44 net@562#1pin@176_polysilicon-1##45 9.85
+R335 net@562#1pin@176_polysilicon-1##45 net@562#1pin@176_polysilicon-1##46 9.85
+R336 net@562#1pin@176_polysilicon-1##46 net@562#1pin@176_polysilicon-1##47 9.85
+R337 net@562#1pin@176_polysilicon-1##47 net@562#1pin@176_polysilicon-1##48 9.85
+R338 net@562#1pin@176_polysilicon-1##48 net@562#1pin@176_polysilicon-1##49 9.85
+R339 net@562#1pin@176_polysilicon-1##49 net@562#1pin@176_polysilicon-1##50 9.85
+R340 net@562#1pin@176_polysilicon-1##50 net@562#1pin@176_polysilicon-1##51 9.85
+R341 net@562#1pin@176_polysilicon-1##51 net@562#1pin@176_polysilicon-1##52 9.85
+R342 net@562#1pin@176_polysilicon-1##52 net@562#1pin@176_polysilicon-1##53 9.85
+R343 net@562#1pin@176_polysilicon-1##53 net@562#1pin@176_polysilicon-1##54 9.85
+R344 net@562#1pin@176_polysilicon-1##54 net@562#1pin@176_polysilicon-1##55 9.85
+R345 net@562#1pin@176_polysilicon-1##55 net@562#1pin@176_polysilicon-1##56 9.85
+R346 net@562#1pin@176_polysilicon-1##56 net@562#1pin@176_polysilicon-1##57 9.85
+R347 net@562#1pin@176_polysilicon-1##57 net@562#1pin@176_polysilicon-1##58 9.85
+R348 net@562#1pin@176_polysilicon-1##58 net@562#1pin@176_polysilicon-1##59 9.85
+R349 net@562#1pin@176_polysilicon-1##59 net@562#1pin@176_polysilicon-1##60 9.85
+R350 net@562#1pin@176_polysilicon-1##60 net@562#2pin@166_metal-1 9.85
+R351 B0#17pmos@44_poly-right B0#17pmos@44_poly-right##0 9.854
+R352 B0#17pmos@44_poly-right##0 B0#17pmos@44_poly-right##1 9.854
+R353 B0#17pmos@44_poly-right##1 B0#17pmos@44_poly-right##2 9.854
+R354 B0#17pmos@44_poly-right##2 B0#17pmos@44_poly-right##3 9.854
+R355 B0#17pmos@44_poly-right##3 B0#17pmos@44_poly-right##4 9.854
+R356 B0#17pmos@44_poly-right##4 B0#17pmos@44_poly-right##5 9.854
+R357 B0#17pmos@44_poly-right##5 B0#17pmos@44_poly-right##6 9.854
+R358 B0#17pmos@44_poly-right##6 B0#17pmos@44_poly-right##7 9.854
+R359 B0#17pmos@44_poly-right##7 B0#17pmos@44_poly-right##8 9.854
+R360 B0#17pmos@44_poly-right##8 B0#17pmos@44_poly-right##9 9.854
+R361 B0#17pmos@44_poly-right##9 B0#17pmos@44_poly-right##10 9.854
+R362 B0#17pmos@44_poly-right##10 B0#17pmos@44_poly-right##11 9.854
+R363 B0#17pmos@44_poly-right##11 B0#17pmos@44_poly-right##12 9.854
+R364 B0#17pmos@44_poly-right##12 B0#17pmos@44_poly-right##13 9.854
+R365 B0#17pmos@44_poly-right##13 B0#17pmos@44_poly-right##14 9.854
+R366 B0#17pmos@44_poly-right##14 B0#17pmos@44_poly-right##15 9.854
+R367 B0#17pmos@44_poly-right##15 B0#17pmos@44_poly-right##16 9.854
+R368 B0#17pmos@44_poly-right##16 B0#17pmos@44_poly-right##17 9.854
+R369 B0#17pmos@44_poly-right##17 B0#17pmos@44_poly-right##18 9.854
+R370 B0#17pmos@44_poly-right##18 B0#17pmos@44_poly-right##19 9.854
+R371 B0#17pmos@44_poly-right##19 B0#17pmos@44_poly-right##20 9.854
+R372 B0#17pmos@44_poly-right##20 B0#17pmos@44_poly-right##21 9.854
+R373 B0#17pmos@44_poly-right##21 B0#17pmos@44_poly-right##22 9.854
+R374 B0#17pmos@44_poly-right##22 B0#17pmos@44_poly-right##23 9.854
+R375 B0#17pmos@44_poly-right##23 B0#17pmos@44_poly-right##24 9.854
+R376 B0#17pmos@44_poly-right##24 B0#17pmos@44_poly-right##25 9.854
+R377 B0#17pmos@44_poly-right##25 B0#17pmos@44_poly-right##26 9.854
+R378 B0#17pmos@44_poly-right##26 B0#17pmos@44_poly-right##27 9.854
+R379 B0#17pmos@44_poly-right##27 B0#17pmos@44_poly-right##28 9.854
+R380 B0#17pmos@44_poly-right##28 B0#17pmos@44_poly-right##29 9.854
+R381 B0#17pmos@44_poly-right##29 B0#17pmos@44_poly-right##30 9.854
+R382 B0#17pmos@44_poly-right##30 B0#17pmos@44_poly-right##31 9.854
+R383 B0#17pmos@44_poly-right##31 B0#17pmos@44_poly-right##32 9.854
+R384 B0#17pmos@44_poly-right##32 B0#17pmos@44_poly-right##33 9.854
+R385 B0#17pmos@44_poly-right##33 B0#17pmos@44_poly-right##34 9.854
+R386 B0#17pmos@44_poly-right##34 B0#17pmos@44_poly-right##35 9.854
+R387 B0#17pmos@44_poly-right##35 B0#17pmos@44_poly-right##36 9.854
+R388 B0#17pmos@44_poly-right##36 B0#17pmos@44_poly-right##37 9.854
+R389 B0#17pmos@44_poly-right##37 B0#17pmos@44_poly-right##38 9.854
+R390 B0#17pmos@44_poly-right##38 B0#17pmos@44_poly-right##39 9.854
+R391 B0#17pmos@44_poly-right##39 B0#17pmos@44_poly-right##40 9.854
+R392 B0#17pmos@44_poly-right##40 B0#17pmos@44_poly-right##41 9.854
+R393 B0#17pmos@44_poly-right##41 B0#17pmos@44_poly-right##42 9.854
+R394 B0#17pmos@44_poly-right##42 B0#17pmos@44_poly-right##43 9.854
+R395 B0#17pmos@44_poly-right##43 B0#17pmos@44_poly-right##44 9.854
+R396 B0#17pmos@44_poly-right##44 B0#17pmos@44_poly-right##45 9.854
+R397 B0#17pmos@44_poly-right##45 B0#17pmos@44_poly-right##46 9.854
+R398 B0#17pmos@44_poly-right##46 B0#17pmos@44_poly-right##47 9.854
+R399 B0#17pmos@44_poly-right##47 B0#17pmos@44_poly-right##48 9.854
+R400 B0#17pmos@44_poly-right##48 B0#17pmos@44_poly-right##49 9.854
+R401 B0#17pmos@44_poly-right##49 B0#17pmos@44_poly-right##50 9.854
+R402 B0#17pmos@44_poly-right##50 B0#17pmos@44_poly-right##51 9.854
+R403 B0#17pmos@44_poly-right##51 B0#17pmos@44_poly-right##52 9.854
+R404 B0#17pmos@44_poly-right##52 B0#17pmos@44_poly-right##53 9.854
+R405 B0#17pmos@44_poly-right##53 B0#17pmos@44_poly-right##54 9.854
+R406 B0#17pmos@44_poly-right##54 B0#10pin@167_polysilicon-1 9.854
+R407 net@684 net@684#2contact@231_metal-1-metal-2 4.797
+R408 A0#15nmos@40_poly-right A0#15nmos@40_poly-right##0 9.871
+R409 A0#15nmos@40_poly-right##0 A0#15nmos@40_poly-right##1 9.871
+R410 A0#15nmos@40_poly-right##1 A0#15nmos@40_poly-right##2 9.871
+R411 A0#15nmos@40_poly-right##2 A0#15nmos@40_poly-right##3 9.871
+R412 A0#15nmos@40_poly-right##3 A0#15nmos@40_poly-right##4 9.871
+R413 A0#15nmos@40_poly-right##4 A0#15nmos@40_poly-right##5 9.871
+R414 A0#15nmos@40_poly-right##5 A0#15nmos@40_poly-right##6 9.871
+R415 A0#15nmos@40_poly-right##6 A0#15nmos@40_poly-right##7 9.871
+R416 A0#15nmos@40_poly-right##7 A0#15nmos@40_poly-right##8 9.871
+R417 A0#15nmos@40_poly-right##8 A0#15nmos@40_poly-right##9 9.871
+R418 A0#15nmos@40_poly-right##9 A0#15nmos@40_poly-right##10 9.871
+R419 A0#15nmos@40_poly-right##10 A0#15nmos@40_poly-right##11 9.871
+R420 A0#15nmos@40_poly-right##11 A0#15nmos@40_poly-right##12 9.871
+R421 A0#15nmos@40_poly-right##12 A0#15nmos@40_poly-right##13 9.871
+R422 A0#15nmos@40_poly-right##13 A0#15nmos@40_poly-right##14 9.871
+R423 A0#15nmos@40_poly-right##14 A0#15nmos@40_poly-right##15 9.871
+R424 A0#15nmos@40_poly-right##15 A0#15nmos@40_poly-right##16 9.871
+R425 A0#15nmos@40_poly-right##16 A0#15nmos@40_poly-right##17 9.871
+R426 A0#15nmos@40_poly-right##17 A0#15nmos@40_poly-right##18 9.871
+R427 A0#15nmos@40_poly-right##18 A0#15nmos@40_poly-right##19 9.871
+R428 A0#15nmos@40_poly-right##19 A0#15nmos@40_poly-right##20 9.871
+R429 A0#15nmos@40_poly-right##20 A0#15nmos@40_poly-right##21 9.871
+R430 A0#15nmos@40_poly-right##21 A0#15nmos@40_poly-right##22 9.871
+R431 A0#15nmos@40_poly-right##22 A0#15nmos@40_poly-right##23 9.871
+R432 A0#15nmos@40_poly-right##23 A0#15nmos@40_poly-right##24 9.871
+R433 A0#15nmos@40_poly-right##24 A0#15nmos@40_poly-right##25 9.871
+R434 A0#15nmos@40_poly-right##25 A0#15nmos@40_poly-right##26 9.871
+R435 A0#15nmos@40_poly-right##26 A0#15nmos@40_poly-right##27 9.871
+R436 A0#15nmos@40_poly-right##27 A0#15nmos@40_poly-right##28 9.871
+R437 A0#15nmos@40_poly-right##28 A0#15nmos@40_poly-right##29 9.871
+R438 A0#15nmos@40_poly-right##29 A0#15nmos@40_poly-right##30 9.871
+R439 A0#15nmos@40_poly-right##30 A0#15nmos@40_poly-right##31 9.871
+R440 A0#15nmos@40_poly-right##31 A0#15nmos@40_poly-right##32 9.871
+R441 A0#15nmos@40_poly-right##32 A0#15nmos@40_poly-right##33 9.871
+R442 A0#15nmos@40_poly-right##33 A0#15nmos@40_poly-right##34 9.871
+R443 A0#15nmos@40_poly-right##34 A0#15nmos@40_poly-right##35 9.871
+R444 A0#15nmos@40_poly-right##35 A0#15nmos@40_poly-right##36 9.871
+R445 A0#15nmos@40_poly-right##36 A0#15nmos@40_poly-right##37 9.871
+R446 A0#15nmos@40_poly-right##37 A0#15nmos@40_poly-right##38 9.871
+R447 A0#15nmos@40_poly-right##38 A0#15nmos@40_poly-right##39 9.871
+R448 A0#15nmos@40_poly-right##39 A0#15nmos@40_poly-right##40 9.871
+R449 A0#15nmos@40_poly-right##40 A0#15nmos@40_poly-right##41 9.871
+R450 A0#15nmos@40_poly-right##41 A0#15nmos@40_poly-right##42 9.871
+R451 A0#15nmos@40_poly-right##42 A0#15nmos@40_poly-right##43 9.871
+R452 A0#15nmos@40_poly-right##43 A0#15nmos@40_poly-right##44 9.871
+R453 A0#15nmos@40_poly-right##44 A0#15nmos@40_poly-right##45 9.871
+R454 A0#15nmos@40_poly-right##45 A0#15nmos@40_poly-right##46 9.871
+R455 A0#15nmos@40_poly-right##46 A0#15nmos@40_poly-right##47 9.871
+R456 A0#15nmos@40_poly-right##47 A0#15nmos@40_poly-right##48 9.871
+R457 A0#15nmos@40_poly-right##48 A0#15nmos@40_poly-right##49 9.871
+R458 A0#15nmos@40_poly-right##49 A0#15nmos@40_poly-right##50 9.871
+R459 A0#15nmos@40_poly-right##50 A0#15nmos@40_poly-right##51 9.871
+R460 A0#15nmos@40_poly-right##51 A0#15nmos@40_poly-right##52 9.871
+R461 A0#15nmos@40_poly-right##52 A0#15nmos@40_poly-right##53 9.871
+R462 A0#15nmos@40_poly-right##53 A0#15nmos@40_poly-right##54 9.871
+R463 A0#15nmos@40_poly-right##54 A0#15nmos@40_poly-right##55 9.871
+R464 A0#15nmos@40_poly-right##55 A0#10pmos@40_poly-left 9.871
+R465 net@562#7pmos@41_poly-left net@562#7pmos@41_poly-left##0 9.871
+R466 net@562#7pmos@41_poly-left##0 net@562#7pmos@41_poly-left##1 9.871
+R467 net@562#7pmos@41_poly-left##1 net@562#7pmos@41_poly-left##2 9.871
+R468 net@562#7pmos@41_poly-left##2 net@562#7pmos@41_poly-left##3 9.871
+R469 net@562#7pmos@41_poly-left##3 net@562#7pmos@41_poly-left##4 9.871
+R470 net@562#7pmos@41_poly-left##4 net@562#7pmos@41_poly-left##5 9.871
+R471 net@562#7pmos@41_poly-left##5 net@562#7pmos@41_poly-left##6 9.871
+R472 net@562#7pmos@41_poly-left##6 net@562#7pmos@41_poly-left##7 9.871
+R473 net@562#7pmos@41_poly-left##7 net@562#7pmos@41_poly-left##8 9.871
+R474 net@562#7pmos@41_poly-left##8 net@562#7pmos@41_poly-left##9 9.871
+R475 net@562#7pmos@41_poly-left##9 net@562#7pmos@41_poly-left##10 9.871
+R476 net@562#7pmos@41_poly-left##10 net@562#7pmos@41_poly-left##11 9.871
+R477 net@562#7pmos@41_poly-left##11 net@562#7pmos@41_poly-left##12 9.871
+R478 net@562#7pmos@41_poly-left##12 net@562#7pmos@41_poly-left##13 9.871
+R479 net@562#7pmos@41_poly-left##13 net@562#7pmos@41_poly-left##14 9.871
+R480 net@562#7pmos@41_poly-left##14 net@562#7pmos@41_poly-left##15 9.871
+R481 net@562#7pmos@41_poly-left##15 net@562#7pmos@41_poly-left##16 9.871
+R482 net@562#7pmos@41_poly-left##16 net@562#7pmos@41_poly-left##17 9.871
+R483 net@562#7pmos@41_poly-left##17 net@562#7pmos@41_poly-left##18 9.871
+R484 net@562#7pmos@41_poly-left##18 net@562#7pmos@41_poly-left##19 9.871
+R485 net@562#7pmos@41_poly-left##19 net@562#7pmos@41_poly-left##20 9.871
+R486 net@562#7pmos@41_poly-left##20 net@562#7pmos@41_poly-left##21 9.871
+R487 net@562#7pmos@41_poly-left##21 net@562#7pmos@41_poly-left##22 9.871
+R488 net@562#7pmos@41_poly-left##22 net@562#7pmos@41_poly-left##23 9.871
+R489 net@562#7pmos@41_poly-left##23 net@562#7pmos@41_poly-left##24 9.871
+R490 net@562#7pmos@41_poly-left##24 net@562#7pmos@41_poly-left##25 9.871
+R491 net@562#7pmos@41_poly-left##25 net@562#7pmos@41_poly-left##26 9.871
+R492 net@562#7pmos@41_poly-left##26 net@562#7pmos@41_poly-left##27 9.871
+R493 net@562#7pmos@41_poly-left##27 net@562#7pmos@41_poly-left##28 9.871
+R494 net@562#7pmos@41_poly-left##28 net@562#7pmos@41_poly-left##29 9.871
+R495 net@562#7pmos@41_poly-left##29 net@562#7pmos@41_poly-left##30 9.871
+R496 net@562#7pmos@41_poly-left##30 net@562#7pmos@41_poly-left##31 9.871
+R497 net@562#7pmos@41_poly-left##31 net@562#7pmos@41_poly-left##32 9.871
+R498 net@562#7pmos@41_poly-left##32 net@562#7pmos@41_poly-left##33 9.871
+R499 net@562#7pmos@41_poly-left##33 net@562#7pmos@41_poly-left##34 9.871
+R500 net@562#7pmos@41_poly-left##34 net@562#7pmos@41_poly-left##35 9.871
+R501 net@562#7pmos@41_poly-left##35 net@562#7pmos@41_poly-left##36 9.871
+R502 net@562#7pmos@41_poly-left##36 net@562#7pmos@41_poly-left##37 9.871
+R503 net@562#7pmos@41_poly-left##37 net@562#7pmos@41_poly-left##38 9.871
+R504 net@562#7pmos@41_poly-left##38 net@562#7pmos@41_poly-left##39 9.871
+R505 net@562#7pmos@41_poly-left##39 net@562#7pmos@41_poly-left##40 9.871
+R506 net@562#7pmos@41_poly-left##40 net@562#7pmos@41_poly-left##41 9.871
+R507 net@562#7pmos@41_poly-left##41 net@562#7pmos@41_poly-left##42 9.871
+R508 net@562#7pmos@41_poly-left##42 net@562#7pmos@41_poly-left##43 9.871
+R509 net@562#7pmos@41_poly-left##43 net@562#7pmos@41_poly-left##44 9.871
+R510 net@562#7pmos@41_poly-left##44 net@562#7pmos@41_poly-left##45 9.871
+R511 net@562#7pmos@41_poly-left##45 net@562#7pmos@41_poly-left##46 9.871
+R512 net@562#7pmos@41_poly-left##46 net@562#7pmos@41_poly-left##47 9.871
+R513 net@562#7pmos@41_poly-left##47 net@562#7pmos@41_poly-left##48 9.871
+R514 net@562#7pmos@41_poly-left##48 net@562#7pmos@41_poly-left##49 9.871
+R515 net@562#7pmos@41_poly-left##49 net@562#7pmos@41_poly-left##50 9.871
+R516 net@562#7pmos@41_poly-left##50 net@562#7pmos@41_poly-left##51 9.871
+R517 net@562#7pmos@41_poly-left##51 net@562#7pmos@41_poly-left##52 9.871
+R518 net@562#7pmos@41_poly-left##52 net@562#7pmos@41_poly-left##53 9.871
+R519 net@562#7pmos@41_poly-left##53 net@562#7pmos@41_poly-left##54 9.871
+R520 net@562#7pmos@41_poly-left##54 net@562#7pmos@41_poly-left##55 9.871
+R521 net@562#7pmos@41_poly-left##55 net@562#11nmos@41_poly-right 9.871
+R522 B0#18pmos@42_poly-right B0#18pmos@42_poly-right##0 9.871
+R523 B0#18pmos@42_poly-right##0 B0#18pmos@42_poly-right##1 9.871
+R524 B0#18pmos@42_poly-right##1 B0#18pmos@42_poly-right##2 9.871
+R525 B0#18pmos@42_poly-right##2 B0#18pmos@42_poly-right##3 9.871
+R526 B0#18pmos@42_poly-right##3 B0#18pmos@42_poly-right##4 9.871
+R527 B0#18pmos@42_poly-right##4 B0#18pmos@42_poly-right##5 9.871
+R528 B0#18pmos@42_poly-right##5 B0#18pmos@42_poly-right##6 9.871
+R529 B0#18pmos@42_poly-right##6 B0#18pmos@42_poly-right##7 9.871
+R530 B0#18pmos@42_poly-right##7 B0#18pmos@42_poly-right##8 9.871
+R531 B0#18pmos@42_poly-right##8 B0#18pmos@42_poly-right##9 9.871
+R532 B0#18pmos@42_poly-right##9 B0#18pmos@42_poly-right##10 9.871
+R533 B0#18pmos@42_poly-right##10 B0#18pmos@42_poly-right##11 9.871
+R534 B0#18pmos@42_poly-right##11 B0#18pmos@42_poly-right##12 9.871
+R535 B0#18pmos@42_poly-right##12 B0#18pmos@42_poly-right##13 9.871
+R536 B0#18pmos@42_poly-right##13 B0#18pmos@42_poly-right##14 9.871
+R537 B0#18pmos@42_poly-right##14 B0#18pmos@42_poly-right##15 9.871
+R538 B0#18pmos@42_poly-right##15 B0#18pmos@42_poly-right##16 9.871
+R539 B0#18pmos@42_poly-right##16 B0#18pmos@42_poly-right##17 9.871
+R540 B0#18pmos@42_poly-right##17 B0#18pmos@42_poly-right##18 9.871
+R541 B0#18pmos@42_poly-right##18 B0#18pmos@42_poly-right##19 9.871
+R542 B0#18pmos@42_poly-right##19 B0#18pmos@42_poly-right##20 9.871
+R543 B0#18pmos@42_poly-right##20 B0#18pmos@42_poly-right##21 9.871
+R544 B0#18pmos@42_poly-right##21 B0#18pmos@42_poly-right##22 9.871
+R545 B0#18pmos@42_poly-right##22 B0#18pmos@42_poly-right##23 9.871
+R546 B0#18pmos@42_poly-right##23 B0#18pmos@42_poly-right##24 9.871
+R547 B0#18pmos@42_poly-right##24 B0#18pmos@42_poly-right##25 9.871
+R548 B0#18pmos@42_poly-right##25 B0#18pmos@42_poly-right##26 9.871
+R549 B0#18pmos@42_poly-right##26 B0#18pmos@42_poly-right##27 9.871
+R550 B0#18pmos@42_poly-right##27 B0#18pmos@42_poly-right##28 9.871
+R551 B0#18pmos@42_poly-right##28 B0#18pmos@42_poly-right##29 9.871
+R552 B0#18pmos@42_poly-right##29 B0#18pmos@42_poly-right##30 9.871
+R553 B0#18pmos@42_poly-right##30 B0#18pmos@42_poly-right##31 9.871
+R554 B0#18pmos@42_poly-right##31 B0#18pmos@42_poly-right##32 9.871
+R555 B0#18pmos@42_poly-right##32 B0#18pmos@42_poly-right##33 9.871
+R556 B0#18pmos@42_poly-right##33 B0#18pmos@42_poly-right##34 9.871
+R557 B0#18pmos@42_poly-right##34 B0#18pmos@42_poly-right##35 9.871
+R558 B0#18pmos@42_poly-right##35 B0#18pmos@42_poly-right##36 9.871
+R559 B0#18pmos@42_poly-right##36 B0#18pmos@42_poly-right##37 9.871
+R560 B0#18pmos@42_poly-right##37 B0#18pmos@42_poly-right##38 9.871
+R561 B0#18pmos@42_poly-right##38 B0#18pmos@42_poly-right##39 9.871
+R562 B0#18pmos@42_poly-right##39 B0#18pmos@42_poly-right##40 9.871
+R563 B0#18pmos@42_poly-right##40 B0#18pmos@42_poly-right##41 9.871
+R564 B0#18pmos@42_poly-right##41 B0#18pmos@42_poly-right##42 9.871
+R565 B0#18pmos@42_poly-right##42 B0#18pmos@42_poly-right##43 9.871
+R566 B0#18pmos@42_poly-right##43 B0#18pmos@42_poly-right##44 9.871
+R567 B0#18pmos@42_poly-right##44 B0#18pmos@42_poly-right##45 9.871
+R568 B0#18pmos@42_poly-right##45 B0#18pmos@42_poly-right##46 9.871
+R569 B0#18pmos@42_poly-right##46 B0#18pmos@42_poly-right##47 9.871
+R570 B0#18pmos@42_poly-right##47 B0#18pmos@42_poly-right##48 9.871
+R571 B0#18pmos@42_poly-right##48 B0#18pmos@42_poly-right##49 9.871
+R572 B0#18pmos@42_poly-right##49 B0#18pmos@42_poly-right##50 9.871
+R573 B0#18pmos@42_poly-right##50 B0#18pmos@42_poly-right##51 9.871
+R574 B0#18pmos@42_poly-right##51 B0#18pmos@42_poly-right##52 9.871
+R575 B0#18pmos@42_poly-right##52 B0#18pmos@42_poly-right##53 9.871
+R576 B0#18pmos@42_poly-right##53 B0#18pmos@42_poly-right##54 9.871
+R577 B0#18pmos@42_poly-right##54 B0#18pmos@42_poly-right##55 9.871
+R578 B0#18pmos@42_poly-right##55 B0#16nmos@42_poly-left 9.871
+R579 net@684#14pmos@43_poly-right net@684#14pmos@43_poly-right##0 9.871
+R580 net@684#14pmos@43_poly-right##0 net@684#14pmos@43_poly-right##1 9.871
+R581 net@684#14pmos@43_poly-right##1 net@684#14pmos@43_poly-right##2 9.871
+R582 net@684#14pmos@43_poly-right##2 net@684#14pmos@43_poly-right##3 9.871
+R583 net@684#14pmos@43_poly-right##3 net@684#14pmos@43_poly-right##4 9.871
+R584 net@684#14pmos@43_poly-right##4 net@684#14pmos@43_poly-right##5 9.871
+R585 net@684#14pmos@43_poly-right##5 net@684#14pmos@43_poly-right##6 9.871
+R586 net@684#14pmos@43_poly-right##6 net@684#14pmos@43_poly-right##7 9.871
+R587 net@684#14pmos@43_poly-right##7 net@684#14pmos@43_poly-right##8 9.871
+R588 net@684#14pmos@43_poly-right##8 net@684#14pmos@43_poly-right##9 9.871
+R589 net@684#14pmos@43_poly-right##9 net@684#14pmos@43_poly-right##10 9.871
+R590 net@684#14pmos@43_poly-right##10 net@684#14pmos@43_poly-right##11 9.871
+R591 net@684#14pmos@43_poly-right##11 net@684#14pmos@43_poly-right##12 9.871
+R592 net@684#14pmos@43_poly-right##12 net@684#14pmos@43_poly-right##13 9.871
+R593 net@684#14pmos@43_poly-right##13 net@684#14pmos@43_poly-right##14 9.871
+R594 net@684#14pmos@43_poly-right##14 net@684#14pmos@43_poly-right##15 9.871
+R595 net@684#14pmos@43_poly-right##15 net@684#14pmos@43_poly-right##16 9.871
+R596 net@684#14pmos@43_poly-right##16 net@684#14pmos@43_poly-right##17 9.871
+R597 net@684#14pmos@43_poly-right##17 net@684#14pmos@43_poly-right##18 9.871
+R598 net@684#14pmos@43_poly-right##18 net@684#14pmos@43_poly-right##19 9.871
+R599 net@684#14pmos@43_poly-right##19 net@684#14pmos@43_poly-right##20 9.871
+R600 net@684#14pmos@43_poly-right##20 net@684#14pmos@43_poly-right##21 9.871
+R601 net@684#14pmos@43_poly-right##21 net@684#14pmos@43_poly-right##22 9.871
+R602 net@684#14pmos@43_poly-right##22 net@684#14pmos@43_poly-right##23 9.871
+R603 net@684#14pmos@43_poly-right##23 net@684#14pmos@43_poly-right##24 9.871
+R604 net@684#14pmos@43_poly-right##24 net@684#14pmos@43_poly-right##25 9.871
+R605 net@684#14pmos@43_poly-right##25 net@684#14pmos@43_poly-right##26 9.871
+R606 net@684#14pmos@43_poly-right##26 net@684#14pmos@43_poly-right##27 9.871
+R607 net@684#14pmos@43_poly-right##27 net@684#14pmos@43_poly-right##28 9.871
+R608 net@684#14pmos@43_poly-right##28 net@684#14pmos@43_poly-right##29 9.871
+R609 net@684#14pmos@43_poly-right##29 net@684#14pmos@43_poly-right##30 9.871
+R610 net@684#14pmos@43_poly-right##30 net@684#14pmos@43_poly-right##31 9.871
+R611 net@684#14pmos@43_poly-right##31 net@684#14pmos@43_poly-right##32 9.871
+R612 net@684#14pmos@43_poly-right##32 net@684#14pmos@43_poly-right##33 9.871
+R613 net@684#14pmos@43_poly-right##33 net@684#14pmos@43_poly-right##34 9.871
+R614 net@684#14pmos@43_poly-right##34 net@684#14pmos@43_poly-right##35 9.871
+R615 net@684#14pmos@43_poly-right##35 net@684#14pmos@43_poly-right##36 9.871
+R616 net@684#14pmos@43_poly-right##36 net@684#14pmos@43_poly-right##37 9.871
+R617 net@684#14pmos@43_poly-right##37 net@684#14pmos@43_poly-right##38 9.871
+R618 net@684#14pmos@43_poly-right##38 net@684#14pmos@43_poly-right##39 9.871
+R619 net@684#14pmos@43_poly-right##39 net@684#14pmos@43_poly-right##40 9.871
+R620 net@684#14pmos@43_poly-right##40 net@684#14pmos@43_poly-right##41 9.871
+R621 net@684#14pmos@43_poly-right##41 net@684#14pmos@43_poly-right##42 9.871
+R622 net@684#14pmos@43_poly-right##42 net@684#14pmos@43_poly-right##43 9.871
+R623 net@684#14pmos@43_poly-right##43 net@684#14pmos@43_poly-right##44 9.871
+R624 net@684#14pmos@43_poly-right##44 net@684#14pmos@43_poly-right##45 9.871
+R625 net@684#14pmos@43_poly-right##45 net@684#14pmos@43_poly-right##46 9.871
+R626 net@684#14pmos@43_poly-right##46 net@684#14pmos@43_poly-right##47 9.871
+R627 net@684#14pmos@43_poly-right##47 net@684#14pmos@43_poly-right##48 9.871
+R628 net@684#14pmos@43_poly-right##48 net@684#14pmos@43_poly-right##49 9.871
+R629 net@684#14pmos@43_poly-right##49 net@684#14pmos@43_poly-right##50 9.871
+R630 net@684#14pmos@43_poly-right##50 net@684#14pmos@43_poly-right##51 9.871
+R631 net@684#14pmos@43_poly-right##51 net@684#14pmos@43_poly-right##52 9.871
+R632 net@684#14pmos@43_poly-right##52 net@684#14pmos@43_poly-right##53 9.871
+R633 net@684#14pmos@43_poly-right##53 net@684#14pmos@43_poly-right##54 9.871
+R634 net@684#14pmos@43_poly-right##54 net@684#14pmos@43_poly-right##55 9.871
+R635 net@684#14pmos@43_poly-right##55 net@684#9nmos@43_poly-left 9.871
+R636 net@676#2contact@256_metal-1-polysilicon-1 net@676 4.706
+R637 net@676#12pmos@46_poly-right net@676#12pmos@46_poly-right##0 9.864
+R638 net@676#12pmos@46_poly-right##0 net@676#12pmos@46_poly-right##1 9.864
+R639 net@676#12pmos@46_poly-right##1 net@676#12pmos@46_poly-right##2 9.864
+R640 net@676#12pmos@46_poly-right##2 net@676#12pmos@46_poly-right##3 9.864
+R641 net@676#12pmos@46_poly-right##3 net@676#12pmos@46_poly-right##4 9.864
+R642 net@676#12pmos@46_poly-right##4 net@676#12pmos@46_poly-right##5 9.864
+R643 net@676#12pmos@46_poly-right##5 net@676#12pmos@46_poly-right##6 9.864
+R644 net@676#12pmos@46_poly-right##6 net@676#12pmos@46_poly-right##7 9.864
+R645 net@676#12pmos@46_poly-right##7 net@676#12pmos@46_poly-right##8 9.864
+R646 net@676#12pmos@46_poly-right##8 net@676#12pmos@46_poly-right##9 9.864
+R647 net@676#12pmos@46_poly-right##9 net@676#12pmos@46_poly-right##10 9.864
+R648 net@676#12pmos@46_poly-right##10 net@676#12pmos@46_poly-right##11 9.864
+R649 net@676#12pmos@46_poly-right##11 net@676#12pmos@46_poly-right##12 9.864
+R650 net@676#12pmos@46_poly-right##12 net@676#12pmos@46_poly-right##13 9.864
+R651 net@676#12pmos@46_poly-right##13 net@676#12pmos@46_poly-right##14 9.864
+R652 net@676#12pmos@46_poly-right##14 net@676#12pmos@46_poly-right##15 9.864
+R653 net@676#12pmos@46_poly-right##15 net@676#12pmos@46_poly-right##16 9.864
+R654 net@676#12pmos@46_poly-right##16 net@676#12pmos@46_poly-right##17 9.864
+R655 net@676#12pmos@46_poly-right##17 net@676#12pmos@46_poly-right##18 9.864
+R656 net@676#12pmos@46_poly-right##18 net@676#12pmos@46_poly-right##19 9.864
+R657 net@676#12pmos@46_poly-right##19 net@676#12pmos@46_poly-right##20 9.864
+R658 net@676#12pmos@46_poly-right##20 net@676#12pmos@46_poly-right##21 9.864
+R659 net@676#12pmos@46_poly-right##21 net@676#12pmos@46_poly-right##22 9.864
+R660 net@676#12pmos@46_poly-right##22 net@676#12pmos@46_poly-right##23 9.864
+R661 net@676#12pmos@46_poly-right##23 net@676#12pmos@46_poly-right##24 9.864
+R662 net@676#12pmos@46_poly-right##24 net@676#12pmos@46_poly-right##25 9.864
+R663 net@676#12pmos@46_poly-right##25 net@676#12pmos@46_poly-right##26 9.864
+R664 net@676#12pmos@46_poly-right##26 net@676#12pmos@46_poly-right##27 9.864
+R665 net@676#12pmos@46_poly-right##27 net@676#12pmos@46_poly-right##28 9.864
+R666 net@676#12pmos@46_poly-right##28 net@676#12pmos@46_poly-right##29 9.864
+R667 net@676#12pmos@46_poly-right##29 net@676#12pmos@46_poly-right##30 9.864
+R668 net@676#12pmos@46_poly-right##30 net@676#12pmos@46_poly-right##31 9.864
+R669 net@676#12pmos@46_poly-right##31 net@676#12pmos@46_poly-right##32 9.864
+R670 net@676#12pmos@46_poly-right##32 net@676#12pmos@46_poly-right##33 9.864
+R671 net@676#12pmos@46_poly-right##33 net@676#12pmos@46_poly-right##34 9.864
+R672 net@676#12pmos@46_poly-right##34 net@676#12pmos@46_poly-right##35 9.864
+R673 net@676#12pmos@46_poly-right##35 net@676#12pmos@46_poly-right##36 9.864
+R674 net@676#12pmos@46_poly-right##36 net@676#12pmos@46_poly-right##37 9.864
+R675 net@676#12pmos@46_poly-right##37 net@676#12pmos@46_poly-right##38 9.864
+R676 net@676#12pmos@46_poly-right##38 net@676#12pmos@46_poly-right##39 9.864
+R677 net@676#12pmos@46_poly-right##39 net@676#12pmos@46_poly-right##40 9.864
+R678 net@676#12pmos@46_poly-right##40 net@676#12pmos@46_poly-right##41 9.864
+R679 net@676#12pmos@46_poly-right##41 net@676#12pmos@46_poly-right##42 9.864
+R680 net@676#12pmos@46_poly-right##42 net@676#12pmos@46_poly-right##43 9.864
+R681 net@676#12pmos@46_poly-right##43 net@676#12pmos@46_poly-right##44 9.864
+R682 net@676#12pmos@46_poly-right##44 net@676#12pmos@46_poly-right##45 9.864
+R683 net@676#12pmos@46_poly-right##45 net@676#12pmos@46_poly-right##46 9.864
+R684 net@676#12pmos@46_poly-right##46 net@676#12pmos@46_poly-right##47 9.864
+R685 net@676#12pmos@46_poly-right##47 net@676#12pmos@46_poly-right##48 9.864
+R686 net@676#12pmos@46_poly-right##48 net@676#12pmos@46_poly-right##49 9.864
+R687 net@676#12pmos@46_poly-right##49 net@676#12pmos@46_poly-right##50 9.864
+R688 net@676#12pmos@46_poly-right##50 net@676#12pmos@46_poly-right##51 9.864
+R689 net@676#12pmos@46_poly-right##51 net@676#12pmos@46_poly-right##52 9.864
+R690 net@676#12pmos@46_poly-right##52 net@676#12pmos@46_poly-right##53 9.864
+R691 net@676#12pmos@46_poly-right##53 net@676#5pin@169_polysilicon-1 9.864
+R692 XOR1_to_NAND1#22pmos@46_diff-top XOR1_to_NAND1#1contact@309_metal-1-metal-2 4.862
+R693 XOR1_to_NAND1#3pin@203_polysilicon-1 XOR1_to_NAND1#3pin@203_polysilicon-1##0 9.881
+R694 XOR1_to_NAND1#3pin@203_polysilicon-1##0 XOR1_to_NAND1#3pin@203_polysilicon-1##1 9.881
+R695 XOR1_to_NAND1#3pin@203_polysilicon-1##1 XOR1_to_NAND1#3pin@203_polysilicon-1##2 9.881
+R696 XOR1_to_NAND1#3pin@203_polysilicon-1##2 XOR1_to_NAND1#3pin@203_polysilicon-1##3 9.881
+R697 XOR1_to_NAND1#3pin@203_polysilicon-1##3 XOR1_to_NAND1#3pin@203_polysilicon-1##4 9.881
+R698 XOR1_to_NAND1#3pin@203_polysilicon-1##4 XOR1_to_NAND1#3pin@203_polysilicon-1##5 9.881
+R699 XOR1_to_NAND1#3pin@203_polysilicon-1##5 XOR1_to_NAND1#3pin@203_polysilicon-1##6 9.881
+R700 XOR1_to_NAND1#3pin@203_polysilicon-1##6 XOR1_to_NAND1#3pin@203_polysilicon-1##7 9.881
+R701 XOR1_to_NAND1#3pin@203_polysilicon-1##7 XOR1_to_NAND1#3pin@203_polysilicon-1##8 9.881
+R702 XOR1_to_NAND1#3pin@203_polysilicon-1##8 XOR1_to_NAND1#3pin@203_polysilicon-1##9 9.881
+R703 XOR1_to_NAND1#3pin@203_polysilicon-1##9 XOR1_to_NAND1#3pin@203_polysilicon-1##10 9.881
+R704 XOR1_to_NAND1#3pin@203_polysilicon-1##10 XOR1_to_NAND1#3pin@203_polysilicon-1##11 9.881
+R705 XOR1_to_NAND1#3pin@203_polysilicon-1##11 XOR1_to_NAND1#3pin@203_polysilicon-1##12 9.881
+R706 XOR1_to_NAND1#3pin@203_polysilicon-1##12 XOR1_to_NAND1#3pin@203_polysilicon-1##13 9.881
+R707 XOR1_to_NAND1#3pin@203_polysilicon-1##13 XOR1_to_NAND1#3pin@203_polysilicon-1##14 9.881
+R708 XOR1_to_NAND1#3pin@203_polysilicon-1##14 XOR1_to_NAND1#3pin@203_polysilicon-1##15 9.881
+R709 XOR1_to_NAND1#3pin@203_polysilicon-1##15 XOR1_to_NAND1#3pin@203_polysilicon-1##16 9.881
+R710 XOR1_to_NAND1#3pin@203_polysilicon-1##16 XOR1_to_NAND1#3pin@203_polysilicon-1##17 9.881
+R711 XOR1_to_NAND1#3pin@203_polysilicon-1##17 XOR1_to_NAND1#3pin@203_polysilicon-1##18 9.881
+R712 XOR1_to_NAND1#3pin@203_polysilicon-1##18 XOR1_to_NAND1#3pin@203_polysilicon-1##19 9.881
+R713 XOR1_to_NAND1#3pin@203_polysilicon-1##19 XOR1_to_NAND1#3pin@203_polysilicon-1##20 9.881
+R714 XOR1_to_NAND1#3pin@203_polysilicon-1##20 XOR1_to_NAND1#3pin@203_polysilicon-1##21 9.881
+R715 XOR1_to_NAND1#3pin@203_polysilicon-1##21 XOR1_to_NAND1#3pin@203_polysilicon-1##22 9.881
+R716 XOR1_to_NAND1#3pin@203_polysilicon-1##22 XOR1_to_NAND1#3pin@203_polysilicon-1##23 9.881
+R717 XOR1_to_NAND1#3pin@203_polysilicon-1##23 XOR1_to_NAND1#3pin@203_polysilicon-1##24 9.881
+R718 XOR1_to_NAND1#3pin@203_polysilicon-1##24 XOR1_to_NAND1#3pin@203_polysilicon-1##25 9.881
+R719 XOR1_to_NAND1#3pin@203_polysilicon-1##25 XOR1_to_NAND1#3pin@203_polysilicon-1##26 9.881
+R720 XOR1_to_NAND1#3pin@203_polysilicon-1##26 XOR1_to_NAND1#3pin@203_polysilicon-1##27 9.881
+R721 XOR1_to_NAND1#3pin@203_polysilicon-1##27 XOR1_to_NAND1#3pin@203_polysilicon-1##28 9.881
+R722 XOR1_to_NAND1#3pin@203_polysilicon-1##28 XOR1_to_NAND1#3pin@203_polysilicon-1##29 9.881
+R723 XOR1_to_NAND1#3pin@203_polysilicon-1##29 XOR1_to_NAND1#3pin@203_polysilicon-1##30 9.881
+R724 XOR1_to_NAND1#3pin@203_polysilicon-1##30 XOR1_to_NAND1#3pin@203_polysilicon-1##31 9.881
+R725 XOR1_to_NAND1#3pin@203_polysilicon-1##31 XOR1_to_NAND1#3pin@203_polysilicon-1##32 9.881
+R726 XOR1_to_NAND1#3pin@203_polysilicon-1##32 XOR1_to_NAND1#3pin@203_polysilicon-1##33 9.881
+R727 XOR1_to_NAND1#3pin@203_polysilicon-1##33 XOR1_to_NAND1#3pin@203_polysilicon-1##34 9.881
+R728 XOR1_to_NAND1#3pin@203_polysilicon-1##34 XOR1_to_NAND1#3pin@203_polysilicon-1##35 9.881
+R729 XOR1_to_NAND1#3pin@203_polysilicon-1##35 XOR1_to_NAND1#3pin@203_polysilicon-1##36 9.881
+R730 XOR1_to_NAND1#3pin@203_polysilicon-1##36 XOR1_to_NAND1#3pin@203_polysilicon-1##37 9.881
+R731 XOR1_to_NAND1#3pin@203_polysilicon-1##37 XOR1_to_NAND1#3pin@203_polysilicon-1##38 9.881
+R732 XOR1_to_NAND1#3pin@203_polysilicon-1##38 XOR1_to_NAND1#3pin@203_polysilicon-1##39 9.881
+R733 XOR1_to_NAND1#3pin@203_polysilicon-1##39 XOR1_to_NAND1#3pin@203_polysilicon-1##40 9.881
+R734 XOR1_to_NAND1#3pin@203_polysilicon-1##40 XOR1_to_NAND1#3pin@203_polysilicon-1##41 9.881
+R735 XOR1_to_NAND1#3pin@203_polysilicon-1##41 XOR1_to_NAND1#3pin@203_polysilicon-1##42 9.881
+R736 XOR1_to_NAND1#3pin@203_polysilicon-1##42 XOR1_to_NAND1#3pin@203_polysilicon-1##43 9.881
+R737 XOR1_to_NAND1#3pin@203_polysilicon-1##43 XOR1_to_NAND1#3pin@203_polysilicon-1##44 9.881
+R738 XOR1_to_NAND1#3pin@203_polysilicon-1##44 XOR1_to_NAND1#3pin@203_polysilicon-1##45 9.881
+R739 XOR1_to_NAND1#3pin@203_polysilicon-1##45 XOR1_to_NAND1#3pin@203_polysilicon-1##46 9.881
+R740 XOR1_to_NAND1#3pin@203_polysilicon-1##46 XOR1_to_NAND1#3pin@203_polysilicon-1##47 9.881
+R741 XOR1_to_NAND1#3pin@203_polysilicon-1##47 XOR1_to_NAND1#3pin@203_polysilicon-1##48 9.881
+R742 XOR1_to_NAND1#3pin@203_polysilicon-1##48 XOR1_to_NAND1#3pin@203_polysilicon-1##49 9.881
+R743 XOR1_to_NAND1#3pin@203_polysilicon-1##49 XOR1_to_NAND1#3pin@203_polysilicon-1##50 9.881
+R744 XOR1_to_NAND1#3pin@203_polysilicon-1##50 XOR1_to_NAND1#3pin@203_polysilicon-1##51 9.881
+R745 XOR1_to_NAND1#3pin@203_polysilicon-1##51 XOR1_to_NAND1#3pin@203_polysilicon-1##52 9.881
+R746 XOR1_to_NAND1#3pin@203_polysilicon-1##52 XOR1_to_NAND1#3pin@203_polysilicon-1##53 9.881
+R747 XOR1_to_NAND1#3pin@203_polysilicon-1##53 XOR1_to_NAND1#3pin@203_polysilicon-1##54 9.881
+R748 XOR1_to_NAND1#3pin@203_polysilicon-1##54 XOR1_to_NAND1#24nmos@52_poly-right 9.881
+R749 net@564#5pmos@52_diff-top net@564#2pin@192_metal-1 4.81
+R750 net@564#1pin@202_polysilicon-1 net@564#1pin@202_polysilicon-1##0 9.85
+R751 net@564#1pin@202_polysilicon-1##0 net@564#1pin@202_polysilicon-1##1 9.85
+R752 net@564#1pin@202_polysilicon-1##1 net@564#1pin@202_polysilicon-1##2 9.85
+R753 net@564#1pin@202_polysilicon-1##2 net@564#1pin@202_polysilicon-1##3 9.85
+R754 net@564#1pin@202_polysilicon-1##3 net@564#1pin@202_polysilicon-1##4 9.85
+R755 net@564#1pin@202_polysilicon-1##4 net@564#1pin@202_polysilicon-1##5 9.85
+R756 net@564#1pin@202_polysilicon-1##5 net@564#1pin@202_polysilicon-1##6 9.85
+R757 net@564#1pin@202_polysilicon-1##6 net@564#1pin@202_polysilicon-1##7 9.85
+R758 net@564#1pin@202_polysilicon-1##7 net@564#1pin@202_polysilicon-1##8 9.85
+R759 net@564#1pin@202_polysilicon-1##8 net@564#1pin@202_polysilicon-1##9 9.85
+R760 net@564#1pin@202_polysilicon-1##9 net@564#1pin@202_polysilicon-1##10 9.85
+R761 net@564#1pin@202_polysilicon-1##10 net@564#1pin@202_polysilicon-1##11 9.85
+R762 net@564#1pin@202_polysilicon-1##11 net@564#1pin@202_polysilicon-1##12 9.85
+R763 net@564#1pin@202_polysilicon-1##12 net@564#1pin@202_polysilicon-1##13 9.85
+R764 net@564#1pin@202_polysilicon-1##13 net@564#1pin@202_polysilicon-1##14 9.85
+R765 net@564#1pin@202_polysilicon-1##14 net@564#1pin@202_polysilicon-1##15 9.85
+R766 net@564#1pin@202_polysilicon-1##15 net@564#1pin@202_polysilicon-1##16 9.85
+R767 net@564#1pin@202_polysilicon-1##16 net@564#1pin@202_polysilicon-1##17 9.85
+R768 net@564#1pin@202_polysilicon-1##17 net@564#1pin@202_polysilicon-1##18 9.85
+R769 net@564#1pin@202_polysilicon-1##18 net@564#1pin@202_polysilicon-1##19 9.85
+R770 net@564#1pin@202_polysilicon-1##19 net@564#1pin@202_polysilicon-1##20 9.85
+R771 net@564#1pin@202_polysilicon-1##20 net@564#1pin@202_polysilicon-1##21 9.85
+R772 net@564#1pin@202_polysilicon-1##21 net@564#1pin@202_polysilicon-1##22 9.85
+R773 net@564#1pin@202_polysilicon-1##22 net@564#1pin@202_polysilicon-1##23 9.85
+R774 net@564#1pin@202_polysilicon-1##23 net@564#1pin@202_polysilicon-1##24 9.85
+R775 net@564#1pin@202_polysilicon-1##24 net@564#1pin@202_polysilicon-1##25 9.85
+R776 net@564#1pin@202_polysilicon-1##25 net@564#1pin@202_polysilicon-1##26 9.85
+R777 net@564#1pin@202_polysilicon-1##26 net@564#1pin@202_polysilicon-1##27 9.85
+R778 net@564#1pin@202_polysilicon-1##27 net@564#1pin@202_polysilicon-1##28 9.85
+R779 net@564#1pin@202_polysilicon-1##28 net@564#1pin@202_polysilicon-1##29 9.85
+R780 net@564#1pin@202_polysilicon-1##29 net@564#1pin@202_polysilicon-1##30 9.85
+R781 net@564#1pin@202_polysilicon-1##30 net@564#1pin@202_polysilicon-1##31 9.85
+R782 net@564#1pin@202_polysilicon-1##31 net@564#1pin@202_polysilicon-1##32 9.85
+R783 net@564#1pin@202_polysilicon-1##32 net@564#1pin@202_polysilicon-1##33 9.85
+R784 net@564#1pin@202_polysilicon-1##33 net@564#1pin@202_polysilicon-1##34 9.85
+R785 net@564#1pin@202_polysilicon-1##34 net@564#1pin@202_polysilicon-1##35 9.85
+R786 net@564#1pin@202_polysilicon-1##35 net@564#1pin@202_polysilicon-1##36 9.85
+R787 net@564#1pin@202_polysilicon-1##36 net@564#1pin@202_polysilicon-1##37 9.85
+R788 net@564#1pin@202_polysilicon-1##37 net@564#1pin@202_polysilicon-1##38 9.85
+R789 net@564#1pin@202_polysilicon-1##38 net@564#1pin@202_polysilicon-1##39 9.85
+R790 net@564#1pin@202_polysilicon-1##39 net@564#1pin@202_polysilicon-1##40 9.85
+R791 net@564#1pin@202_polysilicon-1##40 net@564#1pin@202_polysilicon-1##41 9.85
+R792 net@564#1pin@202_polysilicon-1##41 net@564#1pin@202_polysilicon-1##42 9.85
+R793 net@564#1pin@202_polysilicon-1##42 net@564#1pin@202_polysilicon-1##43 9.85
+R794 net@564#1pin@202_polysilicon-1##43 net@564#1pin@202_polysilicon-1##44 9.85
+R795 net@564#1pin@202_polysilicon-1##44 net@564#1pin@202_polysilicon-1##45 9.85
+R796 net@564#1pin@202_polysilicon-1##45 net@564#1pin@202_polysilicon-1##46 9.85
+R797 net@564#1pin@202_polysilicon-1##46 net@564#1pin@202_polysilicon-1##47 9.85
+R798 net@564#1pin@202_polysilicon-1##47 net@564#1pin@202_polysilicon-1##48 9.85
+R799 net@564#1pin@202_polysilicon-1##48 net@564#1pin@202_polysilicon-1##49 9.85
+R800 net@564#1pin@202_polysilicon-1##49 net@564#1pin@202_polysilicon-1##50 9.85
+R801 net@564#1pin@202_polysilicon-1##50 net@564#1pin@202_polysilicon-1##51 9.85
+R802 net@564#1pin@202_polysilicon-1##51 net@564#1pin@202_polysilicon-1##52 9.85
+R803 net@564#1pin@202_polysilicon-1##52 net@564#1pin@202_polysilicon-1##53 9.85
+R804 net@564#1pin@202_polysilicon-1##53 net@564#1pin@202_polysilicon-1##54 9.85
+R805 net@564#1pin@202_polysilicon-1##54 net@564#1pin@202_polysilicon-1##55 9.85
+R806 net@564#1pin@202_polysilicon-1##55 net@564#1pin@202_polysilicon-1##56 9.85
+R807 net@564#1pin@202_polysilicon-1##56 net@564#1pin@202_polysilicon-1##57 9.85
+R808 net@564#1pin@202_polysilicon-1##57 net@564#1pin@202_polysilicon-1##58 9.85
+R809 net@564#1pin@202_polysilicon-1##58 net@564#1pin@202_polysilicon-1##59 9.85
+R810 net@564#1pin@202_polysilicon-1##59 net@564#1pin@202_polysilicon-1##60 9.85
+R811 net@564#1pin@202_polysilicon-1##60 net@564#2pin@192_metal-1 9.85
+R812 Cin#17pmos@51_poly-right Cin#17pmos@51_poly-right##0 9.854
+R813 Cin#17pmos@51_poly-right##0 Cin#17pmos@51_poly-right##1 9.854
+R814 Cin#17pmos@51_poly-right##1 Cin#17pmos@51_poly-right##2 9.854
+R815 Cin#17pmos@51_poly-right##2 Cin#17pmos@51_poly-right##3 9.854
+R816 Cin#17pmos@51_poly-right##3 Cin#17pmos@51_poly-right##4 9.854
+R817 Cin#17pmos@51_poly-right##4 Cin#17pmos@51_poly-right##5 9.854
+R818 Cin#17pmos@51_poly-right##5 Cin#17pmos@51_poly-right##6 9.854
+R819 Cin#17pmos@51_poly-right##6 Cin#17pmos@51_poly-right##7 9.854
+R820 Cin#17pmos@51_poly-right##7 Cin#17pmos@51_poly-right##8 9.854
+R821 Cin#17pmos@51_poly-right##8 Cin#17pmos@51_poly-right##9 9.854
+R822 Cin#17pmos@51_poly-right##9 Cin#17pmos@51_poly-right##10 9.854
+R823 Cin#17pmos@51_poly-right##10 Cin#17pmos@51_poly-right##11 9.854
+R824 Cin#17pmos@51_poly-right##11 Cin#17pmos@51_poly-right##12 9.854
+R825 Cin#17pmos@51_poly-right##12 Cin#17pmos@51_poly-right##13 9.854
+R826 Cin#17pmos@51_poly-right##13 Cin#17pmos@51_poly-right##14 9.854
+R827 Cin#17pmos@51_poly-right##14 Cin#17pmos@51_poly-right##15 9.854
+R828 Cin#17pmos@51_poly-right##15 Cin#17pmos@51_poly-right##16 9.854
+R829 Cin#17pmos@51_poly-right##16 Cin#17pmos@51_poly-right##17 9.854
+R830 Cin#17pmos@51_poly-right##17 Cin#17pmos@51_poly-right##18 9.854
+R831 Cin#17pmos@51_poly-right##18 Cin#17pmos@51_poly-right##19 9.854
+R832 Cin#17pmos@51_poly-right##19 Cin#17pmos@51_poly-right##20 9.854
+R833 Cin#17pmos@51_poly-right##20 Cin#17pmos@51_poly-right##21 9.854
+R834 Cin#17pmos@51_poly-right##21 Cin#17pmos@51_poly-right##22 9.854
+R835 Cin#17pmos@51_poly-right##22 Cin#17pmos@51_poly-right##23 9.854
+R836 Cin#17pmos@51_poly-right##23 Cin#17pmos@51_poly-right##24 9.854
+R837 Cin#17pmos@51_poly-right##24 Cin#17pmos@51_poly-right##25 9.854
+R838 Cin#17pmos@51_poly-right##25 Cin#17pmos@51_poly-right##26 9.854
+R839 Cin#17pmos@51_poly-right##26 Cin#17pmos@51_poly-right##27 9.854
+R840 Cin#17pmos@51_poly-right##27 Cin#17pmos@51_poly-right##28 9.854
+R841 Cin#17pmos@51_poly-right##28 Cin#17pmos@51_poly-right##29 9.854
+R842 Cin#17pmos@51_poly-right##29 Cin#17pmos@51_poly-right##30 9.854
+R843 Cin#17pmos@51_poly-right##30 Cin#17pmos@51_poly-right##31 9.854
+R844 Cin#17pmos@51_poly-right##31 Cin#17pmos@51_poly-right##32 9.854
+R845 Cin#17pmos@51_poly-right##32 Cin#17pmos@51_poly-right##33 9.854
+R846 Cin#17pmos@51_poly-right##33 Cin#17pmos@51_poly-right##34 9.854
+R847 Cin#17pmos@51_poly-right##34 Cin#17pmos@51_poly-right##35 9.854
+R848 Cin#17pmos@51_poly-right##35 Cin#17pmos@51_poly-right##36 9.854
+R849 Cin#17pmos@51_poly-right##36 Cin#17pmos@51_poly-right##37 9.854
+R850 Cin#17pmos@51_poly-right##37 Cin#17pmos@51_poly-right##38 9.854
+R851 Cin#17pmos@51_poly-right##38 Cin#17pmos@51_poly-right##39 9.854
+R852 Cin#17pmos@51_poly-right##39 Cin#17pmos@51_poly-right##40 9.854
+R853 Cin#17pmos@51_poly-right##40 Cin#17pmos@51_poly-right##41 9.854
+R854 Cin#17pmos@51_poly-right##41 Cin#17pmos@51_poly-right##42 9.854
+R855 Cin#17pmos@51_poly-right##42 Cin#17pmos@51_poly-right##43 9.854
+R856 Cin#17pmos@51_poly-right##43 Cin#17pmos@51_poly-right##44 9.854
+R857 Cin#17pmos@51_poly-right##44 Cin#17pmos@51_poly-right##45 9.854
+R858 Cin#17pmos@51_poly-right##45 Cin#17pmos@51_poly-right##46 9.854
+R859 Cin#17pmos@51_poly-right##46 Cin#17pmos@51_poly-right##47 9.854
+R860 Cin#17pmos@51_poly-right##47 Cin#17pmos@51_poly-right##48 9.854
+R861 Cin#17pmos@51_poly-right##48 Cin#17pmos@51_poly-right##49 9.854
+R862 Cin#17pmos@51_poly-right##49 Cin#17pmos@51_poly-right##50 9.854
+R863 Cin#17pmos@51_poly-right##50 Cin#17pmos@51_poly-right##51 9.854
+R864 Cin#17pmos@51_poly-right##51 Cin#17pmos@51_poly-right##52 9.854
+R865 Cin#17pmos@51_poly-right##52 Cin#17pmos@51_poly-right##53 9.854
+R866 Cin#17pmos@51_poly-right##53 Cin#17pmos@51_poly-right##54 9.854
+R867 Cin#17pmos@51_poly-right##54 Cin#6pin@193_polysilicon-1 9.854
+R868 net@577 net@577#2contact@270_metal-1-metal-2 4.797
+R869 XOR1_to_NAND1#9pmos@47_poly-left XOR1_to_NAND1#9pmos@47_poly-left##0 9.871
+R870 XOR1_to_NAND1#9pmos@47_poly-left##0 XOR1_to_NAND1#9pmos@47_poly-left##1 9.871
+R871 XOR1_to_NAND1#9pmos@47_poly-left##1 XOR1_to_NAND1#9pmos@47_poly-left##2 9.871
+R872 XOR1_to_NAND1#9pmos@47_poly-left##2 XOR1_to_NAND1#9pmos@47_poly-left##3 9.871
+R873 XOR1_to_NAND1#9pmos@47_poly-left##3 XOR1_to_NAND1#9pmos@47_poly-left##4 9.871
+R874 XOR1_to_NAND1#9pmos@47_poly-left##4 XOR1_to_NAND1#9pmos@47_poly-left##5 9.871
+R875 XOR1_to_NAND1#9pmos@47_poly-left##5 XOR1_to_NAND1#9pmos@47_poly-left##6 9.871
+R876 XOR1_to_NAND1#9pmos@47_poly-left##6 XOR1_to_NAND1#9pmos@47_poly-left##7 9.871
+R877 XOR1_to_NAND1#9pmos@47_poly-left##7 XOR1_to_NAND1#9pmos@47_poly-left##8 9.871
+R878 XOR1_to_NAND1#9pmos@47_poly-left##8 XOR1_to_NAND1#9pmos@47_poly-left##9 9.871
+R879 XOR1_to_NAND1#9pmos@47_poly-left##9 XOR1_to_NAND1#9pmos@47_poly-left##10 9.871
+R880 XOR1_to_NAND1#9pmos@47_poly-left##10 XOR1_to_NAND1#9pmos@47_poly-left##11 9.871
+R881 XOR1_to_NAND1#9pmos@47_poly-left##11 XOR1_to_NAND1#9pmos@47_poly-left##12 9.871
+R882 XOR1_to_NAND1#9pmos@47_poly-left##12 XOR1_to_NAND1#9pmos@47_poly-left##13 9.871
+R883 XOR1_to_NAND1#9pmos@47_poly-left##13 XOR1_to_NAND1#9pmos@47_poly-left##14 9.871
+R884 XOR1_to_NAND1#9pmos@47_poly-left##14 XOR1_to_NAND1#9pmos@47_poly-left##15 9.871
+R885 XOR1_to_NAND1#9pmos@47_poly-left##15 XOR1_to_NAND1#9pmos@47_poly-left##16 9.871
+R886 XOR1_to_NAND1#9pmos@47_poly-left##16 XOR1_to_NAND1#9pmos@47_poly-left##17 9.871
+R887 XOR1_to_NAND1#9pmos@47_poly-left##17 XOR1_to_NAND1#9pmos@47_poly-left##18 9.871
+R888 XOR1_to_NAND1#9pmos@47_poly-left##18 XOR1_to_NAND1#9pmos@47_poly-left##19 9.871
+R889 XOR1_to_NAND1#9pmos@47_poly-left##19 XOR1_to_NAND1#9pmos@47_poly-left##20 9.871
+R890 XOR1_to_NAND1#9pmos@47_poly-left##20 XOR1_to_NAND1#9pmos@47_poly-left##21 9.871
+R891 XOR1_to_NAND1#9pmos@47_poly-left##21 XOR1_to_NAND1#9pmos@47_poly-left##22 9.871
+R892 XOR1_to_NAND1#9pmos@47_poly-left##22 XOR1_to_NAND1#9pmos@47_poly-left##23 9.871
+R893 XOR1_to_NAND1#9pmos@47_poly-left##23 XOR1_to_NAND1#9pmos@47_poly-left##24 9.871
+R894 XOR1_to_NAND1#9pmos@47_poly-left##24 XOR1_to_NAND1#9pmos@47_poly-left##25 9.871
+R895 XOR1_to_NAND1#9pmos@47_poly-left##25 XOR1_to_NAND1#9pmos@47_poly-left##26 9.871
+R896 XOR1_to_NAND1#9pmos@47_poly-left##26 XOR1_to_NAND1#9pmos@47_poly-left##27 9.871
+R897 XOR1_to_NAND1#9pmos@47_poly-left##27 XOR1_to_NAND1#9pmos@47_poly-left##28 9.871
+R898 XOR1_to_NAND1#9pmos@47_poly-left##28 XOR1_to_NAND1#9pmos@47_poly-left##29 9.871
+R899 XOR1_to_NAND1#9pmos@47_poly-left##29 XOR1_to_NAND1#9pmos@47_poly-left##30 9.871
+R900 XOR1_to_NAND1#9pmos@47_poly-left##30 XOR1_to_NAND1#9pmos@47_poly-left##31 9.871
+R901 XOR1_to_NAND1#9pmos@47_poly-left##31 XOR1_to_NAND1#9pmos@47_poly-left##32 9.871
+R902 XOR1_to_NAND1#9pmos@47_poly-left##32 XOR1_to_NAND1#9pmos@47_poly-left##33 9.871
+R903 XOR1_to_NAND1#9pmos@47_poly-left##33 XOR1_to_NAND1#9pmos@47_poly-left##34 9.871
+R904 XOR1_to_NAND1#9pmos@47_poly-left##34 XOR1_to_NAND1#9pmos@47_poly-left##35 9.871
+R905 XOR1_to_NAND1#9pmos@47_poly-left##35 XOR1_to_NAND1#9pmos@47_poly-left##36 9.871
+R906 XOR1_to_NAND1#9pmos@47_poly-left##36 XOR1_to_NAND1#9pmos@47_poly-left##37 9.871
+R907 XOR1_to_NAND1#9pmos@47_poly-left##37 XOR1_to_NAND1#9pmos@47_poly-left##38 9.871
+R908 XOR1_to_NAND1#9pmos@47_poly-left##38 XOR1_to_NAND1#9pmos@47_poly-left##39 9.871
+R909 XOR1_to_NAND1#9pmos@47_poly-left##39 XOR1_to_NAND1#9pmos@47_poly-left##40 9.871
+R910 XOR1_to_NAND1#9pmos@47_poly-left##40 XOR1_to_NAND1#9pmos@47_poly-left##41 9.871
+R911 XOR1_to_NAND1#9pmos@47_poly-left##41 XOR1_to_NAND1#9pmos@47_poly-left##42 9.871
+R912 XOR1_to_NAND1#9pmos@47_poly-left##42 XOR1_to_NAND1#9pmos@47_poly-left##43 9.871
+R913 XOR1_to_NAND1#9pmos@47_poly-left##43 XOR1_to_NAND1#9pmos@47_poly-left##44 9.871
+R914 XOR1_to_NAND1#9pmos@47_poly-left##44 XOR1_to_NAND1#9pmos@47_poly-left##45 9.871
+R915 XOR1_to_NAND1#9pmos@47_poly-left##45 XOR1_to_NAND1#9pmos@47_poly-left##46 9.871
+R916 XOR1_to_NAND1#9pmos@47_poly-left##46 XOR1_to_NAND1#9pmos@47_poly-left##47 9.871
+R917 XOR1_to_NAND1#9pmos@47_poly-left##47 XOR1_to_NAND1#9pmos@47_poly-left##48 9.871
+R918 XOR1_to_NAND1#9pmos@47_poly-left##48 XOR1_to_NAND1#9pmos@47_poly-left##49 9.871
+R919 XOR1_to_NAND1#9pmos@47_poly-left##49 XOR1_to_NAND1#9pmos@47_poly-left##50 9.871
+R920 XOR1_to_NAND1#9pmos@47_poly-left##50 XOR1_to_NAND1#9pmos@47_poly-left##51 9.871
+R921 XOR1_to_NAND1#9pmos@47_poly-left##51 XOR1_to_NAND1#9pmos@47_poly-left##52 9.871
+R922 XOR1_to_NAND1#9pmos@47_poly-left##52 XOR1_to_NAND1#9pmos@47_poly-left##53 9.871
+R923 XOR1_to_NAND1#9pmos@47_poly-left##53 XOR1_to_NAND1#9pmos@47_poly-left##54 9.871
+R924 XOR1_to_NAND1#9pmos@47_poly-left##54 XOR1_to_NAND1#9pmos@47_poly-left##55 9.871
+R925 XOR1_to_NAND1#9pmos@47_poly-left##55 XOR1_to_NAND1#26nmos@47_poly-right 9.871
+R926 net@564#7pmos@48_poly-left net@564#7pmos@48_poly-left##0 9.871
+R927 net@564#7pmos@48_poly-left##0 net@564#7pmos@48_poly-left##1 9.871
+R928 net@564#7pmos@48_poly-left##1 net@564#7pmos@48_poly-left##2 9.871
+R929 net@564#7pmos@48_poly-left##2 net@564#7pmos@48_poly-left##3 9.871
+R930 net@564#7pmos@48_poly-left##3 net@564#7pmos@48_poly-left##4 9.871
+R931 net@564#7pmos@48_poly-left##4 net@564#7pmos@48_poly-left##5 9.871
+R932 net@564#7pmos@48_poly-left##5 net@564#7pmos@48_poly-left##6 9.871
+R933 net@564#7pmos@48_poly-left##6 net@564#7pmos@48_poly-left##7 9.871
+R934 net@564#7pmos@48_poly-left##7 net@564#7pmos@48_poly-left##8 9.871
+R935 net@564#7pmos@48_poly-left##8 net@564#7pmos@48_poly-left##9 9.871
+R936 net@564#7pmos@48_poly-left##9 net@564#7pmos@48_poly-left##10 9.871
+R937 net@564#7pmos@48_poly-left##10 net@564#7pmos@48_poly-left##11 9.871
+R938 net@564#7pmos@48_poly-left##11 net@564#7pmos@48_poly-left##12 9.871
+R939 net@564#7pmos@48_poly-left##12 net@564#7pmos@48_poly-left##13 9.871
+R940 net@564#7pmos@48_poly-left##13 net@564#7pmos@48_poly-left##14 9.871
+R941 net@564#7pmos@48_poly-left##14 net@564#7pmos@48_poly-left##15 9.871
+R942 net@564#7pmos@48_poly-left##15 net@564#7pmos@48_poly-left##16 9.871
+R943 net@564#7pmos@48_poly-left##16 net@564#7pmos@48_poly-left##17 9.871
+R944 net@564#7pmos@48_poly-left##17 net@564#7pmos@48_poly-left##18 9.871
+R945 net@564#7pmos@48_poly-left##18 net@564#7pmos@48_poly-left##19 9.871
+R946 net@564#7pmos@48_poly-left##19 net@564#7pmos@48_poly-left##20 9.871
+R947 net@564#7pmos@48_poly-left##20 net@564#7pmos@48_poly-left##21 9.871
+R948 net@564#7pmos@48_poly-left##21 net@564#7pmos@48_poly-left##22 9.871
+R949 net@564#7pmos@48_poly-left##22 net@564#7pmos@48_poly-left##23 9.871
+R950 net@564#7pmos@48_poly-left##23 net@564#7pmos@48_poly-left##24 9.871
+R951 net@564#7pmos@48_poly-left##24 net@564#7pmos@48_poly-left##25 9.871
+R952 net@564#7pmos@48_poly-left##25 net@564#7pmos@48_poly-left##26 9.871
+R953 net@564#7pmos@48_poly-left##26 net@564#7pmos@48_poly-left##27 9.871
+R954 net@564#7pmos@48_poly-left##27 net@564#7pmos@48_poly-left##28 9.871
+R955 net@564#7pmos@48_poly-left##28 net@564#7pmos@48_poly-left##29 9.871
+R956 net@564#7pmos@48_poly-left##29 net@564#7pmos@48_poly-left##30 9.871
+R957 net@564#7pmos@48_poly-left##30 net@564#7pmos@48_poly-left##31 9.871
+R958 net@564#7pmos@48_poly-left##31 net@564#7pmos@48_poly-left##32 9.871
+R959 net@564#7pmos@48_poly-left##32 net@564#7pmos@48_poly-left##33 9.871
+R960 net@564#7pmos@48_poly-left##33 net@564#7pmos@48_poly-left##34 9.871
+R961 net@564#7pmos@48_poly-left##34 net@564#7pmos@48_poly-left##35 9.871
+R962 net@564#7pmos@48_poly-left##35 net@564#7pmos@48_poly-left##36 9.871
+R963 net@564#7pmos@48_poly-left##36 net@564#7pmos@48_poly-left##37 9.871
+R964 net@564#7pmos@48_poly-left##37 net@564#7pmos@48_poly-left##38 9.871
+R965 net@564#7pmos@48_poly-left##38 net@564#7pmos@48_poly-left##39 9.871
+R966 net@564#7pmos@48_poly-left##39 net@564#7pmos@48_poly-left##40 9.871
+R967 net@564#7pmos@48_poly-left##40 net@564#7pmos@48_poly-left##41 9.871
+R968 net@564#7pmos@48_poly-left##41 net@564#7pmos@48_poly-left##42 9.871
+R969 net@564#7pmos@48_poly-left##42 net@564#7pmos@48_poly-left##43 9.871
+R970 net@564#7pmos@48_poly-left##43 net@564#7pmos@48_poly-left##44 9.871
+R971 net@564#7pmos@48_poly-left##44 net@564#7pmos@48_poly-left##45 9.871
+R972 net@564#7pmos@48_poly-left##45 net@564#7pmos@48_poly-left##46 9.871
+R973 net@564#7pmos@48_poly-left##46 net@564#7pmos@48_poly-left##47 9.871
+R974 net@564#7pmos@48_poly-left##47 net@564#7pmos@48_poly-left##48 9.871
+R975 net@564#7pmos@48_poly-left##48 net@564#7pmos@48_poly-left##49 9.871
+R976 net@564#7pmos@48_poly-left##49 net@564#7pmos@48_poly-left##50 9.871
+R977 net@564#7pmos@48_poly-left##50 net@564#7pmos@48_poly-left##51 9.871
+R978 net@564#7pmos@48_poly-left##51 net@564#7pmos@48_poly-left##52 9.871
+R979 net@564#7pmos@48_poly-left##52 net@564#7pmos@48_poly-left##53 9.871
+R980 net@564#7pmos@48_poly-left##53 net@564#7pmos@48_poly-left##54 9.871
+R981 net@564#7pmos@48_poly-left##54 net@564#7pmos@48_poly-left##55 9.871
+R982 net@564#7pmos@48_poly-left##55 net@564#11nmos@48_poly-right 9.871
+R983 Cin#18pmos@49_poly-right Cin#18pmos@49_poly-right##0 9.871
+R984 Cin#18pmos@49_poly-right##0 Cin#18pmos@49_poly-right##1 9.871
+R985 Cin#18pmos@49_poly-right##1 Cin#18pmos@49_poly-right##2 9.871
+R986 Cin#18pmos@49_poly-right##2 Cin#18pmos@49_poly-right##3 9.871
+R987 Cin#18pmos@49_poly-right##3 Cin#18pmos@49_poly-right##4 9.871
+R988 Cin#18pmos@49_poly-right##4 Cin#18pmos@49_poly-right##5 9.871
+R989 Cin#18pmos@49_poly-right##5 Cin#18pmos@49_poly-right##6 9.871
+R990 Cin#18pmos@49_poly-right##6 Cin#18pmos@49_poly-right##7 9.871
+R991 Cin#18pmos@49_poly-right##7 Cin#18pmos@49_poly-right##8 9.871
+R992 Cin#18pmos@49_poly-right##8 Cin#18pmos@49_poly-right##9 9.871
+R993 Cin#18pmos@49_poly-right##9 Cin#18pmos@49_poly-right##10 9.871
+R994 Cin#18pmos@49_poly-right##10 Cin#18pmos@49_poly-right##11 9.871
+R995 Cin#18pmos@49_poly-right##11 Cin#18pmos@49_poly-right##12 9.871
+R996 Cin#18pmos@49_poly-right##12 Cin#18pmos@49_poly-right##13 9.871
+R997 Cin#18pmos@49_poly-right##13 Cin#18pmos@49_poly-right##14 9.871
+R998 Cin#18pmos@49_poly-right##14 Cin#18pmos@49_poly-right##15 9.871
+R999 Cin#18pmos@49_poly-right##15 Cin#18pmos@49_poly-right##16 9.871
+R1000 Cin#18pmos@49_poly-right##16 Cin#18pmos@49_poly-right##17 9.871
+R1001 Cin#18pmos@49_poly-right##17 Cin#18pmos@49_poly-right##18 9.871
+R1002 Cin#18pmos@49_poly-right##18 Cin#18pmos@49_poly-right##19 9.871
+R1003 Cin#18pmos@49_poly-right##19 Cin#18pmos@49_poly-right##20 9.871
+R1004 Cin#18pmos@49_poly-right##20 Cin#18pmos@49_poly-right##21 9.871
+R1005 Cin#18pmos@49_poly-right##21 Cin#18pmos@49_poly-right##22 9.871
+R1006 Cin#18pmos@49_poly-right##22 Cin#18pmos@49_poly-right##23 9.871
+R1007 Cin#18pmos@49_poly-right##23 Cin#18pmos@49_poly-right##24 9.871
+R1008 Cin#18pmos@49_poly-right##24 Cin#18pmos@49_poly-right##25 9.871
+R1009 Cin#18pmos@49_poly-right##25 Cin#18pmos@49_poly-right##26 9.871
+R1010 Cin#18pmos@49_poly-right##26 Cin#18pmos@49_poly-right##27 9.871
+R1011 Cin#18pmos@49_poly-right##27 Cin#18pmos@49_poly-right##28 9.871
+R1012 Cin#18pmos@49_poly-right##28 Cin#18pmos@49_poly-right##29 9.871
+R1013 Cin#18pmos@49_poly-right##29 Cin#18pmos@49_poly-right##30 9.871
+R1014 Cin#18pmos@49_poly-right##30 Cin#18pmos@49_poly-right##31 9.871
+R1015 Cin#18pmos@49_poly-right##31 Cin#18pmos@49_poly-right##32 9.871
+R1016 Cin#18pmos@49_poly-right##32 Cin#18pmos@49_poly-right##33 9.871
+R1017 Cin#18pmos@49_poly-right##33 Cin#18pmos@49_poly-right##34 9.871
+R1018 Cin#18pmos@49_poly-right##34 Cin#18pmos@49_poly-right##35 9.871
+R1019 Cin#18pmos@49_poly-right##35 Cin#18pmos@49_poly-right##36 9.871
+R1020 Cin#18pmos@49_poly-right##36 Cin#18pmos@49_poly-right##37 9.871
+R1021 Cin#18pmos@49_poly-right##37 Cin#18pmos@49_poly-right##38 9.871
+R1022 Cin#18pmos@49_poly-right##38 Cin#18pmos@49_poly-right##39 9.871
+R1023 Cin#18pmos@49_poly-right##39 Cin#18pmos@49_poly-right##40 9.871
+R1024 Cin#18pmos@49_poly-right##40 Cin#18pmos@49_poly-right##41 9.871
+R1025 Cin#18pmos@49_poly-right##41 Cin#18pmos@49_poly-right##42 9.871
+R1026 Cin#18pmos@49_poly-right##42 Cin#18pmos@49_poly-right##43 9.871
+R1027 Cin#18pmos@49_poly-right##43 Cin#18pmos@49_poly-right##44 9.871
+R1028 Cin#18pmos@49_poly-right##44 Cin#18pmos@49_poly-right##45 9.871
+R1029 Cin#18pmos@49_poly-right##45 Cin#18pmos@49_poly-right##46 9.871
+R1030 Cin#18pmos@49_poly-right##46 Cin#18pmos@49_poly-right##47 9.871
+R1031 Cin#18pmos@49_poly-right##47 Cin#18pmos@49_poly-right##48 9.871
+R1032 Cin#18pmos@49_poly-right##48 Cin#18pmos@49_poly-right##49 9.871
+R1033 Cin#18pmos@49_poly-right##49 Cin#18pmos@49_poly-right##50 9.871
+R1034 Cin#18pmos@49_poly-right##50 Cin#18pmos@49_poly-right##51 9.871
+R1035 Cin#18pmos@49_poly-right##51 Cin#18pmos@49_poly-right##52 9.871
+R1036 Cin#18pmos@49_poly-right##52 Cin#18pmos@49_poly-right##53 9.871
+R1037 Cin#18pmos@49_poly-right##53 Cin#18pmos@49_poly-right##54 9.871
+R1038 Cin#18pmos@49_poly-right##54 Cin#18pmos@49_poly-right##55 9.871
+R1039 Cin#18pmos@49_poly-right##55 Cin#9nmos@49_poly-left 9.871
+R1040 net@577#14pmos@50_poly-right net@577#14pmos@50_poly-right##0 9.871
+R1041 net@577#14pmos@50_poly-right##0 net@577#14pmos@50_poly-right##1 9.871
+R1042 net@577#14pmos@50_poly-right##1 net@577#14pmos@50_poly-right##2 9.871
+R1043 net@577#14pmos@50_poly-right##2 net@577#14pmos@50_poly-right##3 9.871
+R1044 net@577#14pmos@50_poly-right##3 net@577#14pmos@50_poly-right##4 9.871
+R1045 net@577#14pmos@50_poly-right##4 net@577#14pmos@50_poly-right##5 9.871
+R1046 net@577#14pmos@50_poly-right##5 net@577#14pmos@50_poly-right##6 9.871
+R1047 net@577#14pmos@50_poly-right##6 net@577#14pmos@50_poly-right##7 9.871
+R1048 net@577#14pmos@50_poly-right##7 net@577#14pmos@50_poly-right##8 9.871
+R1049 net@577#14pmos@50_poly-right##8 net@577#14pmos@50_poly-right##9 9.871
+R1050 net@577#14pmos@50_poly-right##9 net@577#14pmos@50_poly-right##10 9.871
+R1051 net@577#14pmos@50_poly-right##10 net@577#14pmos@50_poly-right##11 9.871
+R1052 net@577#14pmos@50_poly-right##11 net@577#14pmos@50_poly-right##12 9.871
+R1053 net@577#14pmos@50_poly-right##12 net@577#14pmos@50_poly-right##13 9.871
+R1054 net@577#14pmos@50_poly-right##13 net@577#14pmos@50_poly-right##14 9.871
+R1055 net@577#14pmos@50_poly-right##14 net@577#14pmos@50_poly-right##15 9.871
+R1056 net@577#14pmos@50_poly-right##15 net@577#14pmos@50_poly-right##16 9.871
+R1057 net@577#14pmos@50_poly-right##16 net@577#14pmos@50_poly-right##17 9.871
+R1058 net@577#14pmos@50_poly-right##17 net@577#14pmos@50_poly-right##18 9.871
+R1059 net@577#14pmos@50_poly-right##18 net@577#14pmos@50_poly-right##19 9.871
+R1060 net@577#14pmos@50_poly-right##19 net@577#14pmos@50_poly-right##20 9.871
+R1061 net@577#14pmos@50_poly-right##20 net@577#14pmos@50_poly-right##21 9.871
+R1062 net@577#14pmos@50_poly-right##21 net@577#14pmos@50_poly-right##22 9.871
+R1063 net@577#14pmos@50_poly-right##22 net@577#14pmos@50_poly-right##23 9.871
+R1064 net@577#14pmos@50_poly-right##23 net@577#14pmos@50_poly-right##24 9.871
+R1065 net@577#14pmos@50_poly-right##24 net@577#14pmos@50_poly-right##25 9.871
+R1066 net@577#14pmos@50_poly-right##25 net@577#14pmos@50_poly-right##26 9.871
+R1067 net@577#14pmos@50_poly-right##26 net@577#14pmos@50_poly-right##27 9.871
+R1068 net@577#14pmos@50_poly-right##27 net@577#14pmos@50_poly-right##28 9.871
+R1069 net@577#14pmos@50_poly-right##28 net@577#14pmos@50_poly-right##29 9.871
+R1070 net@577#14pmos@50_poly-right##29 net@577#14pmos@50_poly-right##30 9.871
+R1071 net@577#14pmos@50_poly-right##30 net@577#14pmos@50_poly-right##31 9.871
+R1072 net@577#14pmos@50_poly-right##31 net@577#14pmos@50_poly-right##32 9.871
+R1073 net@577#14pmos@50_poly-right##32 net@577#14pmos@50_poly-right##33 9.871
+R1074 net@577#14pmos@50_poly-right##33 net@577#14pmos@50_poly-right##34 9.871
+R1075 net@577#14pmos@50_poly-right##34 net@577#14pmos@50_poly-right##35 9.871
+R1076 net@577#14pmos@50_poly-right##35 net@577#14pmos@50_poly-right##36 9.871
+R1077 net@577#14pmos@50_poly-right##36 net@577#14pmos@50_poly-right##37 9.871
+R1078 net@577#14pmos@50_poly-right##37 net@577#14pmos@50_poly-right##38 9.871
+R1079 net@577#14pmos@50_poly-right##38 net@577#14pmos@50_poly-right##39 9.871
+R1080 net@577#14pmos@50_poly-right##39 net@577#14pmos@50_poly-right##40 9.871
+R1081 net@577#14pmos@50_poly-right##40 net@577#14pmos@50_poly-right##41 9.871
+R1082 net@577#14pmos@50_poly-right##41 net@577#14pmos@50_poly-right##42 9.871
+R1083 net@577#14pmos@50_poly-right##42 net@577#14pmos@50_poly-right##43 9.871
+R1084 net@577#14pmos@50_poly-right##43 net@577#14pmos@50_poly-right##44 9.871
+R1085 net@577#14pmos@50_poly-right##44 net@577#14pmos@50_poly-right##45 9.871
+R1086 net@577#14pmos@50_poly-right##45 net@577#14pmos@50_poly-right##46 9.871
+R1087 net@577#14pmos@50_poly-right##46 net@577#14pmos@50_poly-right##47 9.871
+R1088 net@577#14pmos@50_poly-right##47 net@577#14pmos@50_poly-right##48 9.871
+R1089 net@577#14pmos@50_poly-right##48 net@577#14pmos@50_poly-right##49 9.871
+R1090 net@577#14pmos@50_poly-right##49 net@577#14pmos@50_poly-right##50 9.871
+R1091 net@577#14pmos@50_poly-right##50 net@577#14pmos@50_poly-right##51 9.871
+R1092 net@577#14pmos@50_poly-right##51 net@577#14pmos@50_poly-right##52 9.871
+R1093 net@577#14pmos@50_poly-right##52 net@577#14pmos@50_poly-right##53 9.871
+R1094 net@577#14pmos@50_poly-right##53 net@577#14pmos@50_poly-right##54 9.871
+R1095 net@577#14pmos@50_poly-right##54 net@577#14pmos@50_poly-right##55 9.871
+R1096 net@577#14pmos@50_poly-right##55 net@577#9nmos@50_poly-left 9.871
+R1097 net@576#2contact@295_metal-1-polysilicon-1 net@576 4.654
+R1098 net@576#12pmos@53_poly-right net@576#12pmos@53_poly-right##0 9.931
+R1099 net@576#12pmos@53_poly-right##0 net@576#12pmos@53_poly-right##1 9.931
+R1100 net@576#12pmos@53_poly-right##1 net@576#12pmos@53_poly-right##2 9.931
+R1101 net@576#12pmos@53_poly-right##2 net@576#12pmos@53_poly-right##3 9.931
+R1102 net@576#12pmos@53_poly-right##3 net@576#12pmos@53_poly-right##4 9.931
+R1103 net@576#12pmos@53_poly-right##4 net@576#12pmos@53_poly-right##5 9.931
+R1104 net@576#12pmos@53_poly-right##5 net@576#12pmos@53_poly-right##6 9.931
+R1105 net@576#12pmos@53_poly-right##6 net@576#12pmos@53_poly-right##7 9.931
+R1106 net@576#12pmos@53_poly-right##7 net@576#12pmos@53_poly-right##8 9.931
+R1107 net@576#12pmos@53_poly-right##8 net@576#12pmos@53_poly-right##9 9.931
+R1108 net@576#12pmos@53_poly-right##9 net@576#12pmos@53_poly-right##10 9.931
+R1109 net@576#12pmos@53_poly-right##10 net@576#12pmos@53_poly-right##11 9.931
+R1110 net@576#12pmos@53_poly-right##11 net@576#12pmos@53_poly-right##12 9.931
+R1111 net@576#12pmos@53_poly-right##12 net@576#12pmos@53_poly-right##13 9.931
+R1112 net@576#12pmos@53_poly-right##13 net@576#12pmos@53_poly-right##14 9.931
+R1113 net@576#12pmos@53_poly-right##14 net@576#12pmos@53_poly-right##15 9.931
+R1114 net@576#12pmos@53_poly-right##15 net@576#12pmos@53_poly-right##16 9.931
+R1115 net@576#12pmos@53_poly-right##16 net@576#12pmos@53_poly-right##17 9.931
+R1116 net@576#12pmos@53_poly-right##17 net@576#12pmos@53_poly-right##18 9.931
+R1117 net@576#12pmos@53_poly-right##18 net@576#12pmos@53_poly-right##19 9.931
+R1118 net@576#12pmos@53_poly-right##19 net@576#12pmos@53_poly-right##20 9.931
+R1119 net@576#12pmos@53_poly-right##20 net@576#12pmos@53_poly-right##21 9.931
+R1120 net@576#12pmos@53_poly-right##21 net@576#12pmos@53_poly-right##22 9.931
+R1121 net@576#12pmos@53_poly-right##22 net@576#12pmos@53_poly-right##23 9.931
+R1122 net@576#12pmos@53_poly-right##23 net@576#12pmos@53_poly-right##24 9.931
+R1123 net@576#12pmos@53_poly-right##24 net@576#12pmos@53_poly-right##25 9.931
+R1124 net@576#12pmos@53_poly-right##25 net@576#12pmos@53_poly-right##26 9.931
+R1125 net@576#12pmos@53_poly-right##26 net@576#12pmos@53_poly-right##27 9.931
+R1126 net@576#12pmos@53_poly-right##27 net@576#12pmos@53_poly-right##28 9.931
+R1127 net@576#12pmos@53_poly-right##28 net@576#12pmos@53_poly-right##29 9.931
+R1128 net@576#12pmos@53_poly-right##29 net@576#12pmos@53_poly-right##30 9.931
+R1129 net@576#12pmos@53_poly-right##30 net@576#12pmos@53_poly-right##31 9.931
+R1130 net@576#12pmos@53_poly-right##31 net@576#12pmos@53_poly-right##32 9.931
+R1131 net@576#12pmos@53_poly-right##32 net@576#12pmos@53_poly-right##33 9.931
+R1132 net@576#12pmos@53_poly-right##33 net@576#12pmos@53_poly-right##34 9.931
+R1133 net@576#12pmos@53_poly-right##34 net@576#12pmos@53_poly-right##35 9.931
+R1134 net@576#12pmos@53_poly-right##35 net@576#12pmos@53_poly-right##36 9.931
+R1135 net@576#12pmos@53_poly-right##36 net@576#12pmos@53_poly-right##37 9.931
+R1136 net@576#12pmos@53_poly-right##37 net@576#12pmos@53_poly-right##38 9.931
+R1137 net@576#12pmos@53_poly-right##38 net@576#12pmos@53_poly-right##39 9.931
+R1138 net@576#12pmos@53_poly-right##39 net@576#12pmos@53_poly-right##40 9.931
+R1139 net@576#12pmos@53_poly-right##40 net@576#12pmos@53_poly-right##41 9.931
+R1140 net@576#12pmos@53_poly-right##41 net@576#12pmos@53_poly-right##42 9.931
+R1141 net@576#12pmos@53_poly-right##42 net@576#12pmos@53_poly-right##43 9.931
+R1142 net@576#12pmos@53_poly-right##43 net@576#12pmos@53_poly-right##44 9.931
+R1143 net@576#12pmos@53_poly-right##44 net@576#12pmos@53_poly-right##45 9.931
+R1144 net@576#12pmos@53_poly-right##45 net@576#12pmos@53_poly-right##46 9.931
+R1145 net@576#12pmos@53_poly-right##46 net@576#12pmos@53_poly-right##47 9.931
+R1146 net@576#12pmos@53_poly-right##47 net@576#12pmos@53_poly-right##48 9.931
+R1147 net@576#12pmos@53_poly-right##48 net@576#12pmos@53_poly-right##49 9.931
+R1148 net@576#12pmos@53_poly-right##49 net@576#12pmos@53_poly-right##50 9.931
+R1149 net@576#12pmos@53_poly-right##50 net@576#12pmos@53_poly-right##51 9.931
+R1150 net@576#12pmos@53_poly-right##51 net@576#12pmos@53_poly-right##52 9.931
+R1151 net@576#12pmos@53_poly-right##52 net@576#5pin@195_polysilicon-1 9.931
+R1152 Sum0#4pmos@53_diff-top Sum0 4.823
+R1153 XOR1_to_NAND1#14pin@207_polysilicon-1 XOR1_to_NAND1#14pin@207_polysilicon-1##0 9.854
+R1154 XOR1_to_NAND1#14pin@207_polysilicon-1##0 XOR1_to_NAND1#14pin@207_polysilicon-1##1 9.854
+R1155 XOR1_to_NAND1#14pin@207_polysilicon-1##1 XOR1_to_NAND1#14pin@207_polysilicon-1##2 9.854
+R1156 XOR1_to_NAND1#14pin@207_polysilicon-1##2 XOR1_to_NAND1#14pin@207_polysilicon-1##3 9.854
+R1157 XOR1_to_NAND1#14pin@207_polysilicon-1##3 XOR1_to_NAND1#14pin@207_polysilicon-1##4 9.854
+R1158 XOR1_to_NAND1#14pin@207_polysilicon-1##4 XOR1_to_NAND1#14pin@207_polysilicon-1##5 9.854
+R1159 XOR1_to_NAND1#14pin@207_polysilicon-1##5 XOR1_to_NAND1#14pin@207_polysilicon-1##6 9.854
+R1160 XOR1_to_NAND1#14pin@207_polysilicon-1##6 XOR1_to_NAND1#14pin@207_polysilicon-1##7 9.854
+R1161 XOR1_to_NAND1#14pin@207_polysilicon-1##7 XOR1_to_NAND1#14pin@207_polysilicon-1##8 9.854
+R1162 XOR1_to_NAND1#14pin@207_polysilicon-1##8 XOR1_to_NAND1#14pin@207_polysilicon-1##9 9.854
+R1163 XOR1_to_NAND1#14pin@207_polysilicon-1##9 XOR1_to_NAND1#14pin@207_polysilicon-1##10 9.854
+R1164 XOR1_to_NAND1#14pin@207_polysilicon-1##10 XOR1_to_NAND1#14pin@207_polysilicon-1##11 9.854
+R1165 XOR1_to_NAND1#14pin@207_polysilicon-1##11 XOR1_to_NAND1#14pin@207_polysilicon-1##12 9.854
+R1166 XOR1_to_NAND1#14pin@207_polysilicon-1##12 XOR1_to_NAND1#14pin@207_polysilicon-1##13 9.854
+R1167 XOR1_to_NAND1#14pin@207_polysilicon-1##13 XOR1_to_NAND1#14pin@207_polysilicon-1##14 9.854
+R1168 XOR1_to_NAND1#14pin@207_polysilicon-1##14 XOR1_to_NAND1#14pin@207_polysilicon-1##15 9.854
+R1169 XOR1_to_NAND1#14pin@207_polysilicon-1##15 XOR1_to_NAND1#14pin@207_polysilicon-1##16 9.854
+R1170 XOR1_to_NAND1#14pin@207_polysilicon-1##16 XOR1_to_NAND1#14pin@207_polysilicon-1##17 9.854
+R1171 XOR1_to_NAND1#14pin@207_polysilicon-1##17 XOR1_to_NAND1#14pin@207_polysilicon-1##18 9.854
+R1172 XOR1_to_NAND1#14pin@207_polysilicon-1##18 XOR1_to_NAND1#14pin@207_polysilicon-1##19 9.854
+R1173 XOR1_to_NAND1#14pin@207_polysilicon-1##19 XOR1_to_NAND1#14pin@207_polysilicon-1##20 9.854
+R1174 XOR1_to_NAND1#14pin@207_polysilicon-1##20 XOR1_to_NAND1#14pin@207_polysilicon-1##21 9.854
+R1175 XOR1_to_NAND1#14pin@207_polysilicon-1##21 XOR1_to_NAND1#14pin@207_polysilicon-1##22 9.854
+R1176 XOR1_to_NAND1#14pin@207_polysilicon-1##22 XOR1_to_NAND1#14pin@207_polysilicon-1##23 9.854
+R1177 XOR1_to_NAND1#14pin@207_polysilicon-1##23 XOR1_to_NAND1#14pin@207_polysilicon-1##24 9.854
+R1178 XOR1_to_NAND1#14pin@207_polysilicon-1##24 XOR1_to_NAND1#14pin@207_polysilicon-1##25 9.854
+R1179 XOR1_to_NAND1#14pin@207_polysilicon-1##25 XOR1_to_NAND1#14pin@207_polysilicon-1##26 9.854
+R1180 XOR1_to_NAND1#14pin@207_polysilicon-1##26 XOR1_to_NAND1#14pin@207_polysilicon-1##27 9.854
+R1181 XOR1_to_NAND1#14pin@207_polysilicon-1##27 XOR1_to_NAND1#14pin@207_polysilicon-1##28 9.854
+R1182 XOR1_to_NAND1#14pin@207_polysilicon-1##28 XOR1_to_NAND1#14pin@207_polysilicon-1##29 9.854
+R1183 XOR1_to_NAND1#14pin@207_polysilicon-1##29 XOR1_to_NAND1#14pin@207_polysilicon-1##30 9.854
+R1184 XOR1_to_NAND1#14pin@207_polysilicon-1##30 XOR1_to_NAND1#14pin@207_polysilicon-1##31 9.854
+R1185 XOR1_to_NAND1#14pin@207_polysilicon-1##31 XOR1_to_NAND1#14pin@207_polysilicon-1##32 9.854
+R1186 XOR1_to_NAND1#14pin@207_polysilicon-1##32 XOR1_to_NAND1#14pin@207_polysilicon-1##33 9.854
+R1187 XOR1_to_NAND1#14pin@207_polysilicon-1##33 XOR1_to_NAND1#14pin@207_polysilicon-1##34 9.854
+R1188 XOR1_to_NAND1#14pin@207_polysilicon-1##34 XOR1_to_NAND1#14pin@207_polysilicon-1##35 9.854
+R1189 XOR1_to_NAND1#14pin@207_polysilicon-1##35 XOR1_to_NAND1#14pin@207_polysilicon-1##36 9.854
+R1190 XOR1_to_NAND1#14pin@207_polysilicon-1##36 XOR1_to_NAND1#14pin@207_polysilicon-1##37 9.854
+R1191 XOR1_to_NAND1#14pin@207_polysilicon-1##37 XOR1_to_NAND1#14pin@207_polysilicon-1##38 9.854
+R1192 XOR1_to_NAND1#14pin@207_polysilicon-1##38 XOR1_to_NAND1#14pin@207_polysilicon-1##39 9.854
+R1193 XOR1_to_NAND1#14pin@207_polysilicon-1##39 XOR1_to_NAND1#14pin@207_polysilicon-1##40 9.854
+R1194 XOR1_to_NAND1#14pin@207_polysilicon-1##40 XOR1_to_NAND1#14pin@207_polysilicon-1##41 9.854
+R1195 XOR1_to_NAND1#14pin@207_polysilicon-1##41 XOR1_to_NAND1#14pin@207_polysilicon-1##42 9.854
+R1196 XOR1_to_NAND1#14pin@207_polysilicon-1##42 XOR1_to_NAND1#14pin@207_polysilicon-1##43 9.854
+R1197 XOR1_to_NAND1#14pin@207_polysilicon-1##43 XOR1_to_NAND1#14pin@207_polysilicon-1##44 9.854
+R1198 XOR1_to_NAND1#14pin@207_polysilicon-1##44 XOR1_to_NAND1#14pin@207_polysilicon-1##45 9.854
+R1199 XOR1_to_NAND1#14pin@207_polysilicon-1##45 XOR1_to_NAND1#14pin@207_polysilicon-1##46 9.854
+R1200 XOR1_to_NAND1#14pin@207_polysilicon-1##46 XOR1_to_NAND1#14pin@207_polysilicon-1##47 9.854
+R1201 XOR1_to_NAND1#14pin@207_polysilicon-1##47 XOR1_to_NAND1#14pin@207_polysilicon-1##48 9.854
+R1202 XOR1_to_NAND1#14pin@207_polysilicon-1##48 XOR1_to_NAND1#14pin@207_polysilicon-1##49 9.854
+R1203 XOR1_to_NAND1#14pin@207_polysilicon-1##49 XOR1_to_NAND1#14pin@207_polysilicon-1##50 9.854
+R1204 XOR1_to_NAND1#14pin@207_polysilicon-1##50 XOR1_to_NAND1#14pin@207_polysilicon-1##51 9.854
+R1205 XOR1_to_NAND1#14pin@207_polysilicon-1##51 XOR1_to_NAND1#14pin@207_polysilicon-1##52 9.854
+R1206 XOR1_to_NAND1#14pin@207_polysilicon-1##52 XOR1_to_NAND1#14pin@207_polysilicon-1##53 9.854
+R1207 XOR1_to_NAND1#14pin@207_polysilicon-1##53 XOR1_to_NAND1#14pin@207_polysilicon-1##54 9.854
+R1208 XOR1_to_NAND1#14pin@207_polysilicon-1##54 XOR1_to_NAND1#27nmos@54_poly-right 9.854
+R1209 Cin#20pmos@55_poly-right Cin#20pmos@55_poly-right##0 9.877
+R1210 Cin#20pmos@55_poly-right##0 Cin#20pmos@55_poly-right##1 9.877
+R1211 Cin#20pmos@55_poly-right##1 Cin#20pmos@55_poly-right##2 9.877
+R1212 Cin#20pmos@55_poly-right##2 Cin#20pmos@55_poly-right##3 9.877
+R1213 Cin#20pmos@55_poly-right##3 Cin#20pmos@55_poly-right##4 9.877
+R1214 Cin#20pmos@55_poly-right##4 Cin#20pmos@55_poly-right##5 9.877
+R1215 Cin#20pmos@55_poly-right##5 Cin#20pmos@55_poly-right##6 9.877
+R1216 Cin#20pmos@55_poly-right##6 Cin#20pmos@55_poly-right##7 9.877
+R1217 Cin#20pmos@55_poly-right##7 Cin#20pmos@55_poly-right##8 9.877
+R1218 Cin#20pmos@55_poly-right##8 Cin#20pmos@55_poly-right##9 9.877
+R1219 Cin#20pmos@55_poly-right##9 Cin#20pmos@55_poly-right##10 9.877
+R1220 Cin#20pmos@55_poly-right##10 Cin#20pmos@55_poly-right##11 9.877
+R1221 Cin#20pmos@55_poly-right##11 Cin#20pmos@55_poly-right##12 9.877
+R1222 Cin#20pmos@55_poly-right##12 Cin#20pmos@55_poly-right##13 9.877
+R1223 Cin#20pmos@55_poly-right##13 Cin#20pmos@55_poly-right##14 9.877
+R1224 Cin#20pmos@55_poly-right##14 Cin#20pmos@55_poly-right##15 9.877
+R1225 Cin#20pmos@55_poly-right##15 Cin#20pmos@55_poly-right##16 9.877
+R1226 Cin#20pmos@55_poly-right##16 Cin#20pmos@55_poly-right##17 9.877
+R1227 Cin#20pmos@55_poly-right##17 Cin#20pmos@55_poly-right##18 9.877
+R1228 Cin#20pmos@55_poly-right##18 Cin#20pmos@55_poly-right##19 9.877
+R1229 Cin#20pmos@55_poly-right##19 Cin#20pmos@55_poly-right##20 9.877
+R1230 Cin#20pmos@55_poly-right##20 Cin#20pmos@55_poly-right##21 9.877
+R1231 Cin#20pmos@55_poly-right##21 Cin#20pmos@55_poly-right##22 9.877
+R1232 Cin#20pmos@55_poly-right##22 Cin#20pmos@55_poly-right##23 9.877
+R1233 Cin#20pmos@55_poly-right##23 Cin#20pmos@55_poly-right##24 9.877
+R1234 Cin#20pmos@55_poly-right##24 Cin#20pmos@55_poly-right##25 9.877
+R1235 Cin#20pmos@55_poly-right##25 Cin#20pmos@55_poly-right##26 9.877
+R1236 Cin#20pmos@55_poly-right##26 Cin#20pmos@55_poly-right##27 9.877
+R1237 Cin#20pmos@55_poly-right##27 Cin#20pmos@55_poly-right##28 9.877
+R1238 Cin#20pmos@55_poly-right##28 Cin#20pmos@55_poly-right##29 9.877
+R1239 Cin#20pmos@55_poly-right##29 Cin#20pmos@55_poly-right##30 9.877
+R1240 Cin#20pmos@55_poly-right##30 Cin#20pmos@55_poly-right##31 9.877
+R1241 Cin#20pmos@55_poly-right##31 Cin#20pmos@55_poly-right##32 9.877
+R1242 Cin#20pmos@55_poly-right##32 Cin#20pmos@55_poly-right##33 9.877
+R1243 Cin#20pmos@55_poly-right##33 Cin#20pmos@55_poly-right##34 9.877
+R1244 Cin#20pmos@55_poly-right##34 Cin#20pmos@55_poly-right##35 9.877
+R1245 Cin#20pmos@55_poly-right##35 Cin#20pmos@55_poly-right##36 9.877
+R1246 Cin#20pmos@55_poly-right##36 Cin#20pmos@55_poly-right##37 9.877
+R1247 Cin#20pmos@55_poly-right##37 Cin#20pmos@55_poly-right##38 9.877
+R1248 Cin#20pmos@55_poly-right##38 Cin#20pmos@55_poly-right##39 9.877
+R1249 Cin#20pmos@55_poly-right##39 Cin#20pmos@55_poly-right##40 9.877
+R1250 Cin#20pmos@55_poly-right##40 Cin#20pmos@55_poly-right##41 9.877
+R1251 Cin#20pmos@55_poly-right##41 Cin#20pmos@55_poly-right##42 9.877
+R1252 Cin#20pmos@55_poly-right##42 Cin#20pmos@55_poly-right##43 9.877
+R1253 Cin#20pmos@55_poly-right##43 Cin#20pmos@55_poly-right##44 9.877
+R1254 Cin#20pmos@55_poly-right##44 Cin#20pmos@55_poly-right##45 9.877
+R1255 Cin#20pmos@55_poly-right##45 Cin#20pmos@55_poly-right##46 9.877
+R1256 Cin#20pmos@55_poly-right##46 Cin#20pmos@55_poly-right##47 9.877
+R1257 Cin#20pmos@55_poly-right##47 Cin#20pmos@55_poly-right##48 9.877
+R1258 Cin#20pmos@55_poly-right##48 Cin#20pmos@55_poly-right##49 9.877
+R1259 Cin#20pmos@55_poly-right##49 Cin#14pin@212_polysilicon-1 9.877
+R1260 NAND1_to_NAND3 NAND1_to_NAND3#4nmos@55_diff-bottom 4.823
+R1261 A0#8pin@215_polysilicon-1 A0#8pin@215_polysilicon-1##0 9.938
+R1262 A0#8pin@215_polysilicon-1##0 A0#8pin@215_polysilicon-1##1 9.938
+R1263 A0#8pin@215_polysilicon-1##1 A0#8pin@215_polysilicon-1##2 9.938
+R1264 A0#8pin@215_polysilicon-1##2 A0#8pin@215_polysilicon-1##3 9.938
+R1265 A0#8pin@215_polysilicon-1##3 A0#8pin@215_polysilicon-1##4 9.938
+R1266 A0#8pin@215_polysilicon-1##4 A0#8pin@215_polysilicon-1##5 9.938
+R1267 A0#8pin@215_polysilicon-1##5 A0#8pin@215_polysilicon-1##6 9.938
+R1268 A0#8pin@215_polysilicon-1##6 A0#8pin@215_polysilicon-1##7 9.938
+R1269 A0#8pin@215_polysilicon-1##7 A0#8pin@215_polysilicon-1##8 9.938
+R1270 A0#8pin@215_polysilicon-1##8 A0#8pin@215_polysilicon-1##9 9.938
+R1271 A0#8pin@215_polysilicon-1##9 A0#8pin@215_polysilicon-1##10 9.938
+R1272 A0#8pin@215_polysilicon-1##10 A0#8pin@215_polysilicon-1##11 9.938
+R1273 A0#8pin@215_polysilicon-1##11 A0#8pin@215_polysilicon-1##12 9.938
+R1274 A0#8pin@215_polysilicon-1##12 A0#8pin@215_polysilicon-1##13 9.938
+R1275 A0#8pin@215_polysilicon-1##13 A0#8pin@215_polysilicon-1##14 9.938
+R1276 A0#8pin@215_polysilicon-1##14 A0#8pin@215_polysilicon-1##15 9.938
+R1277 A0#8pin@215_polysilicon-1##15 A0#8pin@215_polysilicon-1##16 9.938
+R1278 A0#8pin@215_polysilicon-1##16 A0#8pin@215_polysilicon-1##17 9.938
+R1279 A0#8pin@215_polysilicon-1##17 A0#8pin@215_polysilicon-1##18 9.938
+R1280 A0#8pin@215_polysilicon-1##18 A0#8pin@215_polysilicon-1##19 9.938
+R1281 A0#8pin@215_polysilicon-1##19 A0#8pin@215_polysilicon-1##20 9.938
+R1282 A0#8pin@215_polysilicon-1##20 A0#8pin@215_polysilicon-1##21 9.938
+R1283 A0#8pin@215_polysilicon-1##21 A0#8pin@215_polysilicon-1##22 9.938
+R1284 A0#8pin@215_polysilicon-1##22 A0#8pin@215_polysilicon-1##23 9.938
+R1285 A0#8pin@215_polysilicon-1##23 A0#8pin@215_polysilicon-1##24 9.938
+R1286 A0#8pin@215_polysilicon-1##24 A0#8pin@215_polysilicon-1##25 9.938
+R1287 A0#8pin@215_polysilicon-1##25 A0#8pin@215_polysilicon-1##26 9.938
+R1288 A0#8pin@215_polysilicon-1##26 A0#8pin@215_polysilicon-1##27 9.938
+R1289 A0#8pin@215_polysilicon-1##27 A0#8pin@215_polysilicon-1##28 9.938
+R1290 A0#8pin@215_polysilicon-1##28 A0#8pin@215_polysilicon-1##29 9.938
+R1291 A0#8pin@215_polysilicon-1##29 A0#8pin@215_polysilicon-1##30 9.938
+R1292 A0#8pin@215_polysilicon-1##30 A0#8pin@215_polysilicon-1##31 9.938
+R1293 A0#8pin@215_polysilicon-1##31 A0#8pin@215_polysilicon-1##32 9.938
+R1294 A0#8pin@215_polysilicon-1##32 A0#8pin@215_polysilicon-1##33 9.938
+R1295 A0#8pin@215_polysilicon-1##33 A0#8pin@215_polysilicon-1##34 9.938
+R1296 A0#8pin@215_polysilicon-1##34 A0#8pin@215_polysilicon-1##35 9.938
+R1297 A0#8pin@215_polysilicon-1##35 A0#8pin@215_polysilicon-1##36 9.938
+R1298 A0#8pin@215_polysilicon-1##36 A0#8pin@215_polysilicon-1##37 9.938
+R1299 A0#8pin@215_polysilicon-1##37 A0#8pin@215_polysilicon-1##38 9.938
+R1300 A0#8pin@215_polysilicon-1##38 A0#8pin@215_polysilicon-1##39 9.938
+R1301 A0#8pin@215_polysilicon-1##39 A0#8pin@215_polysilicon-1##40 9.938
+R1302 A0#8pin@215_polysilicon-1##40 A0#8pin@215_polysilicon-1##41 9.938
+R1303 A0#8pin@215_polysilicon-1##41 A0#8pin@215_polysilicon-1##42 9.938
+R1304 A0#8pin@215_polysilicon-1##42 A0#8pin@215_polysilicon-1##43 9.938
+R1305 A0#8pin@215_polysilicon-1##43 A0#8pin@215_polysilicon-1##44 9.938
+R1306 A0#8pin@215_polysilicon-1##44 A0#8pin@215_polysilicon-1##45 9.938
+R1307 A0#8pin@215_polysilicon-1##45 A0#8pin@215_polysilicon-1##46 9.938
+R1308 A0#8pin@215_polysilicon-1##46 A0#8pin@215_polysilicon-1##47 9.938
+R1309 A0#8pin@215_polysilicon-1##47 A0#8pin@215_polysilicon-1##48 9.938
+R1310 A0#8pin@215_polysilicon-1##48 A0#8pin@215_polysilicon-1##49 9.938
+R1311 A0#8pin@215_polysilicon-1##49 A0#17nmos@56_poly-right 9.938
+R1312 B0#20pmos@57_poly-right B0#20pmos@57_poly-right##0 9.869
+R1313 B0#20pmos@57_poly-right##0 B0#20pmos@57_poly-right##1 9.869
+R1314 B0#20pmos@57_poly-right##1 B0#20pmos@57_poly-right##2 9.869
+R1315 B0#20pmos@57_poly-right##2 B0#20pmos@57_poly-right##3 9.869
+R1316 B0#20pmos@57_poly-right##3 B0#20pmos@57_poly-right##4 9.869
+R1317 B0#20pmos@57_poly-right##4 B0#20pmos@57_poly-right##5 9.869
+R1318 B0#20pmos@57_poly-right##5 B0#20pmos@57_poly-right##6 9.869
+R1319 B0#20pmos@57_poly-right##6 B0#20pmos@57_poly-right##7 9.869
+R1320 B0#20pmos@57_poly-right##7 B0#20pmos@57_poly-right##8 9.869
+R1321 B0#20pmos@57_poly-right##8 B0#20pmos@57_poly-right##9 9.869
+R1322 B0#20pmos@57_poly-right##9 B0#20pmos@57_poly-right##10 9.869
+R1323 B0#20pmos@57_poly-right##10 B0#20pmos@57_poly-right##11 9.869
+R1324 B0#20pmos@57_poly-right##11 B0#20pmos@57_poly-right##12 9.869
+R1325 B0#20pmos@57_poly-right##12 B0#20pmos@57_poly-right##13 9.869
+R1326 B0#20pmos@57_poly-right##13 B0#20pmos@57_poly-right##14 9.869
+R1327 B0#20pmos@57_poly-right##14 B0#20pmos@57_poly-right##15 9.869
+R1328 B0#20pmos@57_poly-right##15 B0#20pmos@57_poly-right##16 9.869
+R1329 B0#20pmos@57_poly-right##16 B0#20pmos@57_poly-right##17 9.869
+R1330 B0#20pmos@57_poly-right##17 B0#20pmos@57_poly-right##18 9.869
+R1331 B0#20pmos@57_poly-right##18 B0#20pmos@57_poly-right##19 9.869
+R1332 B0#20pmos@57_poly-right##19 B0#20pmos@57_poly-right##20 9.869
+R1333 B0#20pmos@57_poly-right##20 B0#20pmos@57_poly-right##21 9.869
+R1334 B0#20pmos@57_poly-right##21 B0#20pmos@57_poly-right##22 9.869
+R1335 B0#20pmos@57_poly-right##22 B0#20pmos@57_poly-right##23 9.869
+R1336 B0#20pmos@57_poly-right##23 B0#20pmos@57_poly-right##24 9.869
+R1337 B0#20pmos@57_poly-right##24 B0#20pmos@57_poly-right##25 9.869
+R1338 B0#20pmos@57_poly-right##25 B0#20pmos@57_poly-right##26 9.869
+R1339 B0#20pmos@57_poly-right##26 B0#20pmos@57_poly-right##27 9.869
+R1340 B0#20pmos@57_poly-right##27 B0#20pmos@57_poly-right##28 9.869
+R1341 B0#20pmos@57_poly-right##28 B0#20pmos@57_poly-right##29 9.869
+R1342 B0#20pmos@57_poly-right##29 B0#20pmos@57_poly-right##30 9.869
+R1343 B0#20pmos@57_poly-right##30 B0#20pmos@57_poly-right##31 9.869
+R1344 B0#20pmos@57_poly-right##31 B0#20pmos@57_poly-right##32 9.869
+R1345 B0#20pmos@57_poly-right##32 B0#20pmos@57_poly-right##33 9.869
+R1346 B0#20pmos@57_poly-right##33 B0#20pmos@57_poly-right##34 9.869
+R1347 B0#20pmos@57_poly-right##34 B0#20pmos@57_poly-right##35 9.869
+R1348 B0#20pmos@57_poly-right##35 B0#20pmos@57_poly-right##36 9.869
+R1349 B0#20pmos@57_poly-right##36 B0#20pmos@57_poly-right##37 9.869
+R1350 B0#20pmos@57_poly-right##37 B0#20pmos@57_poly-right##38 9.869
+R1351 B0#20pmos@57_poly-right##38 B0#20pmos@57_poly-right##39 9.869
+R1352 B0#20pmos@57_poly-right##39 B0#20pmos@57_poly-right##40 9.869
+R1353 B0#20pmos@57_poly-right##40 B0#20pmos@57_poly-right##41 9.869
+R1354 B0#20pmos@57_poly-right##41 B0#20pmos@57_poly-right##42 9.869
+R1355 B0#20pmos@57_poly-right##42 B0#20pmos@57_poly-right##43 9.869
+R1356 B0#20pmos@57_poly-right##43 B0#20pmos@57_poly-right##44 9.869
+R1357 B0#20pmos@57_poly-right##44 B0#20pmos@57_poly-right##45 9.869
+R1358 B0#20pmos@57_poly-right##45 B0#20pmos@57_poly-right##46 9.869
+R1359 B0#20pmos@57_poly-right##46 B0#20pmos@57_poly-right##47 9.869
+R1360 B0#20pmos@57_poly-right##47 B0#8pin@220_polysilicon-1 9.869
+R1361 NAND2_to_Nand3#9pin@224_polysilicon-1 NAND2_to_Nand3#9pin@224_polysilicon-1##0 9.938
+R1362 NAND2_to_Nand3#9pin@224_polysilicon-1##0 NAND2_to_Nand3#9pin@224_polysilicon-1##1 9.938
+R1363 NAND2_to_Nand3#9pin@224_polysilicon-1##1 NAND2_to_Nand3#9pin@224_polysilicon-1##2 9.938
+R1364 NAND2_to_Nand3#9pin@224_polysilicon-1##2 NAND2_to_Nand3#9pin@224_polysilicon-1##3 9.938
+R1365 NAND2_to_Nand3#9pin@224_polysilicon-1##3 NAND2_to_Nand3#9pin@224_polysilicon-1##4 9.938
+R1366 NAND2_to_Nand3#9pin@224_polysilicon-1##4 NAND2_to_Nand3#9pin@224_polysilicon-1##5 9.938
+R1367 NAND2_to_Nand3#9pin@224_polysilicon-1##5 NAND2_to_Nand3#9pin@224_polysilicon-1##6 9.938
+R1368 NAND2_to_Nand3#9pin@224_polysilicon-1##6 NAND2_to_Nand3#9pin@224_polysilicon-1##7 9.938
+R1369 NAND2_to_Nand3#9pin@224_polysilicon-1##7 NAND2_to_Nand3#9pin@224_polysilicon-1##8 9.938
+R1370 NAND2_to_Nand3#9pin@224_polysilicon-1##8 NAND2_to_Nand3#9pin@224_polysilicon-1##9 9.938
+R1371 NAND2_to_Nand3#9pin@224_polysilicon-1##9 NAND2_to_Nand3#9pin@224_polysilicon-1##10 9.938
+R1372 NAND2_to_Nand3#9pin@224_polysilicon-1##10 NAND2_to_Nand3#9pin@224_polysilicon-1##11 9.938
+R1373 NAND2_to_Nand3#9pin@224_polysilicon-1##11 NAND2_to_Nand3#9pin@224_polysilicon-1##12 9.938
+R1374 NAND2_to_Nand3#9pin@224_polysilicon-1##12 NAND2_to_Nand3#9pin@224_polysilicon-1##13 9.938
+R1375 NAND2_to_Nand3#9pin@224_polysilicon-1##13 NAND2_to_Nand3#9pin@224_polysilicon-1##14 9.938
+R1376 NAND2_to_Nand3#9pin@224_polysilicon-1##14 NAND2_to_Nand3#9pin@224_polysilicon-1##15 9.938
+R1377 NAND2_to_Nand3#9pin@224_polysilicon-1##15 NAND2_to_Nand3#9pin@224_polysilicon-1##16 9.938
+R1378 NAND2_to_Nand3#9pin@224_polysilicon-1##16 NAND2_to_Nand3#9pin@224_polysilicon-1##17 9.938
+R1379 NAND2_to_Nand3#9pin@224_polysilicon-1##17 NAND2_to_Nand3#9pin@224_polysilicon-1##18 9.938
+R1380 NAND2_to_Nand3#9pin@224_polysilicon-1##18 NAND2_to_Nand3#9pin@224_polysilicon-1##19 9.938
+R1381 NAND2_to_Nand3#9pin@224_polysilicon-1##19 NAND2_to_Nand3#9pin@224_polysilicon-1##20 9.938
+R1382 NAND2_to_Nand3#9pin@224_polysilicon-1##20 NAND2_to_Nand3#9pin@224_polysilicon-1##21 9.938
+R1383 NAND2_to_Nand3#9pin@224_polysilicon-1##21 NAND2_to_Nand3#9pin@224_polysilicon-1##22 9.938
+R1384 NAND2_to_Nand3#9pin@224_polysilicon-1##22 NAND2_to_Nand3#9pin@224_polysilicon-1##23 9.938
+R1385 NAND2_to_Nand3#9pin@224_polysilicon-1##23 NAND2_to_Nand3#9pin@224_polysilicon-1##24 9.938
+R1386 NAND2_to_Nand3#9pin@224_polysilicon-1##24 NAND2_to_Nand3#9pin@224_polysilicon-1##25 9.938
+R1387 NAND2_to_Nand3#9pin@224_polysilicon-1##25 NAND2_to_Nand3#9pin@224_polysilicon-1##26 9.938
+R1388 NAND2_to_Nand3#9pin@224_polysilicon-1##26 NAND2_to_Nand3#9pin@224_polysilicon-1##27 9.938
+R1389 NAND2_to_Nand3#9pin@224_polysilicon-1##27 NAND2_to_Nand3#9pin@224_polysilicon-1##28 9.938
+R1390 NAND2_to_Nand3#9pin@224_polysilicon-1##28 NAND2_to_Nand3#9pin@224_polysilicon-1##29 9.938
+R1391 NAND2_to_Nand3#9pin@224_polysilicon-1##29 NAND2_to_Nand3#9pin@224_polysilicon-1##30 9.938
+R1392 NAND2_to_Nand3#9pin@224_polysilicon-1##30 NAND2_to_Nand3#9pin@224_polysilicon-1##31 9.938
+R1393 NAND2_to_Nand3#9pin@224_polysilicon-1##31 NAND2_to_Nand3#9pin@224_polysilicon-1##32 9.938
+R1394 NAND2_to_Nand3#9pin@224_polysilicon-1##32 NAND2_to_Nand3#9pin@224_polysilicon-1##33 9.938
+R1395 NAND2_to_Nand3#9pin@224_polysilicon-1##33 NAND2_to_Nand3#9pin@224_polysilicon-1##34 9.938
+R1396 NAND2_to_Nand3#9pin@224_polysilicon-1##34 NAND2_to_Nand3#9pin@224_polysilicon-1##35 9.938
+R1397 NAND2_to_Nand3#9pin@224_polysilicon-1##35 NAND2_to_Nand3#9pin@224_polysilicon-1##36 9.938
+R1398 NAND2_to_Nand3#9pin@224_polysilicon-1##36 NAND2_to_Nand3#9pin@224_polysilicon-1##37 9.938
+R1399 NAND2_to_Nand3#9pin@224_polysilicon-1##37 NAND2_to_Nand3#9pin@224_polysilicon-1##38 9.938
+R1400 NAND2_to_Nand3#9pin@224_polysilicon-1##38 NAND2_to_Nand3#9pin@224_polysilicon-1##39 9.938
+R1401 NAND2_to_Nand3#9pin@224_polysilicon-1##39 NAND2_to_Nand3#9pin@224_polysilicon-1##40 9.938
+R1402 NAND2_to_Nand3#9pin@224_polysilicon-1##40 NAND2_to_Nand3#9pin@224_polysilicon-1##41 9.938
+R1403 NAND2_to_Nand3#9pin@224_polysilicon-1##41 NAND2_to_Nand3#9pin@224_polysilicon-1##42 9.938
+R1404 NAND2_to_Nand3#9pin@224_polysilicon-1##42 NAND2_to_Nand3#9pin@224_polysilicon-1##43 9.938
+R1405 NAND2_to_Nand3#9pin@224_polysilicon-1##43 NAND2_to_Nand3#9pin@224_polysilicon-1##44 9.938
+R1406 NAND2_to_Nand3#9pin@224_polysilicon-1##44 NAND2_to_Nand3#9pin@224_polysilicon-1##45 9.938
+R1407 NAND2_to_Nand3#9pin@224_polysilicon-1##45 NAND2_to_Nand3#9pin@224_polysilicon-1##46 9.938
+R1408 NAND2_to_Nand3#9pin@224_polysilicon-1##46 NAND2_to_Nand3#9pin@224_polysilicon-1##47 9.938
+R1409 NAND2_to_Nand3#9pin@224_polysilicon-1##47 NAND2_to_Nand3#9pin@224_polysilicon-1##48 9.938
+R1410 NAND2_to_Nand3#9pin@224_polysilicon-1##48 NAND2_to_Nand3#9pin@224_polysilicon-1##49 9.938
+R1411 NAND2_to_Nand3#9pin@224_polysilicon-1##49 NAND2_to_Nand3#11nmos@58_poly-right 9.938
+R1412 NAND1_to_NAND3#14nmos@59_poly-right NAND1_to_NAND3#14nmos@59_poly-right##0 9.898
+R1413 NAND1_to_NAND3#14nmos@59_poly-right##0 NAND1_to_NAND3#14nmos@59_poly-right##1 9.898
+R1414 NAND1_to_NAND3#14nmos@59_poly-right##1 NAND1_to_NAND3#14nmos@59_poly-right##2 9.898
+R1415 NAND1_to_NAND3#14nmos@59_poly-right##2 NAND1_to_NAND3#14nmos@59_poly-right##3 9.898
+R1416 NAND1_to_NAND3#14nmos@59_poly-right##3 NAND1_to_NAND3#14nmos@59_poly-right##4 9.898
+R1417 NAND1_to_NAND3#14nmos@59_poly-right##4 NAND1_to_NAND3#14nmos@59_poly-right##5 9.898
+R1418 NAND1_to_NAND3#14nmos@59_poly-right##5 NAND1_to_NAND3#14nmos@59_poly-right##6 9.898
+R1419 NAND1_to_NAND3#14nmos@59_poly-right##6 NAND1_to_NAND3#14nmos@59_poly-right##7 9.898
+R1420 NAND1_to_NAND3#14nmos@59_poly-right##7 NAND1_to_NAND3#14nmos@59_poly-right##8 9.898
+R1421 NAND1_to_NAND3#14nmos@59_poly-right##8 NAND1_to_NAND3#14nmos@59_poly-right##9 9.898
+R1422 NAND1_to_NAND3#14nmos@59_poly-right##9 NAND1_to_NAND3#14nmos@59_poly-right##10 9.898
+R1423 NAND1_to_NAND3#14nmos@59_poly-right##10 NAND1_to_NAND3#14nmos@59_poly-right##11 9.898
+R1424 NAND1_to_NAND3#14nmos@59_poly-right##11 NAND1_to_NAND3#14nmos@59_poly-right##12 9.898
+R1425 NAND1_to_NAND3#14nmos@59_poly-right##12 NAND1_to_NAND3#14nmos@59_poly-right##13 9.898
+R1426 NAND1_to_NAND3#14nmos@59_poly-right##13 NAND1_to_NAND3#14nmos@59_poly-right##14 9.898
+R1427 NAND1_to_NAND3#14nmos@59_poly-right##14 NAND1_to_NAND3#14nmos@59_poly-right##15 9.898
+R1428 NAND1_to_NAND3#14nmos@59_poly-right##15 NAND1_to_NAND3#14nmos@59_poly-right##16 9.898
+R1429 NAND1_to_NAND3#14nmos@59_poly-right##16 NAND1_to_NAND3#14nmos@59_poly-right##17 9.898
+R1430 NAND1_to_NAND3#14nmos@59_poly-right##17 NAND1_to_NAND3#14nmos@59_poly-right##18 9.898
+R1431 NAND1_to_NAND3#14nmos@59_poly-right##18 NAND1_to_NAND3#14nmos@59_poly-right##19 9.898
+R1432 NAND1_to_NAND3#14nmos@59_poly-right##19 NAND1_to_NAND3#14nmos@59_poly-right##20 9.898
+R1433 NAND1_to_NAND3#14nmos@59_poly-right##20 NAND1_to_NAND3#14nmos@59_poly-right##21 9.898
+R1434 NAND1_to_NAND3#14nmos@59_poly-right##21 NAND1_to_NAND3#14nmos@59_poly-right##22 9.898
+R1435 NAND1_to_NAND3#14nmos@59_poly-right##22 NAND1_to_NAND3#14nmos@59_poly-right##23 9.898
+R1436 NAND1_to_NAND3#14nmos@59_poly-right##23 NAND1_to_NAND3#14nmos@59_poly-right##24 9.898
+R1437 NAND1_to_NAND3#14nmos@59_poly-right##24 NAND1_to_NAND3#14nmos@59_poly-right##25 9.898
+R1438 NAND1_to_NAND3#14nmos@59_poly-right##25 NAND1_to_NAND3#14nmos@59_poly-right##26 9.898
+R1439 NAND1_to_NAND3#14nmos@59_poly-right##26 NAND1_to_NAND3#14nmos@59_poly-right##27 9.898
+R1440 NAND1_to_NAND3#14nmos@59_poly-right##27 NAND1_to_NAND3#14nmos@59_poly-right##28 9.898
+R1441 NAND1_to_NAND3#14nmos@59_poly-right##28 NAND1_to_NAND3#14nmos@59_poly-right##29 9.898
+R1442 NAND1_to_NAND3#14nmos@59_poly-right##29 NAND1_to_NAND3#14nmos@59_poly-right##30 9.898
+R1443 NAND1_to_NAND3#14nmos@59_poly-right##30 NAND1_to_NAND3#14nmos@59_poly-right##31 9.898
+R1444 NAND1_to_NAND3#14nmos@59_poly-right##31 NAND1_to_NAND3#14nmos@59_poly-right##32 9.898
+R1445 NAND1_to_NAND3#14nmos@59_poly-right##32 NAND1_to_NAND3#14nmos@59_poly-right##33 9.898
+R1446 NAND1_to_NAND3#14nmos@59_poly-right##33 NAND1_to_NAND3#14nmos@59_poly-right##34 9.898
+R1447 NAND1_to_NAND3#14nmos@59_poly-right##34 NAND1_to_NAND3#14nmos@59_poly-right##35 9.898
+R1448 NAND1_to_NAND3#14nmos@59_poly-right##35 NAND1_to_NAND3#14nmos@59_poly-right##36 9.898
+R1449 NAND1_to_NAND3#14nmos@59_poly-right##36 NAND1_to_NAND3#14nmos@59_poly-right##37 9.898
+R1450 NAND1_to_NAND3#14nmos@59_poly-right##37 NAND1_to_NAND3#14nmos@59_poly-right##38 9.898
+R1451 NAND1_to_NAND3#14nmos@59_poly-right##38 NAND1_to_NAND3#14nmos@59_poly-right##39 9.898
+R1452 NAND1_to_NAND3#14nmos@59_poly-right##39 NAND1_to_NAND3#14nmos@59_poly-right##40 9.898
+R1453 NAND1_to_NAND3#14nmos@59_poly-right##40 NAND1_to_NAND3#14nmos@59_poly-right##41 9.898
+R1454 NAND1_to_NAND3#14nmos@59_poly-right##41 NAND1_to_NAND3#14nmos@59_poly-right##42 9.898
+R1455 NAND1_to_NAND3#14nmos@59_poly-right##42 NAND1_to_NAND3#14nmos@59_poly-right##43 9.898
+R1456 NAND1_to_NAND3#14nmos@59_poly-right##43 NAND1_to_NAND3#14nmos@59_poly-right##44 9.898
+R1457 NAND1_to_NAND3#14nmos@59_poly-right##44 NAND1_to_NAND3#14nmos@59_poly-right##45 9.898
+R1458 NAND1_to_NAND3#14nmos@59_poly-right##45 NAND1_to_NAND3#14nmos@59_poly-right##46 9.898
+R1459 NAND1_to_NAND3#14nmos@59_poly-right##46 NAND1_to_NAND3#14nmos@59_poly-right##47 9.898
+R1460 NAND1_to_NAND3#14nmos@59_poly-right##47 NAND1_to_NAND3#14nmos@59_poly-right##48 9.898
+R1461 NAND1_to_NAND3#14nmos@59_poly-right##48 NAND1_to_NAND3#14nmos@59_poly-right##49 9.898
+R1462 NAND1_to_NAND3#14nmos@59_poly-right##49 NAND1_to_NAND3#14nmos@59_poly-right##50 9.898
+R1463 NAND1_to_NAND3#14nmos@59_poly-right##50 NAND1_to_NAND3#14nmos@59_poly-right##51 9.898
+R1464 NAND1_to_NAND3#14nmos@59_poly-right##51 NAND1_to_NAND3#14nmos@59_poly-right##52 9.898
+R1465 NAND1_to_NAND3#14nmos@59_poly-right##52 NAND1_to_NAND3#14nmos@59_poly-right##53 9.898
+R1466 NAND1_to_NAND3#14nmos@59_poly-right##53 NAND1_to_NAND3#14nmos@59_poly-right##54 9.898
+R1467 NAND1_to_NAND3#14nmos@59_poly-right##54 NAND1_to_NAND3#14nmos@59_poly-right##55 9.898
+R1468 NAND1_to_NAND3#14nmos@59_poly-right##55 NAND1_to_NAND3#11pmos@59_poly-right 9.898
+R1469 Cout Cout#2nmos@59_diff-bottom 4.42
+R1470 NAND2_to_Nand3 NAND2_to_Nand3#4nmos@57_diff-bottom 4.42
 
-*** TOP LEVEL CELL: Eight_bit_adder{sch}
-Mnmos@0 net@403 A0 net@536 gnd NMOS L=0.35U W=1.75U
-Mnmos@1 net@403 net@389 net@545 gnd NMOS L=0.35U W=1.75U
-Mnmos@2 net@389 A0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@3 net@536 net@112 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@4 net@545 B0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@5 net@112 B0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@6 net@0 net@403 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@7 net@234 Cin net@256 gnd NMOS L=0.35U W=1.75U
-Mnmos@8 net@234 net@2 net@265 gnd NMOS L=0.35U W=1.75U
-Mnmos@9 net@2 Cin gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@10 net@256 net@46 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@11 net@265 net@0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@12 net@46 net@0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@13 Sum0 net@234 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@14 net@334 Cin net@341 gnd NMOS L=0.35U W=1.75U
-Mnmos@15 net@341 net@0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@16 net@308 net@334 net@358 gnd NMOS L=0.35U W=1.75U
-Mnmos@17 net@358 net@360 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@18 net@360 A0 net@373 gnd NMOS L=0.35U W=1.75U
-Mnmos@19 net@373 B0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@20 net@553 A1 net@592 gnd NMOS L=0.35U W=1.75U
-Mnmos@21 net@553 net@539 net@593 gnd NMOS L=0.35U W=1.75U
-Mnmos@22 net@539 A1 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@23 net@592 net@439 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@24 net@593 B1 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@25 net@439 B1 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@26 net@426 net@553 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@27 net@454 net@308 net@456 gnd NMOS L=0.35U W=1.75U
-Mnmos@28 net@454 net@428 net@457 gnd NMOS L=0.35U W=1.75U
-Mnmos@29 net@428 net@308 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@30 net@456 net@433 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@31 net@457 net@426 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@32 net@433 net@426 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@33 Sum1 net@454 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@34 net@481 net@308 net@489 gnd NMOS L=0.35U W=1.75U
-Mnmos@35 net@489 net@426 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@36 net@503 net@481 net@509 gnd NMOS L=0.35U W=1.75U
-Mnmos@37 net@509 net@511 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@38 net@511 A1 net@525 gnd NMOS L=0.35U W=1.75U
-Mnmos@39 net@525 B1 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@100 net@1165 A2 net@1299 gnd NMOS L=0.35U W=1.75U
-Mnmos@101 net@1165 net@1151 net@1307 gnd NMOS L=0.35U W=1.75U
-Mnmos@102 net@1151 A2 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@103 net@1299 net@1050 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@104 net@1307 B2 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@105 net@1050 B2 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@106 net@1041 net@1165 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@107 net@1065 net@503 net@1068 gnd NMOS L=0.35U W=1.75U
-Mnmos@108 net@1065 net@1053 net@1069 gnd NMOS L=0.35U W=1.75U
-Mnmos@109 net@1053 net@503 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@110 net@1068 net@1222 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@111 net@1069 net@1041 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@112 net@1222 net@1041 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@113 Sum2 net@1065 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@114 net@1096 net@503 net@1103 gnd NMOS L=0.35U W=1.75U
-Mnmos@115 net@1103 net@1041 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@116 net@1046 net@1096 net@1121 gnd NMOS L=0.35U W=1.75U
-Mnmos@117 net@1121 net@1123 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@118 net@1123 A2 net@1135 gnd NMOS L=0.35U W=1.75U
-Mnmos@119 net@1135 B2 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@120 net@1315 A3 net@1355 gnd NMOS L=0.35U W=1.75U
-Mnmos@121 net@1315 net@1302 net@1356 gnd NMOS L=0.35U W=1.75U
-Mnmos@122 net@1302 A3 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@123 net@1355 net@1201 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@124 net@1356 B3 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@125 net@1201 B3 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@126 net@1188 net@1315 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@127 net@1216 net@1046 net@1218 gnd NMOS L=0.35U W=1.75U
-Mnmos@128 net@1216 net@1190 net@1219 gnd NMOS L=0.35U W=1.75U
-Mnmos@129 net@1190 net@1046 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@130 net@1218 net@1195 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@131 net@1219 net@1188 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@132 net@1195 net@1188 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@133 Sum3 net@1216 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@134 net@1244 net@1046 net@1252 gnd NMOS L=0.35U W=1.75U
-Mnmos@135 net@1252 net@1188 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@136 net@1266 net@1244 net@1272 gnd NMOS L=0.35U W=1.75U
-Mnmos@137 net@1272 net@1274 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@138 net@1274 A3 net@1288 gnd NMOS L=0.35U W=1.75U
-Mnmos@139 net@1288 B3 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@140 net@2006 A4 net@2140 gnd NMOS L=0.35U W=1.75U
-Mnmos@141 net@2006 net@1992 net@2148 gnd NMOS L=0.35U W=1.75U
-Mnmos@142 net@1992 A4 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@143 net@2140 net@1554 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@144 net@2148 B4 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@145 net@1554 B4 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@146 net@1466 net@2006 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@147 net@1906 net@1266 net@1909 gnd NMOS L=0.35U W=1.75U
-Mnmos@148 net@1906 net@1734 net@1910 gnd NMOS L=0.35U W=1.75U
-Mnmos@149 net@1734 net@1266 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@150 net@1909 net@2063 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@151 net@1910 net@1466 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@152 net@2063 net@1466 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@153 net@1984 net@1906 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@154 net@1937 net@1266 net@1944 gnd NMOS L=0.35U W=1.75U
-Mnmos@155 net@1944 net@1466 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@156 net@1471 net@1937 net@1962 gnd NMOS L=0.35U W=1.75U
-Mnmos@157 net@1962 net@1964 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@158 net@1964 A4 net@1976 gnd NMOS L=0.35U W=1.75U
-Mnmos@159 net@1976 B4 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@160 net@2156 A5 net@2196 gnd NMOS L=0.35U W=1.75U
-Mnmos@161 net@2156 net@2143 net@2197 gnd NMOS L=0.35U W=1.75U
-Mnmos@162 net@2143 A5 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@163 net@2196 net@2042 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@164 net@2197 net@1469 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@165 net@2042 net@1469 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@166 net@2029 net@2156 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@167 net@2057 net@1471 net@2059 gnd NMOS L=0.35U W=1.75U
-Mnmos@168 net@2057 net@2031 net@2060 gnd NMOS L=0.35U W=1.75U
-Mnmos@169 net@2031 net@1471 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@170 net@2059 net@2036 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@171 net@2060 net@2029 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@172 net@2036 net@2029 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@173 net@1917 net@2057 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@174 net@2085 net@1471 net@2093 gnd NMOS L=0.35U W=1.75U
-Mnmos@175 net@2093 net@2029 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@176 net@1519 net@2085 net@2113 gnd NMOS L=0.35U W=1.75U
-Mnmos@177 net@2113 net@2115 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@178 net@2115 A5 net@2129 gnd NMOS L=0.35U W=1.75U
-Mnmos@179 net@2129 net@1469 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@180 net@1598 net@1566 net@1733 gnd NMOS L=0.35U W=1.75U
-Mnmos@181 net@1598 net@1586 net@1742 gnd NMOS L=0.35U W=1.75U
-Mnmos@182 net@1586 net@1566 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@183 net@1733 net@1484 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@184 net@1742 net@1476 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@185 net@1484 net@1476 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@186 net@1475 net@1598 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@187 net@1499 net@1519 net@1502 gnd NMOS L=0.35U W=1.75U
-Mnmos@188 net@1499 net@1487 net@1503 gnd NMOS L=0.35U W=1.75U
-Mnmos@189 net@1487 net@1519 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@190 net@1502 net@1655 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@191 net@1503 net@1475 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@192 net@1655 net@1475 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@193 net@1579 net@1499 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@194 net@1530 net@1519 net@1537 gnd NMOS L=0.35U W=1.75U
-Mnmos@195 net@1537 net@1475 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@196 net@1480 net@1530 net@1556 gnd NMOS L=0.35U W=1.75U
-Mnmos@197 net@1556 net@1558 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@198 net@1558 net@1566 net@1571 gnd NMOS L=0.35U W=1.75U
-Mnmos@199 net@1571 net@1476 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@200 net@1750 net@1716 net@1791 gnd NMOS L=0.35U W=1.75U
-Mnmos@201 net@1750 net@1737 net@1792 gnd NMOS L=0.35U W=1.75U
-Mnmos@202 net@1737 net@1716 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@203 net@1791 net@1634 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@204 net@1792 net@1478 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@205 net@1634 net@1478 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@206 net@1621 net@1750 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@207 net@1649 net@1480 net@1651 gnd NMOS L=0.35U W=1.75U
-Mnmos@208 net@1649 net@1623 net@1652 gnd NMOS L=0.35U W=1.75U
-Mnmos@209 net@1623 net@1480 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@210 net@1651 net@1628 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@211 net@1652 net@1621 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@212 net@1628 net@1621 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@213 net@1510 net@1649 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@214 net@1678 net@1480 net@1686 gnd NMOS L=0.35U W=1.75U
-Mnmos@215 net@1686 net@1621 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@216 net@1700 net@1678 net@1706 gnd NMOS L=0.35U W=1.75U
-Mnmos@217 net@1706 net@1708 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@218 net@1708 net@1716 net@1722 gnd NMOS L=0.35U W=1.75U
-Mnmos@219 net@1722 net@1478 gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 net@423 A0 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@1 net@403 net@389 net@423 vdd PMOS L=0.35U W=1.75U
-Mpmos@2 net@389 A0 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@3 net@423 net@112 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@4 net@403 B0 net@423 vdd PMOS L=0.35U W=1.75U
-Mpmos@5 net@112 B0 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@6 net@0 net@403 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@7 net@135 Cin vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@8 net@234 net@2 net@135 vdd PMOS L=0.35U W=1.75U
-Mpmos@9 net@2 Cin vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@10 net@135 net@46 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@11 net@234 net@0 net@135 vdd PMOS L=0.35U W=1.75U
-Mpmos@12 net@46 net@0 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@13 Sum0 net@234 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@14 net@334 Cin vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@15 net@334 net@0 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@16 net@308 net@334 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@17 net@308 net@360 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@18 net@360 A0 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@19 net@360 B0 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@20 net@575 A1 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@21 net@553 net@539 net@575 vdd PMOS L=0.35U W=1.75U
-Mpmos@22 net@539 A1 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@23 net@575 net@439 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@24 net@553 B1 net@575 vdd PMOS L=0.35U W=1.75U
-Mpmos@25 net@439 B1 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@26 net@426 net@553 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@27 net@443 net@308 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@28 net@454 net@428 net@443 vdd PMOS L=0.35U W=1.75U
-Mpmos@29 net@428 net@308 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@30 net@443 net@433 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@31 net@454 net@426 net@443 vdd PMOS L=0.35U W=1.75U
-Mpmos@32 net@433 net@426 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@33 Sum1 net@454 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@34 net@481 net@308 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@35 net@481 net@426 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@36 net@503 net@481 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@37 net@503 net@511 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@38 net@511 A1 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@39 net@511 B1 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@100 net@1185 A2 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@101 net@1165 net@1151 net@1185 vdd PMOS L=0.35U W=1.75U
-Mpmos@102 net@1151 A2 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@103 net@1185 net@1050 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@104 net@1165 B2 net@1185 vdd PMOS L=0.35U W=1.75U
-Mpmos@105 net@1050 B2 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@106 net@1041 net@1165 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@107 net@1054 net@503 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@108 net@1065 net@1053 net@1054 vdd PMOS L=0.35U W=1.75U
-Mpmos@109 net@1053 net@503 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@110 net@1054 net@1222 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@111 net@1065 net@1041 net@1054 vdd PMOS L=0.35U W=1.75U
-Mpmos@112 net@1222 net@1041 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@113 Sum2 net@1065 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@114 net@1096 net@503 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@115 net@1096 net@1041 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@116 net@1046 net@1096 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@117 net@1046 net@1123 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@118 net@1123 A2 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@119 net@1123 B2 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@120 net@1338 A3 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@121 net@1315 net@1302 net@1338 vdd PMOS L=0.35U W=1.75U
-Mpmos@122 net@1302 A3 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@123 net@1338 net@1201 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@124 net@1315 B3 net@1338 vdd PMOS L=0.35U W=1.75U
-Mpmos@125 net@1201 B3 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@126 net@1188 net@1315 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@127 net@1205 net@1046 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@128 net@1216 net@1190 net@1205 vdd PMOS L=0.35U W=1.75U
-Mpmos@129 net@1190 net@1046 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@130 net@1205 net@1195 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@131 net@1216 net@1188 net@1205 vdd PMOS L=0.35U W=1.75U
-Mpmos@132 net@1195 net@1188 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@133 Sum3 net@1216 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@134 net@1244 net@1046 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@135 net@1244 net@1188 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@136 net@1266 net@1244 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@137 net@1266 net@1274 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@138 net@1274 A3 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@139 net@1274 B3 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@140 net@2026 A4 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@141 net@2006 net@1992 net@2026 vdd PMOS L=0.35U W=1.75U
-Mpmos@142 net@1992 A4 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@143 net@2026 net@1554 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@144 net@2006 B4 net@2026 vdd PMOS L=0.35U W=1.75U
-Mpmos@145 net@1554 B4 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@146 net@1466 net@2006 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@147 net@1785 net@1266 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@148 net@1906 net@1734 net@1785 vdd PMOS L=0.35U W=1.75U
-Mpmos@149 net@1734 net@1266 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@150 net@1785 net@2063 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@151 net@1906 net@1466 net@1785 vdd PMOS L=0.35U W=1.75U
-Mpmos@152 net@2063 net@1466 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@153 net@1984 net@1906 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@154 net@1937 net@1266 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@155 net@1937 net@1466 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@156 net@1471 net@1937 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@157 net@1471 net@1964 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@158 net@1964 A4 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@159 net@1964 B4 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@160 net@2179 A5 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@161 net@2156 net@2143 net@2179 vdd PMOS L=0.35U W=1.75U
-Mpmos@162 net@2143 A5 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@163 net@2179 net@2042 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@164 net@2156 net@1469 net@2179 vdd PMOS L=0.35U W=1.75U
-Mpmos@165 net@2042 net@1469 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@166 net@2029 net@2156 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@167 net@2046 net@1471 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@168 net@2057 net@2031 net@2046 vdd PMOS L=0.35U W=1.75U
-Mpmos@169 net@2031 net@1471 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@170 net@2046 net@2036 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@171 net@2057 net@2029 net@2046 vdd PMOS L=0.35U W=1.75U
-Mpmos@172 net@2036 net@2029 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@173 net@1917 net@2057 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@174 net@2085 net@1471 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@175 net@2085 net@2029 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@176 net@1519 net@2085 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@177 net@1519 net@2115 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@178 net@2115 A5 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@179 net@2115 net@1469 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@180 net@1618 net@1566 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@181 net@1598 net@1586 net@1618 vdd PMOS L=0.35U W=1.75U
-Mpmos@182 net@1586 net@1566 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@183 net@1618 net@1484 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@184 net@1598 net@1476 net@1618 vdd PMOS L=0.35U W=1.75U
-Mpmos@185 net@1484 net@1476 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@186 net@1475 net@1598 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@187 net@1488 net@1519 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@188 net@1499 net@1487 net@1488 vdd PMOS L=0.35U W=1.75U
-Mpmos@189 net@1487 net@1519 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@190 net@1488 net@1655 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@191 net@1499 net@1475 net@1488 vdd PMOS L=0.35U W=1.75U
-Mpmos@192 net@1655 net@1475 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@193 net@1579 net@1499 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@194 net@1530 net@1519 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@195 net@1530 net@1475 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@196 net@1480 net@1530 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@197 net@1480 net@1558 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@198 net@1558 net@1566 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@199 net@1558 net@1476 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@200 net@1773 net@1716 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@201 net@1750 net@1737 net@1773 vdd PMOS L=0.35U W=1.75U
-Mpmos@202 net@1737 net@1716 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@203 net@1773 net@1634 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@204 net@1750 net@1478 net@1773 vdd PMOS L=0.35U W=1.75U
-Mpmos@205 net@1634 net@1478 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@206 net@1621 net@1750 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@207 net@1638 net@1480 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@208 net@1649 net@1623 net@1638 vdd PMOS L=0.35U W=1.75U
-Mpmos@209 net@1623 net@1480 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@210 net@1638 net@1628 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@211 net@1649 net@1621 net@1638 vdd PMOS L=0.35U W=1.75U
-Mpmos@212 net@1628 net@1621 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@213 net@1510 net@1649 vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@214 net@1678 net@1480 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@215 net@1678 net@1621 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@216 net@1700 net@1678 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@217 net@1700 net@1708 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@218 net@1708 net@1716 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@219 net@1708 net@1478 vdd vdd PMOS L=0.35U W=1.75U
+* Spice Code nodes in cell cell 'Eight_bit_adder{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin  A0 0 PULSE(5 0 0 1n 1n 2u 4u)
+vin2 B0 0 PULSE(5 0 0 1n 1n 1u 2u )
+vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u)
+cload out 0 250fF
+.tran 0 10u
+.include C:\Electric\C5_models.txt
 .END
