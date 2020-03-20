@@ -1,0 +1,8 @@
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin A0 0 PULSE(5 0 0 1n 1n 2u 4u)
+vin2 B0 0 PULSE(5 0 0 1n 1n 1u 2u )
+vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u)
+cload out 0 250fF
+.tran 0 10u
+.include C:\Electric\C5_models.txt

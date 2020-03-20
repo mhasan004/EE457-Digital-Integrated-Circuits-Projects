@@ -1,0 +1,12 @@
+l A
+l Cin
+l B
+s 2
+h B
+s 2
+l B
+h A
+s 2
+h B
+s 2
+l B

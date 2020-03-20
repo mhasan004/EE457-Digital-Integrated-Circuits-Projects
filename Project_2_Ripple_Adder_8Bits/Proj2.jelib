@@ -349,7 +349,7 @@ Awire|out|D5G1;||1800|AND_3@0|out|29|9.5|pin@3||36.5|9.5
 X
 
 # Cell Eight_bit_adder;1{lay}
-CEight_bit_adder;1{lay}||mocmos|1584577133820|1584600747872||DRC_last_good_drc_area_date()G1584600555888|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1584600555888
+CEight_bit_adder;1{lay}||mocmos|1584577133820|1584647277519||DRC_last_good_drc_area_date()G1584600769118|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1584600769118
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-N-Active-Con|contact@221||-121.5|-120|5||R|
 NMetal-1-P-Active-Con|contact@222||-121.5|75.5|5||RRR|
@@ -1820,7 +1820,7 @@ NMetal-1-Pin|pin@806||1550.5|-99.5||||
 NMetal-1-Pin|pin@807||1108|-99.5||||
 NMetal-1-Pin|pin@808||665.5|-99.5||||
 NMetal-1-Pin|pin@809||223|-99.5||||
-Ngeneric:Invisible-Pin|pin@811||729|-244|||||SIM_spice_card(D5G9;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin1 A0 vdd ,vin2 A1 vdd,vin3 A2 vdd,vin4 A3 0 ,vin5 A4 0,vin6 A5 0,vin7 A6 0 ,vin8 A7 0,vin9  B0 vdd,vin10 B1 vdd,vin11 B2 0,vin12 B3 vdd,vin13 B4 0,vin14 B5 vdd,vin15 B6 vdd,vin16 B7 0,vin17 Cin 0 ,cload out 0 250fF,.tran 0 100n,".include C:\\Electric\\C5_models.txt"]
+Ngeneric:Invisible-Pin|pin@811||854|-269.5|||||SIM_spice_card(D5G9;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin1 A0 0,vin2 A1 0,vin3 A2 0,vin4 A3 0 ,vin5 A4 0,vin6 A5 vdd,vin7 A6 vdd ,vin8 A7 vdd,vin9  B0 vdd,vin10 B1 vdd,vin11 B2 0,vin12 B3 vdd,vin13 B4 0,vin14 B5 vdd,vin15 B6 vdd,vin16 B7 0,vin17 Cin 0 ,cload out 0 250fF,.tran 0 100n,".include C:\\Electric\\C5_models.txt"]
 NMetal-1-Pin|pin@817||2105|-105.5||||
 NPolysilicon-1-Pin|pin@818||2109|87.5||||
 NPolysilicon-1-Pin|pin@819||2117|-131||||
@@ -4673,12 +4673,12 @@ ESum8|Sum4|D5G9;X16.5;|contact@1232||U
 ESum5||D5G9;X16.5;|contact@1230||U
 ESum6||D5G9;X16.5;|contact@1227||U
 ESum7||D5G9;X15;|contact@1221||U
-Egnd||D5G9;X-4.5;Y-1;|substr@2||U
-Evdd||D5G9;|well@2||U
+Egnd||D5G11;X-4.5;Y-1;|substr@2||U
+Evdd||D5G11;|well@2||U
 X
 
 # Cell Eight_bit_adder;1{sch}
-CEight_bit_adder;1{sch}||schematic|1584560695656|1584594376581|
+CEight_bit_adder;1{sch}||schematic|1584560695656|1584679285775|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||16|105||||
 NOff-Page|conn@1||-107.5|113||||
@@ -5822,7 +5822,7 @@ NWire_Pin|pin@1165||170|-67||||
 NWire_Pin|pin@1166||430|58.5||||
 NWire_Pin|pin@1167||430|-29.5||||
 NWire_Pin|pin@1169||-43|-29.5||||
-Ngeneric:Invisible-Pin|pin@1170||538|-129|||||SIM_spice_card(D5G9;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin1 A0 vdd ,vin2 A1 vdd,vin3 A2 vdd,vin4 A3 0 ,vin5 A4 vdd,vin6 B0 vdd,vin7 B1 vdd,vin8 B2 0,vin9 B3 vdd,vin10 B4 vdd,vin11 Cin 0 ,cload out 0 250fF,.tran 0 100n,".include C:\\Electric\\C5_models.txt"]
+Ngeneric:Invisible-Pin|pin@1172||549.5|-131.5|||||SIM_spice_card(D5G9;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin1  A0 0 PULSE(3.3 0 0 1n 1n 60u 80u),vin2  A1 0,vin3  A2 0 PULSE(0 3.3 0 1n 1n 40u 60u),vin4  A3 0 PULSE(3.3 0 0 1n 1n 60u 80u),vin5  A4 0,vin6  A5 0,vin7  A6 0 PULSE(0 3.3 0 1n 1n 60u 80u),vin8  A7 0 PULSE(0 3.3 0 1n 1n 40u 60u),vin9  B0 0 PULSE(3.3 0 0 1n 1n 20u 60u),vin10 B1 0 PULSE(0 3.3 0 1n 1n 20u 60u),vin11 B2 0,vin12 B3 0 PULSE(0 3.3 0 1n 1n 20u 40u),vin13 B4 0,vin14 B5 0 PULSE(0 3.3 0 1n 1n 40u 60u),vin15 B6 0 PULSE(0 3.3 0 1n 1n 40u 60u),vin16 B7 0 PULSE(3.3 0 0 1n 1n 20u 40u),vin17 Cin 0 ,cload out 0 250fF,.tran 0 80u,".include C:\\Electric\\C5_models.txt"]
 NTransistor|pmos@0||-79|105.5|||YR|2|ATTR_length(D5G0.5;X-2.75;Y-3;)D2.0|ATTR_width(D5G1;X-2;Y-3;)D10.0|SIM_spice_model(D5G1;X-1;Y-3.5;)SPMOS
 NTransistor|pmos@1||-79|95.5|||YR|2|ATTR_length(D5G0.5;X-1.25;Y-3;)D2.0|ATTR_width(D5G1;X-0.5;Y-3;)D10.0|SIM_spice_model(D5G1;X0.5;Y-3.5;)SPMOS
 NTransistor|pmos@2||-88|98.5|||YR|2|ATTR_length(D5G0.5;X-0.25;Y-3;)D2.0|ATTR_width(D5G1;X-1;Y-3;)D20.0|SIM_spice_model(D5G1;X0.5;Y-3.5;)SPMOS
@@ -12058,7 +12058,7 @@ Evdd||D5G8;|well@0||U
 X
 
 # Cell One_bit_adder2;1{sch}
-COne_bit_adder2;1{sch}||schematic|1584497122459|1584593175335|
+COne_bit_adder2;1{sch}||schematic|1584497122459|1584652755118|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||16|29.5||||
 NOff-Page|conn@1||13.5|-22||||
@@ -12201,7 +12201,7 @@ NWire_Pin|pin@187||-27.5|-46.5||||
 NWire_Pin|pin@188||-35|-41.5||||
 NWire_Pin|pin@189||-35|-33.5||||
 NWire_Pin|pin@190||5.5|29.5||||
-Ngeneric:Invisible-Pin|pin@193||66.5|-1|||||SIM_spice_card(D5G6;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A 0 PULSE(5 0 0 1n 1n 2u 4u),vin2 B 0 PULSE(5 0 0 1n 1n 1u 2u ),vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u),cload out 0 250fF,.tran 0 10u,".include C:\\Electric\\C5_models.txt"]
+Ngeneric:Invisible-Pin|pin@193||-9.5|-78.5|||||SIM_spice_card(D5G6;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin A0 0 PULSE(3.3 0 0 1n 1n 60u 80u),vin2 B0 0 PULSE(5 0 0 1n 1n 1u 2u ),vin3 Cin 0 PULSE(5 0 0 1n 1n 4u 8u),cload out 0 250fF,.tran 0 80u,".include C:\\Electric\\C5_models.txt"]
 NTransistor|pmos@0||-79|30|||YR|2|ATTR_length(D5G0.5;X-2.75;Y-3;)D2.0|ATTR_width(D5G1;X-2;Y-3;)D10.0|SIM_spice_model(D5G1;X-1;Y-3.5;)SPMOS
 NTransistor|pmos@1||-79|20|||YR|2|ATTR_length(D5G0.5;X-1.25;Y-3;)D2.0|ATTR_width(D5G1;X-0.5;Y-3;)D10.0|SIM_spice_model(D5G1;X0.5;Y-3.5;)SPMOS
 NTransistor|pmos@2||-88|23|||YR|2|ATTR_length(D5G0.5;X-0.25;Y-3;)D2.0|ATTR_width(D5G1;X-1;Y-3;)D20.0|SIM_spice_model(D5G1;X0.5;Y-3.5;)SPMOS

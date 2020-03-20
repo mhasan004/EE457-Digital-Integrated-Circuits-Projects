@@ -1,0 +1,16 @@
+l A
+l Cout
+l Sum
+l Cin
+l B
+s 2
+h A
+s 2
+h B
+l A
+s 2
+h A
+s 2
+l B
+s 0
+l A
