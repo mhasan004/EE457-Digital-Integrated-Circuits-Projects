@@ -1,0 +1,33 @@
+*** SPICE deck for cell MUX_2_1{sch} from library Proj3
+*** Created on Mon Apr 13, 2020 02:22:45
+*** Last revised on Mon Apr 13, 2020 02:40:13
+*** Written on Mon Apr 13, 2020 02:40:51 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: MUX_2_1{sch}
+Mnmos@1 net@176 A net@9 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@9 net@231 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@176 B net@64 gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@64 S gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 net@231 S gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@14 out net@176 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@20 net@231 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@20 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@3 net@176 S net@20 vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@176 B net@20 vdd PMOS L=0.35U W=1.75U
+Mpmos@12 net@231 S vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@14 out net@176 vdd vdd PMOS L=0.35U W=1.75U
+
+* Spice Code nodes in cell cell 'MUX_2_1{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1  A 0 PULSE(3.3 0 0 1n 1n 40u 80u)
+vin2  B 0 PULSE(3.3 0 0 1n 1n 20u 40u)
+vin3  S 0 PULSE(3.3 0 0 1n 1n 80u 160u)
+cload out 0 250fF
+.tran 0 160u
+.include C:\Electric\C5_models.txt
+.END
