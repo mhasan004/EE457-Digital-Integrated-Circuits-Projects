@@ -1,49 +1,55 @@
 *** SPICE deck for cell MUX_4_1{sch} from library Proj3
-*** Created on Sun Apr 12, 2020 01:54:57
-*** Last revised on Sun Apr 12, 2020 03:00:14
-*** Written on Sun Apr 12, 2020 03:00:47 by Electric VLSI Design System, version 9.07
+*** Created on Mon Apr 13, 2020 13:14:57
+*** Last revised on Mon Apr 13, 2020 13:39:41
+*** Written on Mon Apr 13, 2020 13:39:44 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 .global gnd vdd
 
 *** TOP LEVEL CELL: MUX_4_1{sch}
-Mnmos@1 net@65 net@172 net@28 gnd NMOS L=0.35U W=1.75U
-Mnmos@2 net@28 net@192 net@3 gnd NMOS L=0.35U W=1.75U
-Mnmos@3 net@3 I0 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@4 net@65 net@172 net@78 gnd NMOS L=0.35U W=1.75U
-Mnmos@5 net@78 B net@79 gnd NMOS L=0.35U W=1.75U
-Mnmos@6 net@79 I1 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@7 net@65 A net@81 gnd NMOS L=0.35U W=1.75U
-Mnmos@8 net@81 net@192 net@82 gnd NMOS L=0.35U W=1.75U
-Mnmos@9 net@82 I2 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@10 net@65 A net@84 gnd NMOS L=0.35U W=1.75U
-Mnmos@11 net@84 B net@85 gnd NMOS L=0.35U W=1.75U
-Mnmos@12 net@85 I3 gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@13 net@172 A gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@14 net@192 B gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@15 out net@65 gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@1 net@35 net@172 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@2 net@35 net@192 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@3 net@35 I0 vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@4 net@43 net@172 net@35 vdd PMOS L=0.35U W=1.75U
-Mpmos@5 net@43 B net@35 vdd PMOS L=0.35U W=1.75U
-Mpmos@6 net@43 I1 net@35 vdd PMOS L=0.35U W=1.75U
-Mpmos@7 net@48 A net@43 vdd PMOS L=0.35U W=1.75U
-Mpmos@8 net@48 net@192 net@43 vdd PMOS L=0.35U W=1.75U
-Mpmos@9 net@48 I2 net@43 vdd PMOS L=0.35U W=1.75U
-Mpmos@10 net@65 A net@48 vdd PMOS L=0.35U W=1.75U
-Mpmos@11 net@65 B net@48 vdd PMOS L=0.35U W=1.75U
-Mpmos@12 net@65 I3 net@48 vdd PMOS L=0.35U W=1.75U
-Mpmos@13 net@172 A vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@14 net@192 B vdd vdd PMOS L=0.35U W=1.75U
-Mpmos@15 out net@65 vdd vdd PMOS L=0.35U W=1.75U
+Mnmos@0 net@2 I0 net@53 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@53 net@21 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@2 I2 net@49 gnd NMOS L=0.35U W=1.75U
+Mnmos@3 net@49 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@21 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@121 net@2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@6 net@61 I1 net@112 gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@112 net@80 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@61 I3 net@108 gnd NMOS L=0.35U W=1.75U
+Mnmos@9 net@108 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@10 net@80 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@126 net@61 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 net@149 net@121 net@137 gnd NMOS L=0.35U W=1.75U
+Mnmos@13 net@137 net@167 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@14 net@149 net@126 net@133 gnd NMOS L=0.35U W=1.75U
+Mnmos@15 net@133 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@16 net@167 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@17 out net@149 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@17 net@21 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@17 I0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@2 S1 net@17 vdd PMOS L=0.35U W=1.75U
+Mpmos@3 net@2 I2 net@17 vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@21 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@121 net@2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@6 net@76 net@80 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@7 net@76 I1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@8 net@61 S1 net@76 vdd PMOS L=0.35U W=1.75U
+Mpmos@9 net@61 I3 net@76 vdd PMOS L=0.35U W=1.75U
+Mpmos@10 net@80 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@11 net@126 net@61 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@12 net@130 net@167 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@13 net@130 net@121 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@14 net@149 S2 net@130 vdd PMOS L=0.35U W=1.75U
+Mpmos@15 net@149 net@126 net@130 vdd PMOS L=0.35U W=1.75U
+Mpmos@16 net@167 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@17 out net@149 vdd vdd PMOS L=0.35U W=1.75U
 
 * Spice Code nodes in cell cell 'MUX_4_1{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-vin1  A 0 PULSE(3.3 0 0 1n 1n 160u 320u)
-vin2  B 0 PULSE(3.3 0 0 1n 1n 80u 160u)
+vin1  S1 0 PULSE(3.3 0 0 1n 1n 160u 320u)
+vin2  S2 0 PULSE(3.3 0 0 1n 1n 80u 160u)
 vin3  I0 0 PULSE(3.3 0 0 1n 1n 20u 80u)
 vin4  I1 0 PULSE(3.3 0 0 1n 1n 40u 80u)
 vin5  I2 0 PULSE(3.3 0 0 1n 1n 60u 80u)

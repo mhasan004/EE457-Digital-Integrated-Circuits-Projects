@@ -10812,7 +10812,7 @@ Ngeneric:Facet-Center|art@0||0|0||||AV
 X
 
 # Cell MUX_4_1;1{sch}
-CMUX_4_1;1{sch}||schematic|1586798097327|1586799012562|
+CMUX_4_1;1{sch}||schematic|1586798097327|1586799581819|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@1||-20|16||||
 NOff-Page|conn@2||-25|-8||||
@@ -10940,6 +10940,7 @@ NWire_Pin|pin@88||9.5|1||||
 NWire_Pin|pin@89||18.5|1||||
 NWire_Pin|pin@90||8|-18||||
 NWire_Pin|pin@91||9.5|-18||||
+Ngeneric:Invisible-Pin|pin@92||83|-16.5|||||SIM_spice_card(D5G3;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,vin1  S1 0 PULSE(3.3 0 0 1n 1n 160u 320u),vin2  S2 0 PULSE(3.3 0 0 1n 1n 80u 160u),vin3  I0 0 PULSE(3.3 0 0 1n 1n 20u 80u),vin4  I1 0 PULSE(3.3 0 0 1n 1n 40u 80u),vin5  I2 0 PULSE(3.3 0 0 1n 1n 60u 80u),vin6  I3 0 PULSE(3.3 0 0 1n 1n 10u 40u),cload out 0 250fF,.tran 0 320u,".include C:\\Electric\\C5_models.txt"]
 NTransistor|pmos@0||-11|13|||YR|2|ATTR_length(D5G0.5;X-2.75;Y-3;)D2.0|ATTR_width(D5G1;X-2;Y-3;)D10.0|SIM_spice_model(D5G1;X-1;Y-3.5;)SPMOS
 NTransistor|pmos@1||-1|13|||YR|2|ATTR_length(D5G0.5;X-2.75;Y-3;)D2.0|ATTR_width(D5G1;X-2;Y-3;)D10.0|SIM_spice_model(D5G1;X-1;Y-3.5;)SPMOS
 NTransistor|pmos@2||-11|5|||YR|2|ATTR_length(D5G0.5;X-2.75;Y-3;)D2.0|ATTR_width(D5G1;X-2;Y-3;)D10.0|SIM_spice_model(D5G1;X-1;Y-3.5;)SPMOS
@@ -11151,8 +11152,8 @@ Awire|net@194|||2700|pin@74||9.5|-23.5|pin@91||9.5|-18
 Awire|net@195|||2700|pin@91||9.5|-18|pin@79||9.5|-10
 Awire|net@196|||1800|pin@90||8|-18|pin@91||9.5|-18
 EI0||D5G2;|conn@1|a|U
-EI1||D5G2;|conn@3|a|U
-EI2||D5G2;|conn@5|a|U
+EI1||D5G2;|conn@5|a|U
+EI2||D5G2;|conn@3|a|U
 EI3||D5G2;|conn@7|a|U
 ES1||D5G2;|conn@2|a|U
 ES2||D5G2;|conn@12|a|U
