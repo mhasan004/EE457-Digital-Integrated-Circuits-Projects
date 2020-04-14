@@ -1,32 +1,28 @@
-Circuit: *** SPICE deck for cell MUX_4_1{sch} from library Proj3
+Circuit: *** SPICE deck for cell MUX_4_1{lay} from library Proj3
 
 Vgnd: both pins shorted together -- ignoring.
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
 
-Date: Mon Apr 13 13:39:44 2020
-Total elapsed time: 0.299 seconds.
+Date: Mon Apr 13 23:39:13 2020
+Total elapsed time: 0.646 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 7973
-traniter = 7959
-tranpoints = 3004
-accept = 2515
-rejected = 489
-matrix size = 32
-fillins = 6
+totiter = 7198
+traniter = 7176
+tranpoints = 3011
+accept = 2529
+rejected = 482
+matrix size = 346
+fillins = 374
 solver = Normal
-Thread vector: 34.2/15.2[3] 7.0/3.5[3] 2.3/1.7[3] 0.2/1.3[1]  2592/500
-Matrix Compiler1: 2.56 KB object code size  0.6/0.3/[0.2]
-Matrix Compiler2: 3.66 KB object code size  0.4/0.4/[0.3]
+Thread vector: 60.3/37.0[5] 23.9/8.2[5] 5.9/3.7[5] 1.9/5.0[1]  2592/500
+Matrix Compiler1: 34.72 KB object code size  16.4/11.5/[7.2]
+Matrix Compiler2: 32.84 KB object code size  7.1/8.2/[3.3]
 
 
