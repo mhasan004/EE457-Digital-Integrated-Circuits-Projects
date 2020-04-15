@@ -1,5 +1,5 @@
 Title: *** SPICE deck for cell MUX_8_1{sch} from library Proj3
-Date: Tue Apr 14 23:17:58 2020
+Date: Tue Apr 14 23:41:23 2020
 Plotname: Operating Point
 Flags: real
 No. Variables: 403
@@ -11,15 +11,15 @@ Variables:
 	1	V(i0)	voltage
 	2	V(net@278)	voltage
 	3	V(net@181)	voltage
-	4	V(i2)	voltage
+	4	V(i4)	voltage
 	5	V(net@274)	voltage
 	6	V(s0)	voltage
 	7	V(net@350)	voltage
 	8	V(net@287)	voltage
-	9	V(i1)	voltage
+	9	V(i2)	voltage
 	10	V(net@340)	voltage
 	11	V(net@306)	voltage
-	12	V(i3)	voltage
+	12	V(i6)	voltage
 	13	V(net@335)	voltage
 	14	V(net@352)	voltage
 	15	V(net@375)	voltage
@@ -29,14 +29,14 @@ Variables:
 	19	V(s1)	voltage
 	20	V(net@591)	voltage
 	21	V(net@189)	voltage
-	22	V(i4)	voltage
+	22	V(i1)	voltage
 	23	V(net@205)	voltage
 	24	V(net@182)	voltage
-	25	V(i6)	voltage
+	25	V(i5)	voltage
 	26	V(net@200)	voltage
 	27	V(net@451)	voltage
 	28	V(net@214)	voltage
-	29	V(i5)	voltage
+	29	V(i3)	voltage
 	30	V(net@440)	voltage
 	31	V(net@234)	voltage
 	32	V(i7)	voltage
