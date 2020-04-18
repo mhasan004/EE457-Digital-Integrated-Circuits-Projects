@@ -1,0 +1,154 @@
+*** SPICE deck for cell MUX_2_1_TG2{lay} from library Proj3
+*** Created on Fri Apr 17, 2020 23:15:59
+*** Last revised on Fri Apr 17, 2020 23:29:28
+*** Written on Fri Apr 17, 2020 23:29:31 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: MUX_2_1_TG2{lay}
+Mnmos@0 out net@5#14nmos@0_poly-right I0 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
+Mnmos@1 net@5 S0#0nmos@1_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=13.934P AD=1.684P PS=35.175U PD=5.425U
+Mnmos@3 out S0#9nmos@3_poly-left I1 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
+Mpmos@0 I0 S0#4pmos@0_poly-left out vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
+Mpmos@1 vdd S0#2pmos@1_poly-right net@5 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=16.384P PS=5.425U PD=35.525U
+Mpmos@3 I1 net@5#4pmos@3_poly-left out vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
+** Extracted Parasitic Capacitors ***
+C0 I0 0 3.609fF
+C1 out 0 5.7fF
+C2 net@5 0 1.658fF
+C3 S0 0 0.199fF
+C4 I1 0 4.759fF
+C5 S0#1pin@3_polysilicon-1 0 0.149fF
+C6 S0#5pin@13_polysilicon-1 0 0.13fF
+C7 S0#6pin@14_polysilicon-1 0 0.171fF
+C8 S0#8pin@23_polysilicon-1 0 0.135fF
+C9 S0#10pin@36_polysilicon-1 0 0.137fF
+C10 S0#11pin@38_polysilicon-1 0 0.169fF
+C11 net@5#5pin@41_polysilicon-1 0 0.113fF
+C12 net@5#6pin@42_polysilicon-1 0 0.156fF
+C13 net@5#7pin@43_polysilicon-1 0 0.149fF
+C14 net@5#8pin@44_polysilicon-1 0 0.124fF
+C15 net@5#13pin@50_polysilicon-1 0 0.172fF
+** Extracted Parasitic Resistors ***
+R0 S0#0nmos@1_poly-right S0#0nmos@1_poly-right##0 7.233
+R1 S0#0nmos@1_poly-right##0 S0#0nmos@1_poly-right##1 7.233
+R2 S0#0nmos@1_poly-right##1 S0#1pin@3_polysilicon-1 7.233
+R3 S0#1pin@3_polysilicon-1 S0#1pin@3_polysilicon-1##0 5.425
+R4 S0#1pin@3_polysilicon-1##0 S0#2pmos@1_poly-right 5.425
+R5 S0 S0##0 8.267
+R6 S0##0 S0##1 8.267
+R7 S0##1 S0#1pin@3_polysilicon-1 8.267
+R8 S0#4pmos@0_poly-left S0#4pmos@0_poly-left##0 6.2
+R9 S0#4pmos@0_poly-left##0 S0#5pin@13_polysilicon-1 6.2
+R10 S0#5pin@13_polysilicon-1 S0#5pin@13_polysilicon-1##0 9.896
+R11 S0#5pin@13_polysilicon-1##0 S0#5pin@13_polysilicon-1##1 9.896
+R12 S0#5pin@13_polysilicon-1##1 S0#5pin@13_polysilicon-1##2 9.896
+R13 S0#5pin@13_polysilicon-1##2 S0#5pin@13_polysilicon-1##3 9.896
+R14 S0#5pin@13_polysilicon-1##3 S0#5pin@13_polysilicon-1##4 9.896
+R15 S0#5pin@13_polysilicon-1##4 S0#5pin@13_polysilicon-1##5 9.896
+R16 S0#5pin@13_polysilicon-1##5 S0#5pin@13_polysilicon-1##6 9.896
+R17 S0#5pin@13_polysilicon-1##6 S0#5pin@13_polysilicon-1##7 9.896
+R18 S0#5pin@13_polysilicon-1##7 S0#5pin@13_polysilicon-1##8 9.896
+R19 S0#5pin@13_polysilicon-1##8 S0#5pin@13_polysilicon-1##9 9.896
+R20 S0#5pin@13_polysilicon-1##9 S0#5pin@13_polysilicon-1##10 9.896
+R21 S0#5pin@13_polysilicon-1##10 S0#5pin@13_polysilicon-1##11 9.896
+R22 S0#5pin@13_polysilicon-1##11 S0#6pin@14_polysilicon-1 9.896
+R23 S0#6pin@14_polysilicon-1 S0#6pin@14_polysilicon-1##0 9.521
+R24 S0#6pin@14_polysilicon-1##0 S0#6pin@14_polysilicon-1##1 9.521
+R25 S0#6pin@14_polysilicon-1##1 S0#6pin@14_polysilicon-1##2 9.521
+R26 S0#6pin@14_polysilicon-1##2 S0#6pin@14_polysilicon-1##3 9.521
+R27 S0#6pin@14_polysilicon-1##3 S0#6pin@14_polysilicon-1##4 9.521
+R28 S0#6pin@14_polysilicon-1##4 S0#6pin@14_polysilicon-1##5 9.521
+R29 S0#6pin@14_polysilicon-1##5 S0 9.521
+R30 S0#8pin@23_polysilicon-1 S0#8pin@23_polysilicon-1##0 7.75
+R31 S0#8pin@23_polysilicon-1##0 S0#8pin@23_polysilicon-1##1 7.75
+R32 S0#8pin@23_polysilicon-1##1 S0 7.75
+R33 S0#9nmos@3_poly-left S0#9nmos@3_poly-left##0 6.975
+R34 S0#9nmos@3_poly-left##0 S0#10pin@36_polysilicon-1 6.975
+R35 S0#10pin@36_polysilicon-1 S0#10pin@36_polysilicon-1##0 9.772
+R36 S0#10pin@36_polysilicon-1##0 S0#10pin@36_polysilicon-1##1 9.772
+R37 S0#10pin@36_polysilicon-1##1 S0#10pin@36_polysilicon-1##2 9.772
+R38 S0#10pin@36_polysilicon-1##2 S0#10pin@36_polysilicon-1##3 9.772
+R39 S0#10pin@36_polysilicon-1##3 S0#10pin@36_polysilicon-1##4 9.772
+R40 S0#10pin@36_polysilicon-1##4 S0#10pin@36_polysilicon-1##5 9.772
+R41 S0#10pin@36_polysilicon-1##5 S0#10pin@36_polysilicon-1##6 9.772
+R42 S0#10pin@36_polysilicon-1##6 S0#10pin@36_polysilicon-1##7 9.772
+R43 S0#10pin@36_polysilicon-1##7 S0#10pin@36_polysilicon-1##8 9.772
+R44 S0#10pin@36_polysilicon-1##8 S0#10pin@36_polysilicon-1##9 9.772
+R45 S0#10pin@36_polysilicon-1##9 S0#10pin@36_polysilicon-1##10 9.772
+R46 S0#10pin@36_polysilicon-1##10 S0#10pin@36_polysilicon-1##11 9.772
+R47 S0#10pin@36_polysilicon-1##11 S0#10pin@36_polysilicon-1##12 9.772
+R48 S0#10pin@36_polysilicon-1##12 S0#10pin@36_polysilicon-1##13 9.772
+R49 S0#10pin@36_polysilicon-1##13 S0#10pin@36_polysilicon-1##14 9.772
+R50 S0#10pin@36_polysilicon-1##14 S0#10pin@36_polysilicon-1##15 9.772
+R51 S0#10pin@36_polysilicon-1##15 S0#10pin@36_polysilicon-1##16 9.772
+R52 S0#10pin@36_polysilicon-1##16 S0#10pin@36_polysilicon-1##17 9.772
+R53 S0#10pin@36_polysilicon-1##17 S0#10pin@36_polysilicon-1##18 9.772
+R54 S0#10pin@36_polysilicon-1##18 S0#10pin@36_polysilicon-1##19 9.772
+R55 S0#10pin@36_polysilicon-1##19 S0#10pin@36_polysilicon-1##20 9.772
+R56 S0#10pin@36_polysilicon-1##20 S0#10pin@36_polysilicon-1##21 9.772
+R57 S0#10pin@36_polysilicon-1##21 S0#11pin@38_polysilicon-1 9.772
+R58 S0#8pin@23_polysilicon-1 S0#8pin@23_polysilicon-1##0 9.3
+R59 S0#8pin@23_polysilicon-1##0 S0#8pin@23_polysilicon-1##1 9.3
+R60 S0#8pin@23_polysilicon-1##1 S0#8pin@23_polysilicon-1##2 9.3
+R61 S0#8pin@23_polysilicon-1##2 S0#8pin@23_polysilicon-1##3 9.3
+R62 S0#8pin@23_polysilicon-1##3 S0#8pin@23_polysilicon-1##4 9.3
+R63 S0#8pin@23_polysilicon-1##4 S0#11pin@38_polysilicon-1 9.3
+R64 net@5#4pmos@3_poly-left net@5#5pin@41_polysilicon-1 7.75
+R65 net@5#5pin@41_polysilicon-1 net@5#5pin@41_polysilicon-1##0 9.042
+R66 net@5#5pin@41_polysilicon-1##0 net@5#5pin@41_polysilicon-1##1 9.042
+R67 net@5#5pin@41_polysilicon-1##1 net@5#5pin@41_polysilicon-1##2 9.042
+R68 net@5#5pin@41_polysilicon-1##2 net@5#5pin@41_polysilicon-1##3 9.042
+R69 net@5#5pin@41_polysilicon-1##3 net@5#5pin@41_polysilicon-1##4 9.042
+R70 net@5#5pin@41_polysilicon-1##4 net@5#6pin@42_polysilicon-1 9.042
+R71 net@5#6pin@42_polysilicon-1 net@5#6pin@42_polysilicon-1##0 9.3
+R72 net@5#6pin@42_polysilicon-1##0 net@5#6pin@42_polysilicon-1##1 9.3
+R73 net@5#6pin@42_polysilicon-1##1 net@5#6pin@42_polysilicon-1##2 9.3
+R74 net@5#6pin@42_polysilicon-1##2 net@5#6pin@42_polysilicon-1##3 9.3
+R75 net@5#6pin@42_polysilicon-1##3 net@5#6pin@42_polysilicon-1##4 9.3
+R76 net@5#6pin@42_polysilicon-1##4 net@5#6pin@42_polysilicon-1##5 9.3
+R77 net@5#6pin@42_polysilicon-1##5 net@5#6pin@42_polysilicon-1##6 9.3
+R78 net@5#6pin@42_polysilicon-1##6 net@5#7pin@43_polysilicon-1 9.3
+R79 net@5#8pin@44_polysilicon-1 net@5#8pin@44_polysilicon-1##0 9.3
+R80 net@5#8pin@44_polysilicon-1##0 net@5 9.3
+R81 net@5#7pin@43_polysilicon-1 net@5#7pin@43_polysilicon-1##0 8.37
+R82 net@5#7pin@43_polysilicon-1##0 net@5#7pin@43_polysilicon-1##1 8.37
+R83 net@5#7pin@43_polysilicon-1##1 net@5#7pin@43_polysilicon-1##2 8.37
+R84 net@5#7pin@43_polysilicon-1##2 net@5#7pin@43_polysilicon-1##3 8.37
+R85 net@5#7pin@43_polysilicon-1##3 net@5#13pin@50_polysilicon-1 8.37
+R86 net@5#13pin@50_polysilicon-1 net@5#13pin@50_polysilicon-1##0 8.138
+R87 net@5#13pin@50_polysilicon-1##0 net@5#13pin@50_polysilicon-1##1 8.138
+R88 net@5#13pin@50_polysilicon-1##1 net@5#13pin@50_polysilicon-1##2 8.138
+R89 net@5#13pin@50_polysilicon-1##2 net@5#8pin@44_polysilicon-1 8.138
+R90 net@5#14nmos@0_poly-right net@5#14nmos@0_poly-right##0 6.2
+R91 net@5#14nmos@0_poly-right##0 net@5#13pin@50_polysilicon-1 6.2
+
+* Spice Code nodes in cell cell 'MUX_2_1_TG2{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1  S0 0 PULSE(3.3 0 0 1n 1n 80u 160u)
+vin2  I0 0 PULSE(3.3 0 0 1n 1n 20u 80u)
+vin3  I1 0 PULSE(3.3 0 0 1n 1n 40u 80u)
+cload out 0 250fF
+.tran 0 160u
+.include C:\Electric\C5_models.txt
+.END
