@@ -1,0 +1,23 @@
+*** SPICE deck for cell HW3_2_inverter_series{sch} from library HW3
+*** Created on Mon Apr 27, 2020 16:39:32
+*** Last revised on Wed Apr 29, 2020 20:56:11
+*** Written on Wed Apr 29, 2020 20:58:17 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: HW3_2_inverter_series{sch}
+Mnmos@0 net@18 in gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@1 out net@18 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@18 in vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@1 out net@18 vdd vdd PMOS L=0.35U W=3.5U
+
+* Spice Code nodes in cell cell 'HW3_2_inverter_series{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1  in 0 PULSE(3.3 0 0 1n 1n 40u 80u)
+cload out 0 250fF
+.tran 0 160u
+.include C:\Electric\C5_models.txt
+.END

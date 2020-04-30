@@ -1,0 +1,24 @@
+*** SPICE deck for cell TG{sch} from library HW3
+*** Created on Mon Apr 27, 2020 15:27:24
+*** Last revised on Mon Apr 27, 2020 15:45:44
+*** Written on Mon Apr 27, 2020 15:45:45 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: TG{sch}
+Mnmos@0 in net@13 out gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@13 A gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 in A out vdd PMOS L=0.35U W=1.75U
+Mpmos@3 net@13 A vdd vdd PMOS L=0.35U W=3.5U
+
+* Spice Code nodes in cell cell 'TG{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1  A 0 PULSE(3.3 0 0 1n 1n 80u 160u)
+vin2  in 0 PULSE(3.3 0 0 1n 1n 40u 80u)
+cload out 0 250fF
+.tran 0 160u
+.include C:\Electric\C5_models.txt
+.END
