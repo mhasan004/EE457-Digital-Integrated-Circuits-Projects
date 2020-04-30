@@ -1,0 +1,18 @@
+** Extracted Parasitic Capacitors ***
+C0 net@0 0 1.741fF
+C1 out 0 1.667fF
+C2 in#1pin@0_polysilicon-1 0 0.149fF
+C3 net@0#5pin@6_polysilicon-1 0 0.153fF
+** Extracted Parasitic Resistors ***
+R0 in#0nmos@0_poly-right in#0nmos@0_poly-right##0 7.75
+R1 in#0nmos@0_poly-right##0 in#1pin@0_polysilicon-1 7.75
+R2 in#1pin@0_polysilicon-1 in#2pmos@0_poly-right 9.3
+R3 in in##0 7.233
+R4 in##0 in##1 7.233
+R5 in##1 in#1pin@0_polysilicon-1 7.233
+R6 net@0#4nmos@1_poly-right net@0#4nmos@1_poly-right##0 7.75
+R7 net@0#4nmos@1_poly-right##0 net@0#5pin@6_polysilicon-1 7.75
+R8 net@0#5pin@6_polysilicon-1 net@0#6pmos@1_poly-right 9.3
+R9 net@0#5pin@6_polysilicon-1 net@0#5pin@6_polysilicon-1##0 7.75
+R10 net@0#5pin@6_polysilicon-1##0 net@0#5pin@6_polysilicon-1##1 7.75
+R11 net@0#5pin@6_polysilicon-1##1 net@0 7.75

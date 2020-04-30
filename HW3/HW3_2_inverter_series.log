@@ -1,31 +1,27 @@
-Circuit: *** SPICE deck for cell HW3_2_inverter_series{sch} from library HW3
+Circuit: *** SPICE deck for cell HW3_2_inverter_series{lay} from library HW3
 
 Vgnd: both pins shorted together -- ignoring.
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
-Warning: Pd = 0 is less than W.
-Warning: Ps = 0 is less than W.
 Direct Newton iteration for .op point succeeded.
 
-Date: Wed Apr 29 20:58:18 2020
-Total elapsed time: 0.136 seconds.
+Date: Wed Apr 29 21:13:54 2020
+Total elapsed time: 0.196 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2871
-traniter = 2860
-tranpoints = 1354
-accept = 1272
-rejected = 82
-matrix size = 6
-fillins = 0
+totiter = 2828
+traniter = 2817
+tranpoints = 1345
+accept = 1270
+rejected = 75
+matrix size = 18
+fillins = 12
 solver = Normal
-Matrix Compiler1: 164 bytes object code size  0.1/0.1/[0.0]
-Matrix Compiler2: off  [0.1]/0.1/0.1
+Matrix Compiler1: 1.42 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: 1.59 KB object code size  0.2/0.2/[0.1]
 
 

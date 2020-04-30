@@ -1,19 +1,54 @@
-*** SPICE deck for cell HW3_2_inverter_series{sch} from library HW3
-*** Created on Mon Apr 27, 2020 16:39:32
-*** Last revised on Wed Apr 29, 2020 20:56:11
-*** Written on Wed Apr 29, 2020 20:58:17 by Electric VLSI Design System, version 9.07
+*** SPICE deck for cell HW3_2_inverter_series{lay} from library HW3
+*** Created on Mon Apr 27, 2020 18:49:33
+*** Last revised on Wed Apr 29, 2020 21:13:49
+*** Written on Wed Apr 29, 2020 21:13:54 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
 
-.global gnd vdd
+*** TOP LEVEL CELL: HW3_2_inverter_series{lay}
+Mnmos@0 net@0 in#0nmos@0_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=3.981P AD=2.527P PS=11.55U PD=7.175U
+Mnmos@1 out net@0#4nmos@1_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=3.981P AD=2.527P PS=11.55U PD=7.175U
+Mpmos@0 vdd in#2pmos@0_poly-right net@0 vdd PMOS L=0.35U W=3.5U AS=2.527P AD=5.666P PS=7.175U PD=15.05U
+Mpmos@1 vdd net@0#6pmos@1_poly-right out vdd PMOS L=0.35U W=3.5U AS=2.527P AD=5.666P PS=7.175U PD=15.05U
+** Extracted Parasitic Capacitors ***
+C0 net@0 0 1.741fF
+C1 out 0 1.667fF
+C2 in#1pin@0_polysilicon-1 0 0.149fF
+C3 net@0#5pin@6_polysilicon-1 0 0.153fF
+** Extracted Parasitic Resistors ***
+R0 in#0nmos@0_poly-right in#0nmos@0_poly-right##0 7.75
+R1 in#0nmos@0_poly-right##0 in#1pin@0_polysilicon-1 7.75
+R2 in#1pin@0_polysilicon-1 in#2pmos@0_poly-right 9.3
+R3 in in##0 7.233
+R4 in##0 in##1 7.233
+R5 in##1 in#1pin@0_polysilicon-1 7.233
+R6 net@0#4nmos@1_poly-right net@0#4nmos@1_poly-right##0 7.75
+R7 net@0#4nmos@1_poly-right##0 net@0#5pin@6_polysilicon-1 7.75
+R8 net@0#5pin@6_polysilicon-1 net@0#6pmos@1_poly-right 9.3
+R9 net@0#5pin@6_polysilicon-1 net@0#5pin@6_polysilicon-1##0 7.75
+R10 net@0#5pin@6_polysilicon-1##0 net@0#5pin@6_polysilicon-1##1 7.75
+R11 net@0#5pin@6_polysilicon-1##1 net@0 7.75
 
-*** TOP LEVEL CELL: HW3_2_inverter_series{sch}
-Mnmos@0 net@18 in gnd gnd NMOS L=0.35U W=1.75U
-Mnmos@1 out net@18 gnd gnd NMOS L=0.35U W=1.75U
-Mpmos@0 net@18 in vdd vdd PMOS L=0.35U W=3.5U
-Mpmos@1 out net@18 vdd vdd PMOS L=0.35U W=3.5U
-
-* Spice Code nodes in cell cell 'HW3_2_inverter_series{sch}'
+* Spice Code nodes in cell cell 'HW3_2_inverter_series{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 vin1  in 0 PULSE(3.3 0 0 1n 1n 40u 80u)
