@@ -1,0 +1,148 @@
+*** SPICE deck for cell HW3_prob8{lay} from library HW3
+*** Created on Thu Apr 30, 2020 21:08:47
+*** Last revised on Thu Apr 30, 2020 21:54:36
+*** Written on Thu Apr 30, 2020 21:54:39 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** TOP LEVEL CELL: HW3_prob8{lay}
+Mnmos@4 net@61 y#0nmos@4_poly-right net@60 gnd NMOS L=0.35U W=1.75U AS=1.723P AD=0.919P PS=5.469U PD=2.8U
+Mnmos@5 P2 x#0nmos@5_poly-right net@61 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=1.761P PS=2.8U PD=5.512U
+Mnmos@6 net@61 z#0nmos@6_poly-left net@60 gnd NMOS L=0.35U W=1.75U AS=1.723P AD=0.919P PS=5.469U PD=2.8U
+Mnmos@7 net@60 w#0nmos@7_poly-right net@61 gnd NMOS L=0.35U W=1.75U AS=0.919P AD=1.723P PS=2.8U PD=5.469U
+Mnmos@8 gnd clock#6nmos@8_poly-right net@60 gnd NMOS L=0.35U W=1.75U AS=1.723P AD=6.278P PS=5.469U PD=17.675U
+Mpmos@3 P2 clock#0pmos@3_poly-right vdd vdd PMOS L=0.35U W=1.75U AS=5.359P AD=1.761P PS=14.525U PD=5.512U
+** Extracted Parasitic Capacitors ***
+C0 P2 0 4.822fF
+C1 net@60 0 4.875fF
+C2 net@61 0 1.094fF
+C3 y#0nmos@4_poly-right 0 0.108fF
+C4 clock#1pin@12_polysilicon-1 0 0.131fF
+C5 x#1pin@13_polysilicon-1 0 0.141fF
+C6 x#2pin@14_polysilicon-1 0 0.116fF
+C7 y#2pin@16_polysilicon-1 0 0.124fF
+C8 w#1pin@17_polysilicon-1 0 0.12fF
+C9 z#2pin@20_polysilicon-1 0 0.128fF
+C10 w#2pin@21_polysilicon-1 0 0.144fF
+C11 clock#4pin@28_polysilicon-1 0 0.169fF
+C12 clock#5pin@30_polysilicon-1 0 0.129fF
+C13 P2#5pin@33_polysilicon-2 0 1.116fF
+C14 clock#7pin@41_polysilicon-1 0 0.107fF
+C15 clock#0pmos@3_poly-right 0 0.159fF
+** Extracted Parasitic Resistors ***
+R0 clock#0pmos@3_poly-right clock#0pmos@3_poly-right##0 9.92
+R1 clock#0pmos@3_poly-right##0 clock#0pmos@3_poly-right##1 9.92
+R2 clock#0pmos@3_poly-right##1 clock#0pmos@3_poly-right##2 9.92
+R3 clock#0pmos@3_poly-right##2 clock#0pmos@3_poly-right##3 9.92
+R4 clock#0pmos@3_poly-right##3 clock#1pin@12_polysilicon-1 9.92
+R5 clock#1pin@12_polysilicon-1 clock#1pin@12_polysilicon-1##0 7.75
+R6 clock#1pin@12_polysilicon-1##0 clock 7.75
+R7 x#0nmos@5_poly-right x#0nmos@5_poly-right##0 8.267
+R8 x#0nmos@5_poly-right##0 x#0nmos@5_poly-right##1 8.267
+R9 x#0nmos@5_poly-right##1 x#1pin@13_polysilicon-1 8.267
+R10 x#1pin@13_polysilicon-1 x#1pin@13_polysilicon-1##0 9.3
+R11 x#1pin@13_polysilicon-1##0 x#1pin@13_polysilicon-1##1 9.3
+R12 x#1pin@13_polysilicon-1##1 x#1pin@13_polysilicon-1##2 9.3
+R13 x#1pin@13_polysilicon-1##2 x#1pin@13_polysilicon-1##3 9.3
+R14 x#1pin@13_polysilicon-1##3 x#1pin@13_polysilicon-1##4 9.3
+R15 x#1pin@13_polysilicon-1##4 x#1pin@13_polysilicon-1##5 9.3
+R16 x#1pin@13_polysilicon-1##5 x#1pin@13_polysilicon-1##6 9.3
+R17 x#1pin@13_polysilicon-1##6 x#2pin@14_polysilicon-1 9.3
+R18 y#0nmos@4_poly-right y#0nmos@4_poly-right##0 9.61
+R19 y#0nmos@4_poly-right##0 y#0nmos@4_poly-right##1 9.61
+R20 y#0nmos@4_poly-right##1 y#0nmos@4_poly-right##2 9.61
+R21 y#0nmos@4_poly-right##2 y#0nmos@4_poly-right##3 9.61
+R22 y#0nmos@4_poly-right##3 y#2pin@16_polysilicon-1 9.61
+R23 x#2pin@14_polysilicon-1 x#2pin@14_polysilicon-1##0 5.425
+R24 x#2pin@14_polysilicon-1##0 x 5.425
+R25 y#2pin@16_polysilicon-1 y#2pin@16_polysilicon-1##0 6.975
+R26 y#2pin@16_polysilicon-1##0 y 6.975
+R27 w#0nmos@7_poly-right w#0nmos@7_poly-right##0 6.2
+R28 w#0nmos@7_poly-right##0 w#1pin@17_polysilicon-1 6.2
+R29 z#0nmos@6_poly-left z#0nmos@6_poly-left##0 8.138
+R30 z#0nmos@6_poly-left##0 z#0nmos@6_poly-left##1 8.138
+R31 z#0nmos@6_poly-left##1 z#0nmos@6_poly-left##2 8.138
+R32 z#0nmos@6_poly-left##2 z#2pin@20_polysilicon-1 8.138
+R33 w#1pin@17_polysilicon-1 w#1pin@17_polysilicon-1##0 9.558
+R34 w#1pin@17_polysilicon-1##0 w#1pin@17_polysilicon-1##1 9.558
+R35 w#1pin@17_polysilicon-1##1 w#1pin@17_polysilicon-1##2 9.558
+R36 w#1pin@17_polysilicon-1##2 w#1pin@17_polysilicon-1##3 9.558
+R37 w#1pin@17_polysilicon-1##3 w#1pin@17_polysilicon-1##4 9.558
+R38 w#1pin@17_polysilicon-1##4 w#2pin@21_polysilicon-1 9.558
+R39 w#2pin@21_polysilicon-1 w#2pin@21_polysilicon-1##0 8.783
+R40 w#2pin@21_polysilicon-1##0 w#2pin@21_polysilicon-1##1 8.783
+R41 w#2pin@21_polysilicon-1##1 w 8.783
+R42 z#2pin@20_polysilicon-1 z#2pin@20_polysilicon-1##0 8.783
+R43 z#2pin@20_polysilicon-1##0 z#2pin@20_polysilicon-1##1 8.783
+R44 z#2pin@20_polysilicon-1##1 z 8.783
+R45 clock#0pmos@3_poly-right clock#0pmos@3_poly-right##0 9.61
+R46 clock#0pmos@3_poly-right##0 clock#0pmos@3_poly-right##1 9.61
+R47 clock#0pmos@3_poly-right##1 clock#0pmos@3_poly-right##2 9.61
+R48 clock#0pmos@3_poly-right##2 clock#0pmos@3_poly-right##3 9.61
+R49 clock#0pmos@3_poly-right##3 clock#4pin@28_polysilicon-1 9.61
+R50 clock#4pin@28_polysilicon-1 clock#4pin@28_polysilicon-1##0 9.847
+R51 clock#4pin@28_polysilicon-1##0 clock#4pin@28_polysilicon-1##1 9.847
+R52 clock#4pin@28_polysilicon-1##1 clock#4pin@28_polysilicon-1##2 9.847
+R53 clock#4pin@28_polysilicon-1##2 clock#4pin@28_polysilicon-1##3 9.847
+R54 clock#4pin@28_polysilicon-1##3 clock#4pin@28_polysilicon-1##4 9.847
+R55 clock#4pin@28_polysilicon-1##4 clock#4pin@28_polysilicon-1##5 9.847
+R56 clock#4pin@28_polysilicon-1##5 clock#4pin@28_polysilicon-1##6 9.847
+R57 clock#4pin@28_polysilicon-1##6 clock#4pin@28_polysilicon-1##7 9.847
+R58 clock#4pin@28_polysilicon-1##7 clock#4pin@28_polysilicon-1##8 9.847
+R59 clock#4pin@28_polysilicon-1##8 clock#4pin@28_polysilicon-1##9 9.847
+R60 clock#4pin@28_polysilicon-1##9 clock#4pin@28_polysilicon-1##10 9.847
+R61 clock#4pin@28_polysilicon-1##10 clock#4pin@28_polysilicon-1##11 9.847
+R62 clock#4pin@28_polysilicon-1##11 clock#4pin@28_polysilicon-1##12 9.847
+R63 clock#4pin@28_polysilicon-1##12 clock#4pin@28_polysilicon-1##13 9.847
+R64 clock#4pin@28_polysilicon-1##13 clock#4pin@28_polysilicon-1##14 9.847
+R65 clock#4pin@28_polysilicon-1##14 clock#4pin@28_polysilicon-1##15 9.847
+R66 clock#4pin@28_polysilicon-1##15 clock#5pin@30_polysilicon-1 9.847
+R67 P2 P2##0 9.444
+C16 P2##0 0 1.116fF
+R68 P2##0 P2##1 9.444
+C17 P2##1 0 1.116fF
+R69 P2##1 P2##2 9.444
+C18 P2##2 0 1.116fF
+R70 P2##2 P2##3 9.444
+C19 P2##3 0 1.116fF
+R71 P2##3 P2##4 9.444
+C20 P2##4 0 1.116fF
+R72 P2##4 P2#5pin@33_polysilicon-2 9.444
+R73 clock#6nmos@8_poly-right clock#6nmos@8_poly-right##0 8.913
+R74 clock#6nmos@8_poly-right##0 clock#6nmos@8_poly-right##1 8.913
+R75 clock#6nmos@8_poly-right##1 clock#6nmos@8_poly-right##2 8.913
+R76 clock#6nmos@8_poly-right##2 clock#7pin@41_polysilicon-1 8.913
+R77 clock#5pin@30_polysilicon-1 clock#7pin@41_polysilicon-1 7.75
+
+* Spice Code nodes in cell cell 'HW3_prob8{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1 x 0 dc 1
+vin2 w 0 dc 1
+vin3 z 0 dc 1
+vin4 y 0 dc PULSE(0 1 0 0.1n 0.01n 0.25n 0.5n)
+vin5 clock 0 dc PULSE(0 1 0 0.01n 0.01n 0.5n 1n)
+Cload P1 P2 1f
+Cend P1 0 0f
+.tran 0 3ns
+.include C:\Electric\C5_models.txt
+.END
