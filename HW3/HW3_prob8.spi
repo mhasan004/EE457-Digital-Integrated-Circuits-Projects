@@ -1,7 +1,7 @@
 *** SPICE deck for cell HW3_prob8{lay} from library HW3
 *** Created on Thu Apr 30, 2020 21:08:47
-*** Last revised on Thu Apr 30, 2020 21:54:36
-*** Written on Thu Apr 30, 2020 21:54:39 by Electric VLSI Design System, version 9.07
+*** Last revised on Thu Apr 30, 2020 22:01:26
+*** Written on Thu Apr 30, 2020 22:12:18 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
