@@ -1,0 +1,28 @@
+Circuit: *** SPICE deck for cell MUX_16_1_TG{lay} from library MUX_16_1
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun May 10 09:13:21 2020
+Total elapsed time: 3.021 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6128
+traniter = 6117
+tranpoints = 2303
+accept = 2008
+rejected = 295
+matrix size = 1338
+fillins = 2114
+solver = Normal
+Thread vector: 184.8/55.8[12] 62.1/13.1[12] 11.6/6.0[12] 10.0/6.0[10]  2592/500
+Matrix Compiler1: 161.33 KB object code size  85.7/54.0/[29.7]
+Matrix Compiler2: 137.53 KB object code size  36.5/38.4/[17.6]
+
+
