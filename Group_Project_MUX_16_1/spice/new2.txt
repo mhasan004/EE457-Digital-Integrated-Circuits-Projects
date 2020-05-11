@@ -1,0 +1,54 @@
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0n   0n 0n 50n 3200n
+Vin1  I1  0 pulse 0 3.3 100n 0n 0n 50n 3200n
+Vin2  I2  0 pulse 0 3.3 200n 0n 0n 50n 3200n
+Vin3  I3  0 pulse 0 3.3 300n 0n 0n 50n 3200n
+Vin4  I4  0 pulse 0 3.3 400n 0n 0n 50n 3200n
+Vin5  I5  0 pulse 0 3.3 500n 0n 0n 50n 3200n
+Vin6  I6  0 pulse 0 3.3 600n 0n 0n 50n 3200n
+Vin7  I7  0 pulse 0 3.3 700n 0n 0n 50n 3200n
+Vin16 S0 0 PULSE(3.3 0 0 1n 1n 400n 800n)
+Vin17 S1 0 PULSE(3.3 0 0 1n 1n 800n 1600n)
+Vin18 S2 0 PULSE(3.3 0 0 1n 1n 1600n 3200n)
+.TRAN 0 3200n
+.include C:\Electric\C5_models.txt
+
+-----------------------------------------------
+
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0n   0n 0n 50n 3200n
+Vin1  I1  0 pulse 0 3.3 400n 0n 0n 50n 3200n
+Vin2  I2  0 pulse 0 3.3 800n 0n 0n 50n 3200n
+Vin3  I3  0 pulse 0 3.3 1200n 0n 0n 50n 3200n
+Vin4  I4  0 pulse 0 3.3 1600n 0n 0n 50n 3200n
+Vin5  I5  0 pulse 0 3.3 2000n 0n 0n 50n 3200n
+Vin6  I6  0 pulse 0 3.3 2400n 0n 0n 50n 3200n
+Vin7  I7  0 pulse 0 3.3 2800n 0n 0n 50n 3200n
+
+
+Vin16 S0 0 PULSE(3.3 0 0 1n 1n 400n 800n)
+Vin17 S1 0 PULSE(3.3 0 0 1n 1n 800n 1600n)
+Vin18 S2 0 PULSE(3.3 0 0 1n 1n 1600n 3200n)
+cload out 0 250fF
+.TRAN 0 3200n
+.include C:\Electric\C5_models.txt
+
+-------------------------------------------orig:
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+vin1 S0 0 PULSE(3.3 0 0 1n 1n 10240u 20480u)
+vin2  S1 0 PULSE(3.3 0 0 1n 1n 5120u 10240u)
+vin3  S2 0 PULSE(3.3 0 0 1n 1n 2560u 5120u)
+vin4  I0 0 PULSE(3.3 0 0 1n 1n 1280u 2560u)
+vin5  I1 0 PULSE(3.3 0 0 1n 1n 1920u 2560u)
+vin6  I2 0 PULSE(3.3 0 0 1n 1n 640u    1280u)
+vin7  I3 0 PULSE(3.3 0 0 1n 1n 960u   1280u)
+vin8  I4 0 PULSE(3.3 0 0 1n 1n 320u  640u)
+vin9  I5 0 PULSE(3.3 0 0 1n 1n 480u  640u)
+vin10 I6 0 PULSE(3.3 0 0 1n 1n 160u  320u)
+vin11 I7 0 PULSE(3.3 0 0 1n 1n 240u   320u)
+cload out 0 250fF
+.tran 0 20480u
+.include C:\Electric\C5_models.txt

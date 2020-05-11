@@ -1,0 +1,42 @@
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0n   0n 0n 50n 1600n
+Vin1  I1  0 pulse 0 3.3 100n 0n 0n 50n 1600n
+Vin2  I2  0 pulse 0 3.3 200n 0n 0n 50n 1600n
+Vin3  I3  0 pulse 0 3.3 300n 0n 0n 50n 1600n
+Vin4  I4  0 pulse 0 3.3 400n 0n 0n 50n 1600n
+Vin5  I5  0 pulse 0 3.3 500n 0n 0n 50n 1600n
+Vin6  I6  0 pulse 0 3.3 600n 0n 0n 50n 1600n
+Vin7  I7  0 pulse 0 3.3 700n 0n 0n 50n 1600n
+Vin8  I8  0 pulse 0 3.3 800n 0n 0n 50n 1600n
+Vin9  I9  0 pulse 0 3.3 900n 0n 0n 50n 1600n
+Vin10 I10 0 pulse 0 3.3 1000n 0n 0n 50n 1600n
+Vin11 I11 0 pulse 0 3.3 1100n 0n 0n 50n 1600n
+Vin12 I12 0 pulse 0 3.3 1200n 0n 0n 50n 1600n
+Vin13 I13 0 pulse 0 3.3 1300n 0n 0n 50n 1600n
+Vin14 I14 0 pulse 0 3.3 1400n 0n 0n 50n 1600n
+Vin15 I15 0 pulse 0 3.3 1500n 0n 0n 50n 1600n
+Vin16 S0 0 pulse 0 3.3 100n  0n 0n 100n 200n
+Vin17 S1 0 pulse 0 3.3 200n  0n 0n 200n 400n
+Vin18 S2 0 pulse 0 3.3 400n  0n 0n 400n 800n
+Vin19 S3 0 pulse 0 3.3 800n 0n 0n 800n 1600n
+.TRAN 0 1600n
+.include C:\Electric\C5_models.txt
+
+
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0n   0n 0n 50n 800n
+Vin1  I1  0 pulse 0 3.3 100n 0n 0n 50n 800n
+Vin2  I2  0 pulse 0 3.3 200n 0n 0n 50n 800n
+Vin3  I3  0 pulse 0 3.3 300n 0n 0n 50n 800n
+Vin4  I4  0 pulse 0 3.3 400n 0n 0n 50n 800n
+Vin5  I5  0 pulse 0 3.3 500n 0n 0n 50n 800n
+Vin6  I6  0 pulse 0 3.3 600n 0n 0n 50n 800n
+Vin7  S0  0 pulse 0 3.3 100n  0n 0n 100n 200n
+Vin8  S1  0 pulse 0 3.3 200n 0n 0n 200n 400n
+Vin9  S2  0 pulse 0 3.3 400n 0n 0n 400n 800n
+.TRAN 0 800n
+.include C:\Electric\C5_models.txt
+
+
