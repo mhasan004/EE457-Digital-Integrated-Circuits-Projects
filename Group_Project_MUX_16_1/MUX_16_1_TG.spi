@@ -1,7 +1,7 @@
 *** SPICE deck for cell MUX_16_1_TG{lay} from library MUX_16_1
 *** Created on Sun May 10, 2020 06:15:49
-*** Last revised on Sun May 10, 2020 09:13:05
-*** Written on Sun May 10, 2020 09:13:17 by Electric VLSI Design System, version 9.07
+*** Last revised on Sun May 10, 2020 23:24:50
+*** Written on Sun May 10, 2020 23:24:55 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -24,7 +24,7 @@
 ***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
 ***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
 
-*** TOP LEVEL CELL: MUX_16_1_TG{lay}
+*** TOP LEVEL CELL: MUX_16_1:MUX_16_1_TG{lay}
 Mnmos@0 net@0 net@1#7nmos@0_poly-right I4 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mnmos@1 net@1 S1#48nmos@1_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=26.879P AD=1.684P PS=65.462U PD=5.425U
 Mnmos@2 net@0 S1#6nmos@2_poly-left I6 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
@@ -71,49 +71,49 @@ Mnmos@42 out net@1014#6nmos@42_poly-right net@508 gnd NMOS L=0.35U W=1.75U AS=1.
 Mnmos@43 net@1014 S3#2nmos@43_poly-right gnd gnd NMOS L=0.35U W=1.75U AS=26.879P AD=1.684P PS=65.462U PD=5.425U
 Mnmos@44 out S3#10nmos@44_poly-left net@349 gnd NMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@0 I4 S1#49pmos@0_poly-left net@0 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@1 vdd S1#54pmos@1_poly-right net@1 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@1 vdd S1#54pmos@1_poly-right net@1 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@2 I6 net@1#8pmos@2_poly-left net@0 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@3 I5 S1#15pmos@3_poly-left net@18 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@4 vdd S1#19pmos@4_poly-right net@2#4contact@26_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@4 vdd S1#19pmos@4_poly-right net@2#4contact@26_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@5 I7 net@2 net@18 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@6 net@0 S2#15pmos@6_poly-left net@14 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@7 vdd S2#21pmos@7_poly-right net@97 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@7 vdd S2#21pmos@7_poly-right net@97 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@8 net@18 net@97#9pmos@8_poly-left net@14 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@9 I0 S1#41pmos@9_poly-left net@104 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@10 vdd S1#46pmos@10_poly-right net@105 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@10 vdd S1#46pmos@10_poly-right net@105 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@11 I2 net@105#8pmos@11_poly-left net@104 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@12 I1 S1#35pmos@12_poly-left net@123 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@13 vdd S1#39pmos@13_poly-right net@106#4contact@95_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@13 vdd S1#39pmos@13_poly-right net@106#4contact@95_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@14 I3 net@106 net@123 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@15 net@104 S2#9pmos@15_poly-left net@199 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@16 vdd S2#13pmos@16_poly-right net@210 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@16 vdd S2#13pmos@16_poly-right net@210 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@17 net@123 net@210#9pmos@17_poly-left net@199 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@18 net@199 S0#4pmos@18_poly-left net@349 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@19 vdd S0#8pmos@19_poly-right net@350 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@19 vdd S0#8pmos@19_poly-right net@350 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@20 net@14 net@350#9pmos@20_poly-left net@349 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@21 I12 S1#60pmos@21_poly-left net@514 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@22 vdd S1#68pmos@22_poly-right net@576#4pin@204_metal-1 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@22 vdd S1#68pmos@22_poly-right net@576#4pin@204_metal-1 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@23 I14 net@576#2pmos@23_poly-left net@514 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@24 I13 S1#73pmos@24_poly-left net@610 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@25 vdd S1#76pmos@25_poly-right net@578#2contact@208_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@25 vdd S1#76pmos@25_poly-right net@578#2contact@208_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@26 I15 net@578#11pmos@26_poly-left net@610 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@27 net@514 S2#46pmos@27_poly-left net@523 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@28 vdd S2#51pmos@28_poly-right net@495 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@28 vdd S2#51pmos@28_poly-right net@495 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@29 net@610 net@495#7pmos@29_poly-left net@523 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@30 I8 S1#103pmos@30_poly-left net@726 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@31 vdd S1#108pmos@31_poly-right net@727 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@31 vdd S1#108pmos@31_poly-right net@727 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@32 I10 net@727#8pmos@32_poly-left net@726 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@33 I9 S1#97pmos@33_poly-left net@747 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@34 vdd S1#101pmos@34_poly-right net@728#4contact@277_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@34 vdd S1#101pmos@34_poly-right net@728#4contact@277_metal-1-n-act vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@35 I11 net@728 net@747 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@36 net@726 S2#40pmos@36_poly-left net@518 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@37 vdd S2#44pmos@37_poly-right net@844 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@37 vdd S2#44pmos@37_poly-right net@844 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@38 net@747 net@844#9pmos@38_poly-left net@518 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@39 net@518 S0#19pmos@39_poly-left net@508 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@40 vdd S0#23pmos@40_poly-right net@510 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@40 vdd S0#23pmos@40_poly-right net@510 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@41 net@523 net@510#9pmos@41_poly-left net@508 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 Mpmos@42 net@508 S3#4pmos@42_poly-left out vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
-Mpmos@43 vdd S3#8pmos@43_poly-right net@1014 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=37.405P PS=5.425U PD=68.938U
+Mpmos@43 vdd S3#8pmos@43_poly-right net@1014 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=39.774P PS=5.425U PD=69.032U
 Mpmos@44 net@349 net@1014#9pmos@44_poly-left out vdd PMOS L=0.35U W=1.75U AS=1.684P AD=1.684P PS=5.425U PD=5.425U
 ** Extracted Parasitic Capacitors ***
 C0 I4 0 4.78fF
@@ -1670,29 +1670,30 @@ R1363 net@1014#11pin@405_polysilicon-1##4 net@1014#11pin@405_polysilicon-1##5 9.
 R1364 net@1014#11pin@405_polysilicon-1##5 net@1014#11pin@405_polysilicon-1##6 9.3
 R1365 net@1014#11pin@405_polysilicon-1##6 net@1014#4pin@406_polysilicon-1 9.3
 
-* Spice Code nodes in cell cell 'MUX_16_1_TG{lay}'
+* Spice Code nodes in cell cell 'MUX_16_1:MUX_16_1_TG{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-Vin0  I0  0 pulse 0 3.3 0n   1n 1n 50n 1600n
-Vin1  I1  0 pulse 0 3.3 100n 1n 1n 50n 1600n
-Vin2  I2  0 pulse 0 3.3 200n 1n 1n 50n 1600n
-Vin3  I3  0 pulse 0 3.3 300n 1n 1n 50n 1600n
-Vin4  I4  0 pulse 0 3.3 400n 1n 1n 50n 1600n
-Vin5  I5  0 pulse 0 3.3 500n 1n 1n 50n 1600n
-Vin6  I6  0 pulse 0 3.3 600n 1n 1n 50n 1600n
-Vin7  I7  0 pulse 0 3.3 700n 1n 1n 50n 1600n
-Vin8  I8  0 pulse 0 3.3 800n 1n 1n 50n 1600n
-Vin9  I9  0 pulse 0 3.3 900n 1n 1n 50n 1600n
-Vin10 I10 0 pulse 0 3.3 1000n 1n 1n 50n 1600n
-Vin11 I11 0 pulse 0 3.3 1100n 1n 1n 50n 1600n
-Vin12 I12 0 pulse 0 3.3 1200n 1n 1n 50n 1600n
-Vin13 I13 0 pulse 0 3.3 1300n 1n 1n 50n 1600n
-Vin14 I14 0 pulse 0 3.3 1400n 1n 1n 50n 1600n
-Vin15 I15 0 pulse 0 3.3 1500n 1n 1n 50n 1600n
-Vin16 S0 0 pulse 0 3.3 100n  1n 1n 100n 200n
-Vin17 S1 0 pulse 0 3.3 200n  1n 1n 200n 400n
-Vin18 S2 0 pulse 0 3.3 400n  1n 1n 400n 800n
-Vin19 S3 0 pulse 0 3.3 800n 1n 1n 800n 1600n
-.TRAN 0 1600n
+Vin0 S3 0 PULSE  3.3 0 0 1u 1u 400u 800u
+Vin1 S2 0 PULSE  3.3 0 0 1u 1u 800u 1600u
+Vin2 S1 0 PULSE  3.3 0 0 1u 1u 1600u 3200u
+Vin3 S0 0 PULSE  3.3 0 0 1u 1u 3200u 6400u
+Vin4  I0  0 pulse 0 3.3 0u   1u 1u 100u 6400u
+Vin5  I1  0 pulse 0 3.3 400u 1u 1u 100u 6400u
+Vin6  I2  0 pulse 0 3.3 800u 1u 1u 100u 6400u
+Vin7  I3  0 pulse 0 3.3 1200u 1u 1u 100u 6400u
+Vin8  I4  0 pulse 0 3.3 1600u 1u 1u 100u 6400u
+Vin9  I5  0 pulse 0 3.3 2000u 1u 1u 100u 6400u
+Vin10 I6  0 pulse 0 3.3 2400u 1u 1u 100u 6400u
+Vin11 I7  0 pulse 0 3.3 2800u 1u 1u 100u 6400u
+Vin12 I8  0 pulse 0 3.3 3200u   1u 1u 100u 6400u
+Vin13 I9  0 pulse 0 3.3 3600u 1u 1u 100u 6400u
+Vin14 I10  0 pulse 0 3.3 4000u 1u 1u 100u 6400u
+Vin15 I11  0 pulse 0 3.3 4400u 1u 1u 100u 6400u
+Vin16 I12  0 pulse 0 3.3 4800u 1u 1u 100u 6400u
+Vin17 I13 0 pulse 0 3.3 5200u 1u 1u 100u 6400u
+Vin18 I14  0 pulse 0 3.3 5600u 1u 1u 100u 6400u
+Vin19 I15  0 pulse 0 3.3 6000u 1u 1u 100u 6400u
+cload out 0 250fF
+.TRAN 0 6400u
 .include C:\Electric\C5_models.txt
 .END
