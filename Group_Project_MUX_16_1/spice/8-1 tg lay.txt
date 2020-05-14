@@ -1,0 +1,16 @@
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin16 S2 0 PULSE  (3.3 0 0 1u 1u 400u 800u)
+Vin17 S1 0 PULSE  (3.3 0 0 1u 1u 800u 1600u)
+Vin18 S0 0 PULSE  (3.3 0 0 1u 1u 1600u 3200u)
+Vin0  I0  0 pulse 0 3.3 0u   1u 1u 100u 3200u
+Vin1  I1  0 pulse 0 3.3 400u 1u 1u 100u 3200u
+Vin2  I2  0 pulse 0 3.3 800u 1u 1u 100u 3200u
+Vin3  I3  0 pulse 0 3.3 1200u 1u 1u 100u 3200u
+Vin4  I4  0 pulse 0 3.3 1600u 1u 1u 100u 3200u
+Vin5  I5  0 pulse 0 3.3 2000u 1u 1u 100u 3200u
+Vin6  I6  0 pulse 0 3.3 2400u 1u 1u 100u 3200u
+Vin7  I7  0 pulse 0 3.3 2800u 1u 1u 100u 3200u
+cload out 0 250fF
+.TRAN 0 3200u
+.include C:\Electric\C5_models.txt
