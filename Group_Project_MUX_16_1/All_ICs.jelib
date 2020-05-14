@@ -13042,7 +13042,7 @@ Eout||D5G4;X3;Y0.5;|conn@19|y|U
 X
 
 # Cell MUX_8_1_TG;1{lay}
-CMUX_8_1_TG;1{lay}||mocmos|1587187157127|1589420090308||DRC_last_good_drc_area_date()G1589419706164
+CMUX_8_1_TG;1{lay}||mocmos|1587187157127|1589427218523||DRC_last_good_drc_area_date()G1589427165870|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1589427165870
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-0.5|78|5||RRR|
 NMetal-1-P-Active-Con|contact@1||7.5|78|5||RRR|
@@ -13226,7 +13226,7 @@ NMetal-2-Metal-3-Con|contact@192||-75.5|-86||||
 NMetal-1-Metal-2-Con|contact@193||284|45.5||||
 NMetal-1-Metal-2-Con|contact@195||-63|41.5||||
 NMetal-1-Metal-2-Con|contact@196||-63|6||||
-NMetal-2-Metal-3-Con|contact@197||-77|95||||
+NMetal-2-Metal-3-Con|contact@197||-77|98||||
 NN-Transistor|nmos@0||3.5|53|7||R||SIM_spice_model(D5G1;)SNMOS
 NN-Transistor|nmos@1||-29.5|53.5|7||R||SIM_spice_model(D5G1;)SNMOS
 NN-Transistor|nmos@2||34.5|53.5|7||R||SIM_spice_model(D5G1;)SNMOS
@@ -13435,8 +13435,8 @@ NMetal-2-Pin|pin@203||255|-86.5||||
 NMetal-3-Pin|pin@206||271|-97||||
 NMetal-2-Pin|pin@208||236.5|-71||||
 NMetal-1-Pin|pin@209||-54.5|115||||
-NMetal-3-Pin|pin@215||86|95.5||||
-NMetal-3-Pin|pin@216||-69.5|95.5||||
+NMetal-3-Pin|pin@215||86|98.5||||
+NMetal-3-Pin|pin@216||-69.5|98.5||||
 NMetal-2-Pin|pin@217||-63.5|86||||
 NMetal-2-Pin|pin@218||-63|41||||
 NMetal-1-Pin|pin@219||-66.5|41.5||||
@@ -13446,7 +13446,7 @@ NMetal-1-Pin|pin@222||-63.5|6||||
 NMetal-2-Pin|pin@223||-63|-28.5||||
 NMetal-2-Pin|pin@224||-70|-28.5||||
 Ngeneric:Invisible-Pin|pin@226||-109.5|64.5|||||ART_message(D5G1;)Stext
-Ngeneric:Invisible-Pin|pin@227||-110.5|-25|||||SIM_spice_card(D5G4;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,Vin16 S2 0 PULSE  (3.3 0 0 1u 1u 400u 800u),Vin17 S1 0 PULSE  (3.3 0 0 1u 1u 800u 1600u),Vin18 S0 0 PULSE  (3.3 0 0 1u 1u 1600u 3200u),Vin0  I0  0 pulse 0 3.3 0u   1u 1u 100u 3200u,Vin1  I1  0 pulse 0 3.3 400u 1u 1u 100u 3200u,Vin2  I2  0 pulse 0 3.3 800u 1u 1u 100u 3200u,Vin3  I3  0 pulse 0 3.3 1200u 1u 1u 100u 3200u,Vin4  I4  0 pulse 0 3.3 1600u 1u 1u 100u 3200u,Vin5  I5  0 pulse 0 3.3 2000u 1u 1u 100u 3200u,Vin6  I6  0 pulse 0 3.3 2400u 1u 1u 100u 3200u,Vin7  I7  0 pulse 0 3.3 2800u 1u 1u 100u 3200u,cload out 0 250fF,.TRAN 0 3200u,".include C:\\Electric\\C5_models.txt"]
+NMetal-1-Pin|pin@228||-54.5|95||||
 NP-Transistor|pmos@0||3.5|78|7||RRR||SIM_spice_model(D5G1;)SPMOS
 NP-Transistor|pmos@1||-29.5|78|7||RRR||SIM_spice_model(D5G1;)SPMOS
 NP-Transistor|pmos@2||34.5|78.5|7||RRR||SIM_spice_model(D5G1;)SPMOS
@@ -13569,7 +13569,6 @@ APolysilicon-1|net@77|||S0|pin@5||3.5|89|pin@6||-38|89
 AMetal-2|net@78|||S0|pin@43||46.5|16.5|pin@67||46.5|16.5
 APolysilicon-1|net@79|||S900|pin@6||-38|89|pin@7||-38|67.5
 AMetal-1|net@80||2|S1800|well@3||-53|25.5|well@1||2.5|25.5
-AMetal-1|net@81||2|S1800|well@3||-53|95|well@0||2.5|95
 AMetal-1|net@82||1|S0|substr@2||2.5|-102|pin@69||-36|-102
 AMetal-1|net@83||2|S1800|well@3||-53|-44|well@2||2.5|-44
 AMetal-2|net@84|||S1800|pin@19||14|86|pin@20||45.5|86
@@ -13968,8 +13967,8 @@ AMetal-3|net@541||1|S900|pin@201||271|-61.5|pin@206||271|-97
 AMetal-2|net@542|||S2700|pin@208||236.5|-71|pin@179||236.5|-17
 AMetal-2|net@543|||S1800|contact@186||255|45.5|contact@193||284|45.5
 AMetal-1|net@544||2|S2700|substr@1||40|-32.5|contact@64||40|-26
-AMetal-3|net@545|||S2700|pin@164||86|86|pin@215||86|95.5
-AMetal-3|net@546|||S0|pin@215||86|95.5|pin@216||-69.5|95.5
+AMetal-3|net@545|||S2700|pin@164||86|86|pin@215||86|98.5
+AMetal-3|net@546|||S0|pin@215||86|98.5|pin@216||-69.5|98.5
 AMetal-2|net@549|||S900|pin@169||-63.5|86|pin@217||-63.5|86
 AMetal-2|net@551|||S1800|contact@167||-77.5|86|pin@217||-63.5|86
 AMetal-2|net@552|||S900|pin@168||-63|52|pin@218||-63|41
@@ -13984,9 +13983,11 @@ AMetal-1|net@561|||S1800|pin@222||-63.5|6|contact@196||-63|6
 AMetal-2|net@562|||S900|pin@166||-63|-17.5|pin@223||-63|-28.5
 AMetal-2|net@563|||S0|pin@223||-63|-28.5|pin@224||-70|-28.5
 AMetal-2|net@564|||S0|pin@224||-70|-28.5|contact@164||-77|-28.5
-AMetal-3|net@565|||S0|pin@216||-69.5|95.5|contact@197||-77|95.5
-AMetal-2|net@566||1|S2700|contact@162||-77|95|contact@197||-77|95.5
+AMetal-3|net@565|||S0|pin@216||-69.5|98.5|contact@197||-77|98.5
+AMetal-2|net@566||1|S2700|contact@162||-77|95|contact@197||-77|97.5
 AMetal-2|net@567|||S0|contact@53||-38|-71.5|contact@153||-76|-71.5
+AMetal-1|net@568||2|S0|well@0||2.5|95|pin@228||-54.5|95
+AMetal-1|net@569||3|S2700|well@3||-54.5|-3.5|pin@228||-54.5|95
 EI4|I0|D5G7;|contact@162||U
 EI6|I1|D5G7;|contact@160||U
 EI5|I2|D5G7;|contact@156||U

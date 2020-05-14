@@ -1,7 +1,7 @@
 *** SPICE deck for cell MUX_8_1_TG{lay} from library All_ICs
 *** Created on Sat Apr 18, 2020 01:19:17
-*** Last revised on Wed May 13, 2020 21:34:50
-*** Written on Wed May 13, 2020 21:34:51 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed May 13, 2020 23:33:12
+*** Written on Wed May 13, 2020 23:33:13 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 ***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
@@ -80,7 +80,7 @@ C8 I7 0 6.683fF
 C9 net@18 0 25.138fF
 C10 net@19 0 1.643fF
 C11 S2 0 11.204fF
-C12 I0 0 12.726fF
+C12 I0 0 12.956fF
 C13 net@196 0 16.814fF
 C14 net@197 0 1.643fF
 C15 I2 0 13.799fF
