@@ -1,0 +1,128 @@
+*** SPICE deck for cell MUX_16_1_TG{sch} from library MUX_16_1
+*** Created on Thu May 14, 2020 00:19:34
+*** Last revised on Thu May 14, 2020 04:25:23
+*** Written on Thu May 14, 2020 04:25:28 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: MUX_16_1_TG{sch}
+Mnmos@0 I0 net@45 net@56 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 I1 S0 net@56 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@45 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 I2 net@117 net@112 gnd NMOS L=0.35U W=1.75U
+Mnmos@4 I3 S0 net@112 gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@117 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@6 net@56 net@2 net@54 gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@112 S1 net@54 gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@2 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@9 I4 net@173 net@6 gnd NMOS L=0.35U W=1.75U
+Mnmos@10 I5 S0 net@6 gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@173 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 I6 net@176 net@12 gnd NMOS L=0.35U W=1.75U
+Mnmos@13 I7 S0 net@12 gnd NMOS L=0.35U W=1.75U
+Mnmos@14 net@176 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@15 net@6 net@22 net@32 gnd NMOS L=0.35U W=1.75U
+Mnmos@16 net@12 S1 net@32 gnd NMOS L=0.35U W=1.75U
+Mnmos@17 net@22 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@18 net@54 net@52 net@60 gnd NMOS L=0.35U W=1.75U
+Mnmos@19 net@32 S2 net@60 gnd NMOS L=0.35U W=1.75U
+Mnmos@20 net@52 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@21 I8 net@374 net@274 gnd NMOS L=0.35U W=1.75U
+Mnmos@22 I9 S0 net@274 gnd NMOS L=0.35U W=1.75U
+Mnmos@23 net@374 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@24 I10 net@273 net@268 gnd NMOS L=0.35U W=1.75U
+Mnmos@25 I11 S0 net@268 gnd NMOS L=0.35U W=1.75U
+Mnmos@26 net@273 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@27 net@274 net@313 net@324 gnd NMOS L=0.35U W=1.75U
+Mnmos@28 net@268 S1 net@324 gnd NMOS L=0.35U W=1.75U
+Mnmos@29 net@313 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@30 I12 net@335 net@254 gnd NMOS L=0.35U W=1.75U
+Mnmos@31 I13 S0 net@254 gnd NMOS L=0.35U W=1.75U
+Mnmos@32 net@335 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@33 I14 net@338 net@276 gnd NMOS L=0.35U W=1.75U
+Mnmos@34 I15 S0 net@276 gnd NMOS L=0.35U W=1.75U
+Mnmos@35 net@338 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@36 net@254 net@341 net@430 gnd NMOS L=0.35U W=1.75U
+Mnmos@37 net@276 S1 net@430 gnd NMOS L=0.35U W=1.75U
+Mnmos@38 net@341 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@39 net@324 net@452 net@461 gnd NMOS L=0.35U W=1.75U
+Mnmos@40 net@430 S2 net@461 gnd NMOS L=0.35U W=1.75U
+Mnmos@41 net@452 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@42 net@60 net@508 out gnd NMOS L=0.35U W=1.75U
+Mnmos@43 net@461 S3 out gnd NMOS L=0.35U W=1.75U
+Mnmos@44 net@508 S3 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 I0 S0 net@56 vdd PMOS L=0.35U W=1.75U
+Mpmos@1 I1 net@45 net@56 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@45 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@3 I2 S0 net@112 vdd PMOS L=0.35U W=1.75U
+Mpmos@4 I3 net@117 net@112 vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@117 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@6 net@56 S1 net@54 vdd PMOS L=0.35U W=1.75U
+Mpmos@7 net@112 net@2 net@54 vdd PMOS L=0.35U W=1.75U
+Mpmos@8 net@2 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@9 I4 S0 net@6 vdd PMOS L=0.35U W=1.75U
+Mpmos@10 I5 net@173 net@6 vdd PMOS L=0.35U W=1.75U
+Mpmos@11 net@173 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@12 I6 S0 net@12 vdd PMOS L=0.35U W=1.75U
+Mpmos@13 I7 net@176 net@12 vdd PMOS L=0.35U W=1.75U
+Mpmos@14 net@176 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@15 net@6 S1 net@32 vdd PMOS L=0.35U W=1.75U
+Mpmos@16 net@12 net@22 net@32 vdd PMOS L=0.35U W=1.75U
+Mpmos@17 net@22 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@18 net@54 S2 net@60 vdd PMOS L=0.35U W=1.75U
+Mpmos@19 net@32 net@52 net@60 vdd PMOS L=0.35U W=1.75U
+Mpmos@20 net@52 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@21 I8 S0 net@274 vdd PMOS L=0.35U W=1.75U
+Mpmos@22 I9 net@374 net@274 vdd PMOS L=0.35U W=1.75U
+Mpmos@23 net@374 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@24 I10 S0 net@268 vdd PMOS L=0.35U W=1.75U
+Mpmos@25 I11 net@273 net@268 vdd PMOS L=0.35U W=1.75U
+Mpmos@26 net@273 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@27 net@274 S1 net@324 vdd PMOS L=0.35U W=1.75U
+Mpmos@28 net@268 net@313 net@324 vdd PMOS L=0.35U W=1.75U
+Mpmos@29 net@313 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@30 I12 S0 net@254 vdd PMOS L=0.35U W=1.75U
+Mpmos@31 I13 net@335 net@254 vdd PMOS L=0.35U W=1.75U
+Mpmos@32 net@335 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@33 I14 S0 net@276 vdd PMOS L=0.35U W=1.75U
+Mpmos@34 I15 net@338 net@276 vdd PMOS L=0.35U W=1.75U
+Mpmos@35 net@338 S0 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@36 net@254 S1 net@430 vdd PMOS L=0.35U W=1.75U
+Mpmos@37 net@276 net@341 net@430 vdd PMOS L=0.35U W=1.75U
+Mpmos@38 net@341 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@39 net@324 S2 net@461 vdd PMOS L=0.35U W=1.75U
+Mpmos@40 net@430 net@452 net@461 vdd PMOS L=0.35U W=1.75U
+Mpmos@41 net@452 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@42 net@60 S3 out vdd PMOS L=0.35U W=1.75U
+Mpmos@43 net@461 net@508 out vdd PMOS L=0.35U W=1.75U
+Mpmos@44 net@508 S3 vdd vdd PMOS L=0.35U W=1.75U
+
+* Spice Code nodes in cell cell 'MUX_16_1_TG{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin16 S0  0 PULSE  (3.3 0 0 1u 1u 400u 800u)
+Vin17 S1  0 PULSE  (3.3 0 0 1u 1u 800u 1600u)
+Vin18 S2  0 PULSE  (3.3 0 0 1u 1u 1600u 3200u)
+Vin19 S3  0 PULSE  (3.3 0 0 1u 1u 3200u 6400u)
+Vin0  I0  0 pulse 0 3.3 0u   1u 1u 100u 6400u
+Vin1  I1  0 pulse 0 3.3 400u 1u 1u 100u 6400u
+Vin2  I2  0 pulse 0 3.3 800u 1u 1u 100u 6400u
+Vin3  I3  0 pulse 0 3.3 1200u 1u 1u 100u 6400u
+Vin4  I4  0 pulse 0 3.3 1600u 1u 1u 100u 6400u
+Vin5  I5  0 pulse 0 3.3 2000u 1u 1u 100u 6400u
+Vin6  I6  0 pulse 0 3.3 2400u 1u 1u 100u 6400u
+Vin7  I7  0 pulse 0 3.3 2800u 1u 1u 100u 6400u
+Vin8  I8  0 pulse 0 3.3 3200u 1u 1u 100u 6400u
+Vin9  I9  0 pulse 0 3.3 3600u 1u 1u 100u 6400u
+Vin10 I10 0 pulse 0 3.3 4000u 1u 1u 100u 6400u
+Vin11 I11 0 pulse 0 3.3 4400u 1u 1u 100u 6400u
+Vin12 I12 0 pulse 0 3.3 4800u 1u 1u 100u 6400u
+Vin13 I13 0 pulse 0 3.3 5200u 1u 1u 100u 6400u
+Vin14 I14 0 pulse 0 3.3 5600u 1u 1u 100u 6400u
+Vin15 I15 0 pulse 0 3.3 6000u 1u 1u 100u 6400u
+cload out 0 250fF
+.TRAN 0 6400u
+.include C:\Electric\C5_models.txt
+.END

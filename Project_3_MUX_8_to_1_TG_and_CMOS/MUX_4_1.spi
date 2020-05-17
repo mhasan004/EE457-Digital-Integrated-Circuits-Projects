@@ -1,7 +1,7 @@
 *** SPICE deck for cell MUX_4_1{sch} from library Proj3
 *** Created on Mon Apr 13, 2020 13:14:57
-*** Last revised on Tue Apr 14, 2020 19:47:06
-*** Written on Tue Apr 14, 2020 19:47:07 by Electric VLSI Design System, version 9.07
+*** Last revised on Sun May 10, 2020 18:23:20
+*** Written on Sun May 10, 2020 18:23:20 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -48,13 +48,13 @@ Mpmos@17 out net@149 vdd vdd PMOS L=0.35U W=1.75U
 * Spice Code nodes in cell cell 'MUX_4_1{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-vin1  S1 0 PULSE(3.3 0 0 1n 1n 640u 1280u)
-vin2  S2 0 PULSE(3.3 0 0 1n 1n 320u 640u)
-vin3  I0 0 PULSE(3.3 0 0 1n 1n 80u 160u)
-vin4  I1 0 PULSE(3.3 0 0 1n 1n 60u 160u)
-vin5  I2 0 PULSE(3.3 0 0 1n 1n 40u 160u)
-vin6  I3 0 PULSE(3.3 0 0 1n 1n 20u 160u)
+vin1  S1 0 PULSE(3.3 0 0 1n 1n 160u 320u)
+vin2  S2 0 PULSE(3.3 0 0 1n 1n 80u 160u)
+vin3  I0 0 PULSE(3.3 0 0 1n 1n 20u 80u)
+vin4  I1 0 PULSE(3.3 0 0 1n 1n 40u 80u)
+vin5  I2 0 PULSE(3.3 0 0 1n 1n 60u 80u)
+vin6  I3 0 PULSE(3.3 0 0 1n 1n 10u 40u)
 cload out 0 250fF
-.tran 0 1280u
+.tran 0 320u
 .include C:\Electric\C5_models.txt
 .END

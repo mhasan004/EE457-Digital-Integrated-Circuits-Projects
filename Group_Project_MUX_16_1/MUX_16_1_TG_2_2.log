@@ -1,0 +1,31 @@
+Circuit: *** SPICE deck for cell MUX_16_1_TG_2_2{lay} from library MUX_16_1
+
+Vgnd: both pins shorted together -- ignoring.
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node NET@1001#3PMOS@30_POLY-LEFT##0 is floating.
+
+WARNING: Less than two connections to node I8.  This node is used by VIN8.
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed May 13 22:24:50 2020
+Total elapsed time: 9.542 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 7552
+traniter = 7540
+tranpoints = 3167
+accept = 2662
+rejected = 505
+matrix size = 1356
+fillins = 2306
+solver = Normal
+Thread vector: 248.3/124.9[12] 127.0/42.8[12] 29.5/15.1[12] 14.4/24.2[1]  2592/500
+Matrix Compiler1: 169.25 KB object code size  209.5/146.1/[58.7]
+Matrix Compiler2: 141.90 KB object code size  85.9/112.6/[28.1]
+
+

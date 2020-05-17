@@ -1,0 +1,75 @@
+
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0u   1n 1n 100u 3200u
+Vin1  I1  0 pulse 0 3.3 400u 1n 1n 100u 3200u
+Vin2  I2  0 pulse 0 3.3 800u 1n 1n 100u 3200u
+Vin3  I3  0 pulse 0 3.3 1200u 1n 1n 100u 3200u
+Vin4  I4  0 pulse 0 3.3 1600u 1n 1n 100u 3200u
+Vin5  I5  0 pulse 0 3.3 2000u 1n 1n 100u 3200u
+Vin6  I6  0 pulse 0 3.3 2400u 1n 1n 100u 3200u
+Vin7  I7  0 pulse 0 3.3 2800u 1n 1n 100u 3200u
+
+
+Vin16 S0 0 PULSE 3.3 0 0 1n 1n 400u  800u
+Vin17 S1 0 PULSE 3.3 0 0 1n 1n 800u  1600u
+Vin18 S2 0 PULSE 3.3 0 0 1n 1n 1600u 3200u
+cload out 0 250fF
+.TRAN 0 3200u
+.include C:\Electric\C5_models.txt
+
+-----------------------------------------------
+
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0 3.3 0n   1n 1n 50n 3200n
+Vin1  I1  0 pulse 0 3.3 400n 1n 1n 50n 3200n
+Vin2  I2  0 pulse 0 3.3 800n 1n 1n 50n 3200n
+Vin3  I3  0 pulse 0 3.3 1200n 1n 1n 50n 3200n
+Vin4  I4  0 pulse 0 3.3 1600n 1n 1n 50n 3200n
+Vin5  I5  0 pulse 0 3.3 2000n 1n 1n 50n 3200n
+Vin6  I6  0 pulse 0 3.3 2400n 1n 1n 50n 3200n
+Vin7  I7  0 pulse 0 3.3 2800n 1n 1n 50n 3200n
+Vin16 S0 0 PULSE  0 3.3 400n 1n 1n 50n 800n
+Vin17 S1 0 PULSE  3.3 0 0 1n 1n 800n 1600n)
+Vin18 S2 0 PULSE  3.3 0 0 1n 1n 1600n 3200n)
+cload out 0 250fF
+.TRAN 0 3200n
+.include C:\Electric\C5_models.txt
+
+------------------------------------------------
+
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0  I0  0 pulse 0   3.3 0u    1n 1n 100u  3200u
+Vin1  I1  0 pulse 0   3.3 400u  1n 1n 100u  3200u
+Vin2  I2  0 pulse 0   3.3 800u  1n 1n 100u  3200u
+Vin3  I3  0 pulse 0   3.3 1200u 1n 1n 100u  3200u
+Vin4  I4  0 pulse 0   3.3 1600u 1n 1n 100u  3200u
+Vin5  I5  0 pulse 0   3.3 2000u 1n 1n 100u  3200u
+Vin6  I6  0 pulse 0   3.3 2400u 1n 1n 100u  3200u
+Vin7  I7  0 pulse 0   3.3 2800u 1n 1n 100u  3200u
+Vin16 S0  0 PULSE 3.3 0   0     1n 1n 400u  800u
+Vin17 S1  0 PULSE 3.3 0   0     1n 1n 800u  1600u
+Vin18 S2  0 PULSE 3.3 0   0     1n 1n 1600u 3200u
+cload out 0 250fF
+.TRAN 0 3200u
+.include C:\Electric\C5_models.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

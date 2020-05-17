@@ -1,0 +1,53 @@
+*** SPICE deck for cell MUX_8_1_TG{sch} from library Proj3
+*** Created on Sat Apr 18, 2020 00:57:15
+*** Last revised on Sat Apr 18, 2020 01:17:58
+*** Written on Sun Apr 19, 2020 21:47:33 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: MUX_8_1_TG{sch}
+Mnmos@0 I0 net@16 net@5 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 I1 S2 net@5 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@16 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 I2 net@49 net@8 gnd NMOS L=0.35U W=1.75U
+Mnmos@4 I3 S2 net@8 gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@49 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@6 net@5 net@83 net@92 gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@8 S1 net@92 gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@83 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@9 I4 net@127 net@155 gnd NMOS L=0.35U W=1.75U
+Mnmos@10 I5 S2 net@155 gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@127 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 I6 net@129 net@123 gnd NMOS L=0.35U W=1.75U
+Mnmos@13 I7 S2 net@123 gnd NMOS L=0.35U W=1.75U
+Mnmos@14 net@129 S2 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@15 net@155 net@131 net@223 gnd NMOS L=0.35U W=1.75U
+Mnmos@16 net@123 S1 net@223 gnd NMOS L=0.35U W=1.75U
+Mnmos@17 net@131 S1 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@18 net@92 net@246 out gnd NMOS L=0.35U W=1.75U
+Mnmos@19 net@223 S0 out gnd NMOS L=0.35U W=1.75U
+Mnmos@20 net@246 S0 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 I0 S2 net@5 vdd PMOS L=0.35U W=1.75U
+Mpmos@1 I1 net@16 net@5 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@16 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@3 I2 S2 net@8 vdd PMOS L=0.35U W=1.75U
+Mpmos@4 I3 net@49 net@8 vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@49 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@6 net@5 S1 net@92 vdd PMOS L=0.35U W=1.75U
+Mpmos@7 net@8 net@83 net@92 vdd PMOS L=0.35U W=1.75U
+Mpmos@8 net@83 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@9 I4 S2 net@155 vdd PMOS L=0.35U W=1.75U
+Mpmos@10 I5 net@127 net@155 vdd PMOS L=0.35U W=1.75U
+Mpmos@11 net@127 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@12 I6 S2 net@123 vdd PMOS L=0.35U W=1.75U
+Mpmos@13 I7 net@129 net@123 vdd PMOS L=0.35U W=1.75U
+Mpmos@14 net@129 S2 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@15 net@155 S1 net@223 vdd PMOS L=0.35U W=1.75U
+Mpmos@16 net@123 net@131 net@223 vdd PMOS L=0.35U W=1.75U
+Mpmos@17 net@131 S1 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@18 net@92 S0 out vdd PMOS L=0.35U W=1.75U
+Mpmos@19 net@223 net@246 out vdd PMOS L=0.35U W=1.75U
+Mpmos@20 net@246 S0 vdd vdd PMOS L=0.35U W=1.75U
+.END

@@ -1,0 +1,15 @@
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0 D0 0 pulse 0 3.3 0n 5n 5n 50n 800n
+Vin1 D1 0 pulse 0 3.3 100n 5n 5n 50n 800n
+Vin2 D2 0 pulse 0 3.3 200n 5n 5n 50n 800n
+Vin3 D3 0 pulse 0 3.3 300n 5n 5n 50n 800n
+Vin4 D4 0 pulse 0 3.3 400n 5n 5n 50n 800n
+Vin5 D5 0 pulse 0 3.3 500n 5n 5n 50n 800n
+Vin6 D6 0 pulse 0 3.3 600n 5n 5n 50n 800n
+Vin7 D7 0 pulse 0 3.3 700n 5n 5n 50n 800n
+Vin8 S0 0 pulse 0 3.3 100n 5n 5n 100n 200n
+Vin9 S1 0 pulse 0 3.3 200n 5n 5n 200n 400n
+Vin10 S2 0 pulse 0 3.3 400n 5n 5n 400n 800n
+.TRAN 0 800n
+.include C:\Electric\C5_models.txt

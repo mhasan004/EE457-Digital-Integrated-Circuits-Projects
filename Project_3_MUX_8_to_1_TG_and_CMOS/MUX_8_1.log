@@ -5,24 +5,27 @@ Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
+WARNING: Node I1#2PIN@147_POLYSILICON-1##23 is floating.
+
+WARNING: Less than two connections to node 11.  This node is used by VIN1.
 Direct Newton iteration for .op point succeeded.
 
-Date: Sun Apr 19 00:21:19 2020
-Total elapsed time: 18.690 seconds.
+Date: Sun May 10 18:22:40 2020
+Total elapsed time: 1.181 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 70123
-traniter = 70099
-tranpoints = 28489
-accept = 22770
-rejected = 5719
-matrix size = 780
-fillins = 924
+totiter = 4988
+traniter = 4959
+tranpoints = 1801
+accept = 1547
+rejected = 254
+matrix size = 781
+fillins = 938
 solver = Normal
-Thread vector: 102.8/43.1[11] 34.8/12.6[11] 10.2/6.2[10] 3.4/3.9[1]  2592/500
-Matrix Compiler1: 81.95 KB object code size  25.6/20.2/[14.0]
-Matrix Compiler2: 75.73 KB object code size  14.0/20.2/[12.1]
+Thread vector: 68.3/19.3[11] 48.3/5.7[11] 10.4/3.1[11] 2.3/4.4[1]  2592/500
+Matrix Compiler1: 82.79 KB object code size  40.0/23.5/[14.8]
+Matrix Compiler2: 75.99 KB object code size  16.6/18.9/[6.1]
 
 
