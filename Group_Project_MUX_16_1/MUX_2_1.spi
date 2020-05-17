@@ -1,0 +1,33 @@
+*** SPICE deck for cell MUX_2_1{sch} from library All_ICs
+*** Created on Mon Apr 13, 2020 02:22:45
+*** Last revised on Sat May 16, 2020 17:44:44
+*** Written on Sat May 16, 2020 17:44:44 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: All_ICs:MUX_2_1{sch}
+Mnmos@1 net@176 A net@9 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@9 net@231 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@176 B net@64 gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@64 S gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 net@231 S gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@14 out net@176 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@20 net@231 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@20 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@3 net@176 S net@20 vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@176 B net@20 vdd PMOS L=0.35U W=1.75U
+Mpmos@12 net@231 S vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@14 out net@176 vdd vdd PMOS L=0.35U W=1.75U
+
+* Spice Code nodes in cell cell 'All_ICs:MUX_2_1{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+Vin0 CLK 0 pulse 0 3.3 100n 5n 5n 100n 200n
+Vin1 S 0 pulse 0 3.3 200n 5n 5n 200n 400n
+Vin2 A 0 pulse 0 3.3 0n 5n 5n 50n 400n
+Vin4 B 0 pulse 0 3.3 200n 5n 5n 50n 400n
+.TRAN 0 400n
+.include C:\Electric\C5_models.txt
+.END
