@@ -1,7 +1,7 @@
 *** SPICE deck for cell MUX_2_1_dynamic{sch} from library MUX_16_1
 *** Created on Sat May 16, 2020 17:12:42
-*** Last revised on Sat May 16, 2020 23:51:25
-*** Written on Sat May 16, 2020 23:51:35 by Electric VLSI Design System, version 9.07
+*** Last revised on Sun May 17, 2020 00:15:33
+*** Written on Sun May 17, 2020 00:15:33 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -22,7 +22,7 @@ Mpmos@14 out net@134 vdd vdd PMOS L=0.35U W=1.75U
 * Spice Code nodes in cell cell 'MUX_2_1_dynamic{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-Vin0 CLK 0 pulse 0 3.3 0n 1n 1n 10n 200n
+Vin0 CLK 0 pulse 0 3.3 0n 1n 1n 50n 100n
 Vin1 S 0 pulse 0 3.3 200n 1n 1n 200n 400n
 Vin2 A 0 pulse 0 3.3 0n 1n 1n 50n 400n
 Vin4 B 0 pulse 0 3.3 300n 1n 1n 50n 400n
